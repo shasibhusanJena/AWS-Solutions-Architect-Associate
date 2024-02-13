@@ -48,3 +48,29 @@ it has vary specific notes on the use cases of AWS components and helps in under
 
     - SNS is designed for fan out messaging and can deliver messages concurrently to a large number of subscribers including Lambda functions. This makes it an effective choice for fan out to improve event throughput.
     - Push once in SNS , receive in all SQS queues that are subscribed.Fully decoupled , no data loss.
+13. Kinesis 
+
+    - it makes it easy to collect, process and analyze streaming data in real time.
+    - ingest real time data as Application log, Metrics, Website clickstream.
+    - Kinesis is of 4 types.
+        - Kinesis Data Firehose. - load data stream into AWS data stores.
+        - Kinesis Data Analytics. - analyze data stream with SQL or Apache Flink.
+        - Kinesis Data stream. - capture, process, store data streams.
+        - Kinesis video Streams. - capture process store data stream.
+
+14. ECS 
+    - The application consists of a front-end container that communicates with a back-end container. The containers need to scale automatically based on demand. You want to deploy the containers on ECS and manage them as a single application.
+    - The most efficient approach is to use a single ECS service with one task definition running both containers. This allows managing them together while still providing auto scaling based on demand.
+15. ECR Elastic container Registry
+    - Private Repository.
+    - ECR Used to Store and manage Docker image on AWS.
+    - Your company is migrating its monolithic application to microservices hosted in containers. The development team wants to use ECR to store and manage the container images. The images must be accessible to applications running in a VPC with private subnets only.
+    - An ECR repository can be configured with a VPC endpoint policy to allow access only from the specified VPC and subnets. This meets the requirement to restrict access to the VPC with private subnets only.
+
+16. EKS
+    -	You are designing a Kubernetes environment on AWS that will run a variety of microservices applications. The applications have unpredictable traffic patterns and can scale up rapidly at times. You want to optimize cost efficiency while still providing high availability.
+    -	Deploy Amazon EKS with a mix of spot and on-demand instances in multiple Availability Zones.
+
+17. AWS Fargate
+    - The application consists of a front-end and a back-end container. The front-end needs to scale automatically based on demand. The back-end needs to run consistently with no interruptions. You want to optimize cost.
+    - Deploy both containers to a Fargate service configured with a load balancer and auto scaling.
