@@ -74,3 +74,40 @@ it has vary specific notes on the use cases of AWS components and helps in under
 17. AWS Fargate
     - The application consists of a front-end and a back-end container. The front-end needs to scale automatically based on demand. The back-end needs to run consistently with no interruptions. You want to optimize cost.
     - Deploy both containers to a Fargate service configured with a load balancer and auto scaling.
+18. CloudFront
+    -	it supports JavaScript, can handle million of request per second, max execution time <1 millisecond
+    -	Max Memory 2 MB , total PKG size 10 KB, free tier available 1/6th price of @Edge.
+
+19. Lambda@Edge
+
+    - it supports node.js , python , can handle 1000 of requests , triggers Viewer Request/Response and Origin Request/Response.
+    - max execution time 5 -10 seconds , max memory 128 MB - 10 GB , total package size = 1 MB -50 MB. 
+20. AWS Lambda
+
+    - Execution:
+      - Memory allocation: 128 MB – 10GB (1 MB increments)
+      - Maximum execution time: 900 seconds (15 minutes)
+      - Environment variables (4 KB)
+      - Disk capacity in the “function container” (in /tmp): 512 MB to 10GB
+      - Concurrency executions: 1000 (can be increased)
+    - Deployment:
+      - Lambda function deployment size (compressed .zip): 50 MB
+      - Size of uncompressed deployment (code + dependencies): 250 MB
+      - Can use the /tmp directory to load other files at startup
+      - Size of environment variables: 4 KB.
+
+21. Others. 
+  - Amazon Transcript: ML model to Audio to Text
+  - Amazon Polly: text to audio , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
+  - Amazon Translate: provides real-time, high-quality, and affordable language translation
+  - Amazon Lex: build conversational bots – chatbots
+  - Amazon Connect: cloud contact center
+  - Amazon Comprehend : natural language processing , natural language processing (NLP) service that uses machine learning to find meaning and insights in text.
+  - Amazon Comprehend Medical - This service is specifically built for natural language processing for medical text. It can identify medication names, dosages, symptoms etc. from unstructured clinical text.
+  - Amazon SageMaker - Fully managed service for developer, /data scientist for Build ML model.
+  - Amazon Forecast - use ML to deliver accurate forcast.
+  - Amazon Kendra - fully managed document search service, extract answer from document , it read files ,PDF from google Drive and s3….
+  - Amazon Personalize - fully managed ML , to build apps with real time personalized recommendation. , also send sms and email ,
+  - Amazon textract  - help to extract text , analyze and data will be given .
+  - Amazon Rekognition : face detection, labeling, celebrity recognition , remove pornographic content
+  - Amazon Transcribe: audio to text (ex: subtitles) , remove any Personally Identifiable Information (PII) from the call before it's saved.
