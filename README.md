@@ -2,26 +2,26 @@
 it has vary specific notes on the use cases of AWS components and helps in understanding each of them with short descriiption
 
 
-1.  AWS Transit Gateway
+1. AWS Transit Gateway
     -   Create a route table for the transit gateway and add a route that allows traffic between VPC A and VPC B's CIDR blocks. Associate this route table with VPC A and VPC B attachments.
-2.  AWS Global Accelerator
+2. AWS Global Accelerator
     -   You are designing the architecture for a global SaaS application that will be deployed in the AWS cloud across multiple regions. The application needs to provide fast, reliable access for users across the globe. You want to improve performance and availability for users by routing traffic through the AWS global network.
-3.  Cross-region replication 
+3. Cross-region replication 
     -   copies objects between S3 buckets in different regions
-4.  CloudFront
+4. CloudFront
     -   used for caching content at the edge
-5.  Snowball
+5. Snowball
     -   used for physical data transport
 6. Transfer Acceleration
     -   a media company that frequently transfers large video files between an on-premises data center and Amazon S3. The company would like to accelerate these transfers to improve efficiency.
     -   uses the AWS global network and edge locations to accelerate uploads to and downloads from an S3 bucket over long distances. This would help accelerate transfers between the on-premises data center and S3
-7.  Virtual private gateway. 
+7. Virtual private gateway. 
     -   Explanation: A virtual private gateway enables communication between a VPC and an on-premises network over an IPsec VPN tunnel. It supports overlapping IP address ranges and meets the requirements stated in the scenario.
-8.  NAT gateway
+8. NAT gateway
     -   Instances in the private subnet can access the internet by using a NAT gateway.
     -   The NAT gateway will perform source NAT and translate the private IP to a public IP when traffic goes to the internet
 
-9.  Internet gateway
+9. Internet gateway
     -   Attaching an internet gateway to the VPC allows resources in the VPC such as instances in private subnets to connect to the internet by routing their traffic through a NAT gateway. This allows private resources internet access while keeping them private.
 
 10. VPC peering
@@ -44,3 +44,7 @@ it has vary specific notes on the use cases of AWS components and helps in under
     - SQS - long pooling:
         - when a consumer request message from the queue it can optionally wait for the msg to arrive if there are none in the queue.
         - Long pooling decreases number of API calls while increasing the efficiency and latency of your application, the wait time can be 1 to 20 second. (preferable 20 second). long pooling can be enabled at queue level or at the API level using WaitTimeSeconds.
+12. SNS
+
+    - SNS is designed for fan out messaging and can deliver messages concurrently to a large number of subscribers including Lambda functions. This makes it an effective choice for fan out to improve event throughput.
+    - Push once in SNS , receive in all SQS queues that are subscribed.Fully decoupled , no data loss.
