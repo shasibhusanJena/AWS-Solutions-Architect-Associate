@@ -28,9 +28,19 @@ it has vary specific notes on the use cases of AWS components and helps in under
     -   requirement : You have two VPCs, VPC A (10.0.0.0/16) in us-east-1 and VPC B (10.1.0.0/16) in us-west-2. You need to allow resources in VPC A to communicate with resources in VPC B.
     -   VPC peering allows resources in two VPCs, even in different regions, to communicate with each other as if they are within the same network. A VPC peering connection needs to be created between the VPCs and routes configured to route traffic between them. This allows resources in VPC A to communicate with resources in VPC B.
 11. SQS
-    -   The messages need to be processed asynchronously and out of order. Your application needs to ensure no messages are lost.
-    -   Amazon SQS provides a message queue service that enables asynchronous message processing. It supports out-of-order processing and ensures no messages are lost.
+    - The messages need to be processed asynchronously and out of order. Your application needs to ensure no messages are lost.
+    - Amazon SQS provides a message queue service that enables asynchronous message processing. It supports out-of-order processing and ensures no messages are lost.
     - by default a msg visibility time 30 seconds, once it pooled by consumer.
     - if consumer has not pooled and deleted the msg from the SQS queue then the msg will be visible after 30 seconds.
     - a consumer could call the ChangeMessageVisibility API to get more time.
-    - if visibility timeout is high and consumer crashes, then reprocessing will take place.
+    - if visibility timeout is high and consumer crashes, then reprocessing will take place. 
+    - -SQS -standard Queue.
+        - in this Duplicate entry on the queue is allowed 
+    - SQS -FIFO Queue.
+        - in this kind of Queue we can keep orders of the msg send to the queue.
+        - limited throughput: 300 msg/s without batching, 3000 msg/s with.
+        - Exactly once send capability.(by removing duplicates).
+        - Messages are processed in order by the consumer.
+    - SQS - long pooling:
+        - when a consumer request message from the queue it can optionally wait for the msg to arrive if there are none in the queue.
+        - Long pooling decreases number of API calls while increasing the efficiency and latency of your application, the wait time can be 1 to 20 second. (preferable 20 second). long pooling can be enabled at queue level or at the API level using WaitTimeSeconds.
