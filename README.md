@@ -96,6 +96,7 @@ it has vary specific notes on the use cases of AWS components and helps in under
       - Can use the /tmp directory to load other files at startup
       - Size of environment variables: 4 KB.
 
+
 21. Others. 
   - Amazon Transcript: ML model to Audio to Text
   - Amazon Polly: text to audio , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
@@ -111,3 +112,4 @@ it has vary specific notes on the use cases of AWS components and helps in under
   - Amazon textract  - help to extract text , analyze and data will be given .
   - Amazon Rekognition : face detection, labeling, celebrity recognition , remove pornographic content
   - Amazon Transcribe: audio to text (ex: subtitles) , remove any Personally Identifiable Information (PII) from the call before it's saved.
+
