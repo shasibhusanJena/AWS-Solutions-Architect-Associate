@@ -76,12 +76,19 @@ descriiption
         - Long pooling decreases number of API calls while increasing the efficiency and latency of your application,
           the wait time can be 1 to 20 second. (preferable 20 second). long pooling can be enabled at queue level or at
           the API level using WaitTimeSeconds.
-15. **SNS**
 
+15. **SNS**
     - SNS is designed for fan out messaging and can deliver messages concurrently to a large number of subscribers
       including Lambda functions. This makes it an effective choice for fan out to improve event throughput.
     - Push once in SNS , receive in all SQS queues that are subscribed.Fully decoupled , no data loss.
-16. **Kinesis**
+    - allows sending push notifications but **does not have built-in analytics for tracking app usage** or targeting user segments.
+
+16. **Amazon Pinpoint**
+    - send **push notifications and has features for tracking app usage**, defining user segments, and sending targeted campaigns. 
+    - Pinpoint is designed for sending push notifications to mobile apps too.
+    - Scales to Billions of messages per day.
+    
+17. **Kinesis**
 
     - it makes it easy to collect, process and analyze streaming data in real time.
     - ingest real time data as Application log, Metrics, Website clickstream.
@@ -91,13 +98,13 @@ descriiption
         - Kinesis Data stream. - capture, process, store data streams.
         - Kinesis video Streams. - capture process store data stream.
 
-17. **ECS** (Elastic container service)
+18. **ECS** (Elastic container service)
     - The application consists of a front-end container that communicates with a back-end container. The containers need
       to scale automatically based on demand. You want to deploy the containers on ECS and manage them as a single
       application.
     - The most efficient approach is to use a single ECS service with one task definition running both containers. This
       allows managing them together while still providing auto scaling based on demand.
-18. **ECR** (Elastic container Registry)
+19. **ECR** (Elastic container Registry)
     - Private Repository.
     - ECR Used to Store and manage Docker image on AWS.
     - Your company is migrating its monolithic application to microservices hosted in containers. The development team
@@ -106,26 +113,26 @@ descriiption
     - An ECR repository can be configured with a VPC endpoint policy to allow access only from the specified VPC and
       subnets. This meets the requirement to restrict access to the VPC with private subnets only.
 
-19. **EKS** (Elastic Kubernates Service)
+20. **EKS** (Elastic Kubernates Service)
     - You are designing a Kubernetes environment on AWS that will run a variety of microservices applications. The
       applications have unpredictable traffic patterns and can scale up rapidly at times. You want to optimize cost
       efficiency while still providing high availability.
     - Deploy Amazon EKS with a mix of spot and on-demand instances in multiple Availability Zones.
 
-20. **Amazon Fargate**
+21. **Amazon Fargate**
     - The application consists of a front-end and a back-end container. The front-end needs to scale automatically based
       on demand. The back-end needs to run consistently with no interruptions. You want to optimize cost.
     - Deploy both containers to a Fargate service configured with a load balancer and auto scaling.
-21. **Amazon CloudFront**
+22. **Amazon CloudFront**
     - it supports JavaScript, can handle million of request per second, max execution time <1 millisecond
     - Max Memory 2 MB , total PKG size 10 KB, free tier available 1/6th price of @Edge.
 
-22. **Lambda@Edge**
+23. **Lambda@Edge**
 
     - it supports node.js , python , can handle 1000 of requests , triggers Viewer Request/Response and Origin
       Request/Response.
     - max execution time 5 -10 seconds , max memory 128 MB - 10 GB , total package size = 1 MB -50 MB.
-23. **Amazon Lambda**
+24. **Amazon Lambda**
 
     - Execution:
         - Memory allocation: 128 MB – 10GB (1 MB increments)
@@ -139,11 +146,11 @@ descriiption
         - Can use the /tmp directory to load other files at startup
         - Size of environment variables: 4 KB.
 
-24. **CloudWatch**
+25. **CloudWatch**
     - CloudWatch metrics and alarms monitor performance, not API calls.
 
-25. **CloudTrail**
-    - it provide governance ,audit and compliance for AWS account.
+26. **CloudTrail**
+    - it provides governance ,audit and compliance for AWS account.
     - inaccurate resource provisioning
     - hitting service limits
     - Bursts of AWS IAM actions
@@ -151,12 +158,16 @@ descriiption
     - The security team has requested that all API calls made within your AWS account be logged for auditing and
       troubleshooting purposes.
     - Enable AWS CloudTrail trail logging across all regions and turn on log file validation.
-26. **Amazon EventBridge**
+27. **Amazon EventBridge**
     - EventBridge allows responding to events from various AWS services as well as custom applications. It meets the
       requirements of decoupled architecture, responding to events, and supporting AWS and custom sources.
+28. **Amazon AppFlow**
+    - is a fully managed integration service that helps you securely transfer data between software as a service (SaaS) applications such as Salesforce, SAP, Google Analytics, Facebook Ads, and ServiceNow, and AWS services such as Amazon Simple Storage Service (S3) and Amazon Redshift in just a few clicks.
+29. **AWS Control Tower** 
+    - is used by cloud administrators and architects to set up and govern a secure, multi-account 
+    - for a large enterprise that wants to set up a multi-account environment in AWS using AWS Control Tower
 
-
-99. **Others**.
+30. **Others**.
 
     - **Amazon Polly**: text to audio , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
     - **Amazon Translate**: provides real-time, high-quality, and affordable language translation
@@ -186,3 +197,14 @@ descriiption
         - Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern
           matching to discover and protect your sensitive data in AWS.
         - Macie helps identify and alert you to sensitive data, such as personally identifiable information (PII).
+    - **Amazon Elastic Transcoder** : 
+        - allows you to easily convert media files stored in Amazon S3 into multiple formats. 
+        - It provides transcoding optimizations like resolution and bitrate adjustment to support playback on different devices.
+        - Fully managed and secure pay for what you use.
+
+### Links for more info
+   1. Architecting for the cloud:  https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf (Archived)
+   2. Whitepapers related to well-architected framework are mentioned here:  https://aws.amazon.com/blogs/aws/aws-well-architected-framework-updated-white-papers-tools-and-best-practices/
+   3. Disaster recovery whitepaper:  https://d1.awsstatic.com/whitepapers/aws-disaster-recovery.pdf (Archived)
+   4. AWS now recommends a well-architected framework whitepaper:  https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf
+ 
