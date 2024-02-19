@@ -202,6 +202,8 @@ descriiption
         - It provides transcoding optimizations like resolution and bitrate adjustment to support playback on different devices.
         - Fully managed and secure pay for what you use.
 
+![img_1.png](img_1.png)
+
 ### Links for more info
    1. Architecting for the cloud:  https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf (Archived)
    2. Whitepapers related to well-architected framework are mentioned here:  https://aws.amazon.com/blogs/aws/aws-well-architected-framework-updated-white-papers-tools-and-best-practices/
