@@ -30,6 +30,16 @@ descriiption
         - **DynamoDB Streams** allows you to capture a time-ordered sequence of item-level modifications in a DynamoDB
           table. It's integrated with AWS Lambda so that you create triggers that automatically respond to events in
           real-time.
+    - **RDS** - Amazon Relational Database Service (Amazon RDS) makes it easy to set up, operate, and scale a relational
+      database in the cloud.
+        - It provides cost-efficient and resizable capacity while automating time-consuming administration tasks such as
+          hardware provisioning, database setup, patching, and backups
+
+    - **ElastiCache** - Amazon ElastiCache allows you to seamlessly set up, run, and scale popular open-Source
+      compatible in-memory data stores in the cloud. Build data-intensive apps or boost the performance of your existing
+      databases by retrieving data from high throughput and low latency in-memory data stores.
+        - Amazon ElastiCache is a popular choice for real-time use cases like Caching, Session Stores, Gaming,
+          Geospatial Services, Real-Time Analytics, and Queuing.
 
 2. **AWS Transit Gateway**
     - Create a route table for the transit gateway and add a route that allows traffic between VPC A and VPC B's CIDR
@@ -205,6 +215,7 @@ descriiption
     - The security team has requested that all API calls made within your AWS account be logged for auditing and
       troubleshooting purposes.
     - Enable AWS CloudTrail trail logging across all regions and turn on log file validation.
+    - example **S3 buckets settings being changed regularly by some one**. 
 28. **Amazon EventBridge**
     - EventBridge allows responding to events from various AWS services as well as custom applications. It meets the
       requirements of decoupled architecture, responding to events, and supporting AWS and custom sources.
@@ -248,7 +259,7 @@ descriiption
     - **Amazon Macie**
         - Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern
           matching to discover and protect your sensitive data in AWS.
-        - Macie helps identify and alert you to sensitive data, such as personally identifiable information (PII).
+        - Macie helps **identify and alert you to sensitive data, ex: as personally identifiable information (PII)**.
     - **Amazon Elastic Transcoder** :
         - allows you to easily convert media files stored in Amazon S3 into multiple formats.
         - It provides transcoding optimizations like resolution and bitrate adjustment to support playback on different
@@ -280,7 +291,52 @@ descriiption
 35. **SQS VS SNS VS Kinsesis**
 
     ![img_1.png](img_1.png)
-36. **Notes**
+
+    ## Security, Identity, & Compliance
+36. Notes :
+    - AWS Artifact - On-demand access to AWS compliance reports
+
+    - AWS Audit Manager  - Audit your AWS usage to simplify how you assess risk and compliance
+
+    - Amazon Cloud Directory - Store hundreds of millions of application-specific objects.
+
+    - Amazon Cognito - Identity management for your apps.
+
+    - Amazon Detective - Investigate potential security issues.
+
+    - AWS Directory Service - Set up and run Microsoft Active Directory with AWS services
+
+    - AWS Firewall Manager - Deploy network security across your VPCs with just a few clicks
+
+    - AWS GovCloud (US) Move sensitive workloads into the cloud.
+
+    - AWS Identity and Access Management - Securely manage access to services and resources
+
+    - AWS IAM Identity Center - Manage single sign-on access to AWS accounts and apps.
+
+    - AWS Network Firewall - Deploy network security across your Amazon VPCs with just a few clicks
+
+    - AWS Payment Cryptography - Fully managed payment cryptography service.
+
+    - AWS Resource Access Manager - Simple, secure service to share AWS resources.
+
+    - AWS Secrets Manager - Rotate, manage, and retrieve secrets.
+
+    - Security Documentation - Security documentation by category.
+
+    - AWS Security Hub - Unified security and compliance center.
+
+    - Amazon Security Lake - Automatically centralize your security data with a few clicks
+
+    - AWS Shield - DDoS protection.
+
+    - AWS WAF - Filter malicious web traffic.
+
+    - Amazon Inspector - Automated and continual vulnerability management at scale
+
+    - Amazon Macie - Discover and protect your sensitive data at scale
+
+37. **Notes**
     - S3 Transfer Acceleration helps speed up long-distance object transfers between S3 buckets, while Global
       Accelerator helps manage traffic across multiple AWS regions.
     - Glacier is a storage service, used for archival storage. Snowball is data transfer service, used for transferring
