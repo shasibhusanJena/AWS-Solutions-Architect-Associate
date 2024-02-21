@@ -295,45 +295,25 @@ descriiption
     ## Security, Identity, & Compliance
 36. Notes :
     - AWS Artifact - On-demand access to AWS compliance reports
-
     - AWS Audit Manager  - Audit your AWS usage to simplify how you assess risk and compliance
-
     - Amazon Cloud Directory - Store hundreds of millions of application-specific objects.
-
     - Amazon Cognito - Identity management for your apps.
-
     - Amazon Detective - Investigate potential security issues.
-
     - AWS Directory Service - Set up and run Microsoft Active Directory with AWS services
-
     - AWS Firewall Manager - Deploy network security across your VPCs with just a few clicks
-
     - AWS GovCloud (US) Move sensitive workloads into the cloud.
-
     - AWS Identity and Access Management - Securely manage access to services and resources
-
     - AWS IAM Identity Center - Manage single sign-on access to AWS accounts and apps.
-
     - AWS Network Firewall - Deploy network security across your Amazon VPCs with just a few clicks
-
     - AWS Payment Cryptography - Fully managed payment cryptography service.
-
     - AWS Resource Access Manager - Simple, secure service to share AWS resources.
-
     - AWS Secrets Manager - Rotate, manage, and retrieve secrets.
-
     - Security Documentation - Security documentation by category.
-
     - AWS Security Hub - Unified security and compliance center.
-
     - Amazon Security Lake - Automatically centralize your security data with a few clicks
-
     - AWS Shield - DDoS protection.
-
     - AWS WAF - Filter malicious web traffic.
-
     - Amazon Inspector - Automated and continual vulnerability management at scale
-
     - Amazon Macie - Discover and protect your sensitive data at scale
 
 37. **Notes**
