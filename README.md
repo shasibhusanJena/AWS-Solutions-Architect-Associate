@@ -243,7 +243,7 @@ descriiption
     - **Amazon SageMaker** - Fully managed service for developer, /data scientist for Build ML model.
     - **Amazon Forecast** - use ML to deliver accurate forcast.
     - **Amazon Kendra** - fully managed document search service, extract answer from document , it read files ,PDF from
-      google Drive and s3….
+      google Drive and s3.
     - Amazon Personalize - fully managed ML , to build apps with real time personalized recommendation. , also send sms
       and email ,
     - **Amazon textract** - help to extract text , analyze and data will be given .
@@ -327,7 +327,7 @@ descriiption
     - You can't move data directly from Snowball into Glacier, you need to go through S3 first, and then use a lifecycle
       policy.
     - CloudFront uses Edge Locations to cache content while Global Accelerator uses Edge Locations to find an optimal
-      pathway to the nearest regional endpoint.
+      pathway to the nearest regional endpoint. 
     - S3 batch replication to copy objects across S3 buckets in different Regions using S3 console
     - The Lambda Function must be deployed in your VPC, because RDS Proxy is never publicly accessible.
 
