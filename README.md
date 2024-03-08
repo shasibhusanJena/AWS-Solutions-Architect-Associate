@@ -204,7 +204,8 @@ descriiption
         - Size of environment variables: 4 KB.
 
 26. **CloudWatch**
-    - CloudWatch metrics and alarms monitor performance, not API calls.
+    - **monitor** everything like (applications, infrastructure, network, and services)and use **alarms, logs,** and events data to take automated actions and reduce mean time to resolution (MTTR).
+    - but **not API calls** .
 
 27. **CloudTrail**
     - it provides governance ,audit and compliance for AWS account.
@@ -212,7 +213,7 @@ descriiption
     - hitting service limits
     - Bursts of AWS IAM actions
     - Gaps in periodic maintenance activity
-    - The security team has requested that all API calls made within your AWS account be logged for auditing and
+    - The security team has requested that **all API calls** made within your AWS account be logged for auditing and
       troubleshooting purposes.
     - Enable AWS CloudTrail trail logging across all regions and turn on log file validation.
     - example **S3 buckets settings being changed regularly by some one**. 
@@ -230,7 +231,7 @@ descriiption
     - is used by cloud administrators and architects to set up and govern a secure, multi-account
     - for a large enterprise that wants to set up a multi-account environment in AWS using AWS Control Tower
 
-32. **Others**.
+31. **Others**.
 
     - **Amazon Polly**: text to audio , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
     - **Amazon Translate**: provides real-time, high-quality, and affordable language translation
@@ -266,7 +267,7 @@ descriiption
           devices.
         - Fully managed and secure pay for what you use.
 
-33. **Others1**
+32. **Others1**
     - EBS volumes: Network storage for one EC2 instance at a time
     - Instance Storage: Physical storage for your EC2 instance (high IOPS)
     - EFS: Network File System for Linux instances, POSIX filesystem
@@ -275,7 +276,7 @@ descriiption
     - FSx for NetApp ONTAP: High OS Compatibility
     - FSx for OpenZFS: Managed ZFS file system
 
-34. **Classic Ports to know**
+33. **Classic Ports to know**
     - 22 = SSH (Secure Shell) - log into a Linux instance
     - 21 = FTP (File Transfer Protocol) – upload files into a file share
     - 22 = SFTP (Secure File Transfer Protocol) – upload files using SSH
@@ -283,7 +284,7 @@ descriiption
     - 443 = HTTPS – access secured websites
     - 3389 = RDP (Remote Desktop Protocol) – log into a Windows instance
 
-35. **Overall, try to avoid using Elastic IP**:
+34. **Overall, try to avoid using Elastic IP**:
     - They often reflect poor architectural decisions, Instead, use a random public IP and register a DNS name to it
     - Or, as we’ll see later, use a Load Balancer and don’t use a public IP.
 
