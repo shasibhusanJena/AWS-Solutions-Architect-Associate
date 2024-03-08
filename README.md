@@ -219,18 +219,18 @@ descriiption
     - example **S3 buckets settings being changed regularly by some one**. 
 28. **Amazon EventBridge**
     - EventBridge allows responding to events from various AWS services as well as custom applications. It meets the
-      requirements of decoupled architecture, responding to events, and supporting AWS and custom sources.
+      requirements of decoupled architecture, **responding to events**, and supporting AWS and custom sources.
 29. **Amazon AppFlow**
-    - is a fully managed integration service that helps you securely transfer data between software as a service (SaaS)
+    - is a fully managed integration service that helps you securely **transfer data** between **software as a service** (SaaS)
       applications such as Salesforce, SAP, Google Analytics, Facebook Ads, and ServiceNow, and AWS services such as
       Amazon Simple Storage Service (S3) and Amazon Redshift in just a few clicks.
 
 30. **AWS Control Tower**
     - The AWS Control Tower dashboard gives you continuous visibility into your AWS environment. You can view the number
-      of OUs and accounts provisioned
-    - is used by cloud administrators and architects to set up and govern a secure, multi-account
-    - for a large enterprise that wants to set up a multi-account environment in AWS using AWS Control Tower
-
+      of **OUs and accounts provisioned**
+    - is used by cloud administrators and architects to **set up and govern a secure, multi-account**
+    - for a large enterprise that wants to set up a **multi-account environment in AWS** using AWS Control Tower
+****
 31. **Others**.
 
     - **Amazon Polly**: text to audio , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
@@ -238,7 +238,7 @@ descriiption
     - **Amazon Lex**: build conversational bots – chatbots
     - **Amazon Connect**: cloud contact center
     - **Amazon Comprehend** : natural language processing , natural language processing (NLP) service that uses machine
-      learning to find meaning and insights in text.
+      learning to find **meaning and insights in text**.
     - **Amazon Comprehend Medical** - This service is specifically built for natural language processing for medical
       text. It can identify medication names, dosages, symptoms etc. from unstructured clinical text.
     - **Amazon SageMaker** - Fully managed service for developer, /data scientist for Build ML model.
@@ -247,19 +247,21 @@ descriiption
       google Drive and s3.
     - Amazon Personalize - fully managed ML , to build apps with real time personalized recommendation. , also send sms
       and email ,
-    - **Amazon textract** - help to extract text , analyze and data will be given .
-    - **Amazon Rekognition** : face detection, labeling, celebrity recognition , remove pornographic content
-    - **Amazon Transcribe** : audio to text (ex: subtitles) , remove any Personally Identifiable Information (PII) from
+    - **Amazon textract** - **help to extract text** , analyze and data will be given .
+    - **Amazon Rekognition** : **face detection**, labeling, **celebrity recognition** , **remove pornographic content**
+    - **Amazon Transcribe** : **audio to text (ex: subtitles)** , **remove any Personally Identifiable Information** (PII) from
       the call before it's saved.
     - **Amazon GuardDuty** : uses ML to create intelligent Threat discovery to protect your AWS Account,anomaly
       detection, 3rd party data, One click to enable (30 days trial), no need to install software.
     - **Amazon Inspector**
         - Automated Security Assessments and easy Reporting & integration with AWS Security Hub
-        - Sends findings to Amazon Event Bridge.
-        - Continuous scanning of the infrastructure.
+        - **Sends findings to Amazon Event Bridge.**
+        - Continuous **scanning of the infrastructure**.
+        - Automated and continual vulnerability management at scale.
     - **Amazon Macie**
         - Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern
           matching to discover and protect your sensitive data in AWS.
+        - Discover and protect your sensitive data at scale.
         - Macie helps **identify and alert you to sensitive data, ex: as personally identifiable information (PII)**.
     - **Amazon Elastic Transcoder** :
         - allows you to easily convert media files stored in Amazon S3 into multiple formats.
@@ -293,29 +295,26 @@ descriiption
 
     ![img_1.png](img_1.png)
 
-    ## Security, Identity, & Compliance
-36. Notes :
-    - AWS Artifact - On-demand access to AWS compliance reports
-    - AWS Audit Manager  - Audit your AWS usage to simplify how you assess risk and compliance
-    - Amazon Cloud Directory - Store hundreds of millions of application-specific objects.
-    - Amazon Cognito - Identity management for your apps.
-    - Amazon Detective - Investigate potential security issues.
-    - AWS Directory Service - Set up and run Microsoft Active Directory with AWS services
-    - AWS Firewall Manager - Deploy network security across your VPCs with just a few clicks
-    - AWS GovCloud (US) Move sensitive workloads into the cloud.
-    - AWS Identity and Access Management - Securely manage access to services and resources
-    - AWS IAM Identity Center - Manage single sign-on access to AWS accounts and apps.
-    - AWS Network Firewall - Deploy network security across your Amazon VPCs with just a few clicks
-    - AWS Payment Cryptography - Fully managed payment cryptography service.
-    - AWS Resource Access Manager - Simple, secure service to share AWS resources.
-    - AWS Secrets Manager - Rotate, manage, and retrieve secrets.
-    - Security Documentation - Security documentation by category.
-    - AWS Security Hub - Unified security and compliance center.
-    - Amazon Security Lake - Automatically centralize your security data with a few clicks
-    - AWS Shield - DDoS protection.
-    - AWS WAF - Filter malicious web traffic.
-    - Amazon Inspector - Automated and continual vulnerability management at scale
-    - Amazon Macie - Discover and protect your sensitive data at scale
+36. ###**Security, Identity, & Compliance** :
+    - **AWS Artifact** - **On-demand access to AWS compliance reports**
+    - **AWS Audit Manager**  - Audit your AWS usage to simplify how you **assess risk and compliance**
+    - **Amazon Cloud Directory** - Store hundreds of millions of application-specific objects.
+    - **Amazon Cognito** - Identity management for your apps.
+    - **Amazon Detective** - Investigate potential security issues.
+    - **AWS Directory Service** - Set up and run Microsoft Active Directory with AWS services
+    - **AWS Firewall Manager** - Deploy network security across your VPCs with just a few clicks
+    - **AWS GovCloud** (US) Move sensitive workloads into the cloud.
+    - **AWS Identity and Access Management** - Securely manage access to services and resources
+    - **AWS IAM Identity Center** - Manage single sign-on access to AWS accounts and apps.
+    - **AWS Network Firewall** - Deploy network security across your Amazon VPCs with just a few clicks
+    - **AWS Payment Cryptography** - Fully managed payment cryptography service.
+    - **AWS Resource Access Manager** - Simple, secure service to share AWS resources.
+    - **AWS Secrets Manager** - **Rotate, manage, and retrieve secrets**.
+    - **AWS Security Documentation** - Security documentation by category.
+    - **AWS Security Hub** - **Unified security and compliance center**.
+    - **Amazon Security Lake** - Automatically centralize your security data with a few clicks
+    - **AWS Shield** - **DDoS protection**.
+    - **AWS WAF** - Filter **malicious web traffic**.
 
 37. **Notes**
     - S3 Transfer Acceleration helps speed up long-distance object transfers between S3 buckets, while Global
