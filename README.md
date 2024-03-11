@@ -220,6 +220,7 @@ descriiption
 28. **Amazon EventBridge**
     - EventBridge allows responding to events from various AWS services as well as custom applications. It meets the
       requirements of decoupled architecture, **responding to events**, and supporting AWS and custom sources.
+    - Receives Notification when specific **Amazon S3 events such as Object creation or deletion occur in the S3** Bucket.
 29. **Amazon AppFlow**
     - is a fully managed integration service that helps you securely **transfer data** between **software as a service** (SaaS)
       applications such as Salesforce, SAP, Google Analytics, Facebook Ads, and ServiceNow, and AWS services such as
@@ -317,8 +318,8 @@ descriiption
     - **AWS WAF** - Filter **malicious web traffic**.
 
 37. **Notes**
-    - S3 Transfer Acceleration helps speed up long-distance object transfers between S3 buckets, while Global
-      Accelerator helps manage traffic across multiple AWS regions.
+    - S3 Transfer Acceleration helps speed up **long-distance object transfers between S3 buckets**, while Global
+      Accelerator helps manage **traffic across multiple AWS regions**.
     - Glacier is a storage service, used for archival storage. Snowball is data transfer service, used for transferring
       data from your data center or any other source to AWS.
     - Breaking a large object upload into smaller pieces has a number of advantages. It can improve throughput by
@@ -326,10 +327,20 @@ descriiption
       the upload for the failed parts.
     - You can't move data directly from Snowball into Glacier, you need to go through S3 first, and then use a lifecycle
       policy.
-    - CloudFront uses Edge Locations to cache content while Global Accelerator uses Edge Locations to find an optimal
-      pathway to the nearest regional endpoint. 
+    - **CloudFront uses Edge Locations to cache content while Global Accelerator uses Edge Locations to find an optimal
+      pathway to the nearest regional** endpoint. 
     - S3 batch replication to copy objects across S3 buckets in different Regions using S3 console
     - The Lambda Function must be deployed in your VPC, because RDS Proxy is never publicly accessible.
+    - AWS Backup - Automatically back up your filesystem
+    - AWS DataSync - Automatically move data between on-premises storage and your file systems
+    - AWS Fargate - Serverless compute for containers 
+    - AWS Lambda - Run code without thinking about servers. Pay only for the compute time you consume. 
+    - Amazon SageMaker - Machine learning for every developer and data scientist
+    - AWS Transfer - Seamlessly transfer files over SFTP, FTPS, and FTP protocols into your filesystem
+    - Amazon Elastic- File System (Amazon EFS) provides a simple, scalable, fully managed elastic NFS file system for use with AWS Cloud services and on-premises resources. It is built to scale on demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files, eliminating the need to provision and manage capacity to accommodate growth.
+    - AWS DataSync - Automate data transfers between on-premises storage and S3 by using AWS DataSync.
+
+
 
 ### Links for more info
 
