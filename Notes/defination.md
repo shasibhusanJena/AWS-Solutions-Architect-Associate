@@ -31,3 +31,16 @@
       - Amazon S3 on Outposts delivers object storage to your on-premises AWS Outposts environment. 
       - Using the S3 APIs and features available in AWS Regions today, S3 on Outposts makes it easy to store and retrieve data on your Outpost, as well as secure the data, control access, tag, and report on it. 
       - ideal for workloads with local data residency requirements.
+    
+2. **Encryption**
+   - SSE-S3:
+     - AWS S3 manages its own keys
+     - Keys are rotated every month
+     - Request Header - x-amz-server-side-encryption(AES256)
+   - SSE-KMS:
+     - Customer manages keys in KMS
+     - Request Headers - x-amz-server-side-encryption(aws:kms) and x-amz-server-side-encryption-aws-kms-key-id(ARN for key in KMS)
+   - SSE-C:
+     - Customer sends the key with every request
+     - S3 performs encryption and decryption without storing the key
+     - HTTPS is mandatory
