@@ -206,6 +206,7 @@ descriiption
 26. **CloudWatch**
     - **monitor** everything like (applications, infrastructure, network, and services)and use **alarms, logs,** and events data to take automated actions and reduce mean time to resolution (MTTR).
     - but **not API calls** .
+    - CloudWatch **Logs agent** provides an automated way to send log data to CloudWatch Logs
 
 27. **CloudTrail**
     - it provides governance ,audit and compliance for AWS account.
@@ -316,7 +317,8 @@ descriiption
     - **Amazon Security Lake** - Automatically centralize your security data with a few clicks
     - **AWS Shield** - **DDoS protection**.
     - **AWS WAF** - Filter **malicious web traffic**.
-
+    - **Amazon Athena** is an interactive query service that makes it easy to analyze data in **Amazon S3 using standard SQL** expressions. Athena is serverless, so there is no infrastructure to manage.
+    - **Amazon Redshift** also includes Redshift Spectrum, allowing you to directly run SQL queries against exabytes of unstructured data in Amazon S3. No loading or transformation is required, and you can use open data formats, including Avro, CSV, Grok, ORC, Parquet, RCFile, RegexSerDe, SequenceFile, TextFile, and TSV. Redshift Spectrum automatically scales query compute capacity
 37. **Notes**
     - S3 Transfer Acceleration helps speed up **long-distance object transfers between S3 buckets**, while Global
       Accelerator helps manage **traffic across multiple AWS regions**.

@@ -61,4 +61,8 @@
      - Use multipart uploads for faster file uploads into the destination S3 bucket or use S3 Transfer acceleration.
      - When you apply a retention period to an object version explicitly, you specify a Retain Until Date for the object version and Different versions of a single object can have different retention modes and periods
      - ECS with EC2 launch type is charged based on EC2 instances and EBS volumes used. ECS with Fargate launch type is charged based on vCPU and memory resources that the containerized application requests
-     - 
+     - A **security group** acts as a virtual firewall for your instance to control inbound and outbound traffic.
+     - Using an Elastic Load Balancer is an ideal solution for adding **elasticity** to your application. 
+     - Karpenter to automatically adjusts the number of nodes in the EKS cluster when pods fail or are rescheduled onto other nodes
+     - AWS Transit Gateway and add VPC attachments to connect all departments. Set up AWS Network Firewall to secure the application traffic travelling between the VPCs
+     - RAID 0 configuration enables you to improve your storage volumes’ performance by distributing the I/O across the volumes in a stripe. Therefore, if you add a storage volume, you get the straight addition of throughput and IOPS.
