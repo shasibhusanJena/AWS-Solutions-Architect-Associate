@@ -1,6 +1,15 @@
 
 1. **Amazon S3 Storage classes**
-    - The S3 storage classes include **S3 Intelligent-Tiering** for automatic cost savings for data with unknown or changing access patterns, **S3 Standard** for frequently accessed data, **S3 Express One Zone** for your most frequently accessed data, **S3 Standard-Infrequent Access (S3 Standard-IA)** and **S3 One Zone-Infrequent Access (S3 One Zone-IA)** for less frequently accessed data, **S3 Glacier Instant Retrieval** for archive data that needs immediate access, **S3 Glacier Flexible Retrieval (formerly S3 Glacier)** for rarely accessed long-term data that does not require immediate access, and **Amazon S3 Glacier Deep Archive (S3 Glacier Deep Archive)** for long-term archive and digital preservation with retrieval in hours at the lowest cost storage in the cloud.
+    - The S3 storage classes include 
+    - **S3 Intelligent-Tiering** for automatic cost savings for data with unknown or changing access patterns, 
+    - **S3 Standard** for frequently accessed data, 
+    - **S3 Express One Zone** for your most frequently accessed data, 
+    - **S3 Standard-Infrequent Access (S3 Standard-IA)** and **S3 One Zone-Infrequent Access (S3 One Zone-IA)** for less frequently accessed data, 
+    - **S3 Glacier Instant Retrieval** for archive data that needs immediate access, 
+    - **S3 Glacier Flexible Retrieval (formerly S3 Glacier)** for rarely accessed long-term data that does not require immediate access, 
+    - **Amazon S3 Glacier Deep Archive (S3 Glacier Deep Archive)** for long-term archive and digital preservation with retrieval in hours at the lowest cost storage in the cloud.
+   
+    - 
     - **Amazon S3 Standard (S3 Standard)**:-
       - Standard offers high durability, availability, and performance object storage for frequently accessed data.
       - appropriate for a wide variety of use cases, including cloud applications, dynamic websites, content distribution, mobile and gaming applications, and big data analytics. 
@@ -44,3 +53,12 @@
      - Customer sends the key with every request
      - S3 performs encryption and decryption without storing the key
      - HTTPS is mandatory
+3. **Notes**
+     - Throttling is the process of limiting the number of requests an authorized program can submit to a given operation in a given amount of time. API gateway can handle this not LoadBalancer.
+     - GuardDuty analyzes tens of billions of events across multiple AWS data sources, such as AWS CloudTrail events, Amazon VPC Flow Logs, and DNS logs.
+     - You can use AWS WAF with your Application Load Balancer to allow or block requests based on the rules in a web access control list (web ACL).
+     - Accidental deletion of data in the bucket can be handled by **Enable versioning on the bucket**  and **Enable MFA** on the bucket.
+     - Use multipart uploads for faster file uploads into the destination S3 bucket or use S3 Transfer acceleration.
+     - When you apply a retention period to an object version explicitly, you specify a Retain Until Date for the object version and Different versions of a single object can have different retention modes and periods
+     - ECS with EC2 launch type is charged based on EC2 instances and EBS volumes used. ECS with Fargate launch type is charged based on vCPU and memory resources that the containerized application requests
+     - 
