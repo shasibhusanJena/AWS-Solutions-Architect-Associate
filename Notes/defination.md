@@ -55,8 +55,7 @@
      - HTTPS is mandatory
 3. **Notes**
      - Throttling is the process of limiting the number of requests an authorized program can submit to a given operation in a given amount of time. API gateway can handle this not LoadBalancer.
-     - GuardDuty analyzes tens of billions of events across multiple AWS data sources, such as AWS CloudTrail events, Amazon VPC Flow Logs, and DNS logs.
-     - You can use AWS WAF with your Application Load Balancer to allow or block requests based on the rules in a web access control list (web ACL).
+     - You can use **AWS WAF with your Application Load Balancer to allow or block requests based on the rules** in a web access control list (web ACL).Configure the listener over HTTP and HTTPS to forward traffic to the application target group.
      - Accidental deletion of data in the bucket can be handled by **Enable versioning on the bucket**  and **Enable MFA** on the bucket.
      - Use multipart uploads for faster file uploads into the destination S3 bucket or use S3 Transfer acceleration.
      - When you apply a retention period to an object version explicitly, you specify a Retain Until Date for the object version and Different versions of a single object can have different retention modes and periods
@@ -66,3 +65,5 @@
      - Karpenter to automatically adjusts the number of nodes in the EKS cluster when pods fail or are rescheduled onto other nodes
      - AWS Transit Gateway and add VPC attachments to connect all departments. Set up AWS Network Firewall to secure the application traffic travelling between the VPCs
      - RAID 0 configuration enables you to improve your storage volumes’ performance by distributing the I/O across the volumes in a stripe. Therefore, if you add a storage volume, you get the straight addition of throughput and IOPS.
+     - Implement Lake Formation tag-based access control to enable authorization and cross-account permissions for the needed datasets to engineering team accounts. 
+       - Integrate with AWS Security Hub to enhance security monitoring and compliance oversight.
