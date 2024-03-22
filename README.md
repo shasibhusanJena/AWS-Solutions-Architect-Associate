@@ -42,24 +42,25 @@ descriiption
         - Amazon ElastiCache is a popular choice for real-time use cases like Caching, Session Stores, Gaming,
           Geospatial Services, Real-Time Analytics, and Queuing.
     - **Amazon Quantum Ledger Database (Amazon QLDB)** - is a fully managed ledger database that provides a transparent, immutable, and **cryptographically verifiable transaction log** owned by a central trusted authority. 
-    - Amazon QLDB can be used to track every application data change and maintains a complete and verifiable history of changes over time.
+    - Amazon QLDB can be used to **track every application data change and maintains a complete and verifiable history** of changes over time.
 ****
 2. **AWS Transit Gateway**
     - Create a route table for the transit gateway and add a route that allows traffic between VPC A and VPC B's CIDR
       blocks. Associate this route table with VPC A and VPC B attachments.
     - if we have 5 VPC then we can use **transit gateway** to interconnect the VPC
 3. **AWS Global Accelerator**
-    - You are designing the architecture for a global SaaS application that will be deployed in the AWS cloud across
+    - You are designing the architecture for a global **SaaS application** that will be deployed in the AWS cloud across
       multiple regions. The application needs to provide fast, reliable access for users across the globe. You want to
-      improve performance and availability for users by routing traffic through the AWS global network.
+      improve performance and availability for users **by routing traffic through the AWS global network**.
 4. **Cross-region replication**
     - copies objects between S3 buckets in different regions
 5. 
     - **CloudFront**
-    - used for caching content at the edge
+    -  Enable accelerated, reliable and secure content delivery for Amazon S3 buckets, Application Load Balancers, Amazon API Gateway APIs, and more in 5 minutes or less. used for caching content at the edge
 
 6. **Amazon Direct Connect**:
 - Move GB/s of data to the cloud, over a private secure network - from its on-premises data center to AWS
+
 7. **Amazon Snowball**
     - migrate 50 **Terabytes** of data from on-premises data centers to Amazon S3.
     - AWS Snowball is available in two device types.
@@ -78,7 +79,7 @@ descriiption
 9. **AWS Snowcone**
     - is a portable, rugged, and secure device for edge computing and data transfer. You can use a Snowcone device to
       collect, process, and move data to the AWS Cloud, either offline by shipping the device to AWS, or online by using
-      AWS DataSync.
+      **AWS DataSync**.
 
 10. **Amazon DataSync**
      - Move large amount of data between **on-premises and S3**, EFS, FSx for Windows and **aws to aws**.
@@ -95,7 +96,7 @@ descriiption
       IPsec VPN tunnel. It supports overlapping IP address ranges and meets the requirements stated in the scenario.
 13. **NAT gateway**
     - Instances in the private subnet can access the internet by using a NAT gateway.
-    - The NAT gateway will perform source NAT and translate the private IP to a public IP when traffic goes to the
+    - The NAT gateway will perform source **NAT and translate the private IP** to a public IP when traffic goes to the
       internet
 
 14. **Internet gateway**
@@ -110,8 +111,8 @@ descriiption
       within the same network. A VPC peering connection needs to be created between the VPCs and routes configured to
       route traffic between them. This allows resources in VPC A to communicate with resources in VPC B.
 16. **SQS**
-    - The messages need to be processed asynchronously and out of order. Your application needs to ensure no messages
-      are lost.
+    - The messages need to be processed asynchronously and out of order. Your application needs to **ensure no messages
+      are lost.**
     - Amazon SQS provides a message queue service that enables asynchronous message processing. It supports out-of-order
       processing and ensures no messages are lost.
     - by default a msg visibility time 30 seconds, once it pooled by consumer.
@@ -238,11 +239,10 @@ descriiption
     - **Amazon Translate**: provides real-time, high-quality, and affordable language translation
     - **Amazon Lex**: build conversational bots – chatbots
     - **Amazon Connect**: cloud contact center
-    - **Amazon Comprehend** : natural language processing , natural language processing (NLP) service that uses machine
-      learning to find **meaning and insights in text**.
+    - **Amazon Comprehend** : natural language processing (NLP) to find **meaning and insights in text**.
     - **Amazon Comprehend Medical** - This service is specifically built for natural language processing for medical
       text. It can identify medication names, dosages, symptoms etc. from unstructured clinical text.
-    - **Amazon SageMaker** - Fully managed service for developer, /data scientist for Build ML model.
+    - **Amazon SageMaker** - Fully managed service for developer, data scientist for Build ML model.
     - **Amazon Forecast** - use ML to deliver accurate forcast.
     - **Amazon Kendra** - fully managed document search service, extract answer from document , it read files ,PDF from
       google Drive and s3.
@@ -343,15 +343,12 @@ descriiption
       pathway to the nearest regional** endpoint. 
     - S3 batch replication to copy objects across S3 buckets in different Regions using S3 console
     - The Lambda Function must be deployed in your VPC, because RDS Proxy is never publicly accessible.
-    - AWS Backup - Automatically back up your filesystem
-    - AWS DataSync - Automatically move data between on-premises storage and your file systems
-    - AWS Lambda - Run code without thinking about servers. Pay only for the compute time you consume. 
-    - Amazon SageMaker - Machine learning for every developer and data scientist
+    - AWS Backup - Automatically back up your filesystem.
+    - AWS Lambda - Run code without thinking about servers. Pay only for the compute time you consume.
     - AWS Transfer - Seamlessly transfer files over SFTP, FTPS, and FTP protocols into your filesystem
     - Amazon Elastic- File System (Amazon EFS) provides a simple, scalable, fully managed elastic NFS file system for use with AWS Cloud services and on-premises resources. It is built to scale on demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files, eliminating the need to provision and manage capacity to accommodate growth.
-    - AWS DataSync - Automate data transfers between on-premises storage and S3 by using AWS DataSync.
-
-
+    - AWS DataSync - Automate data transfers between on-premises storage and your file system ex: S3.
+    
 
 ### Links for more info
 
