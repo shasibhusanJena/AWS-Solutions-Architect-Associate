@@ -73,7 +73,7 @@
   }
   
 
-- To determine whether a log file was modified, deleted, or unchanged after CloudTrail delivered it, you can use CloudTrail log file integrity validation. 
+- To determine whether a log file was modified, deleted, or unchanged after CloudTrail delivered it, you can use **CloudTrail log file integrity validation**. 
 - This feature is built using industry-standard algorithms: SHA-256 for hashing and SHA-256 with RSA for digital signing.
   - ![img.png](img.png)
 
@@ -111,5 +111,12 @@
           ]
       }
 
-- AAAA ? Load Balancer ?
+- AAAA ? Load Balancer ? Amazon API Gateway APIs ? cloud formation ? EMR cluster ?
 **AWS Glue Job bookMarks**  - help AWS Glue maintain state information and prevent the reprocessing of old data.
+
+
+1. How to handle elastic load balancer in the system ?
+   - option 1. if the first load balancer fails , we can have a secondary load balancer as backup. 
+   - option 2. we can have load balancer in multi AZ for failure proof. 
+   - option 3. we can temporarily modify the API gateway to route the traffic directly to the indivisual server or machine.
+   - in short ,amazon load balancer are failure proof, only if they are setup on multiple availability zone
