@@ -1,7 +1,7 @@
   
 - i am policy to ensure encrypted EBS volume can be created is :
 
-	
+
     {
         "Sid" : "Name001",
         "Effect" : "Allow",
@@ -28,6 +28,7 @@
 - if customer have AWS CloudTrail enabled for logging purposes , then we can **Query with AWS CloudTrail Lake to find specific errors** in CloudTrail logs.
 
 - "a serverless architecture that allows AWS Lambda to access an Amazon DynamoDB table named tutorialsdojo in the US East (N. Virginia) region. The IAM policy attached to a Lambda function allows it to put and delete items in the table. The policy must be updated to only allow two operations in the tutorialsdojo table and prevent other DynamoDB tables from being modified."
+
 
 
     {
@@ -79,6 +80,7 @@
     - "The DevOps Team at Agila Corporation aims to enforce an IAM policy that grants them exclusive permissions to start, stop, and terminate EC2 instances in the us-west-1 region. To maintain strict security measures, any requests originating outside the company’s network range (192.158.1.0/24) should be denied."
 
 
+
       {
           "Version": "2012-10-17",
           "Statement": [
@@ -89,7 +91,6 @@
                       "ec2:StartInstances",
                       "ec2:StopInstances"
                   ],
-  
                   "Resource": "*",
                   "Condition": {
                       "StringEquals": {
@@ -110,8 +111,5 @@
           ]
       }
 
-
 - AAAA ? Load Balancer ?
 **AWS Glue Job bookMarks**  - help AWS Glue maintain state information and prevent the reprocessing of old data.
-
-- 
