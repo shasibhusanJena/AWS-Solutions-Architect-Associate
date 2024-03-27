@@ -120,3 +120,59 @@
    - option 2. we can have load balancer in multi AZ for failure proof. 
    - option 3. we can temporarily modify the API gateway to route the traffic directly to the indivisual server or machine.
    - in short ,amazon load balancer are failure proof, only if they are setup on multiple availability zone
+
+2. A company has a large on-premises data center and wants to establish a dedicated network connection between their data center and the AWS Cloud. They require a **high-bandwidth, low-latency** connection for transferring large amounts of data securely. Which AWS service should they use? 
+     - A. AWS Site-to-Site VPN 
+     - B. **AWS Direct Connect** 
+     - C. AWS VPN CloudHub 
+     - D. AWS Transit Gateway
+     - **ANS**:- A. Incorrect. AWS Site-to-Site VPN would allow establishing an encrypted VPN connection over the public internet between the on-premises data center and AWS. However, it does not provide a dedicated high-bandwidth, low-latency connection. 
+     - B. Correct. AWS Direct Connect provides a dedicated private network connection between the on-premises data center and AWS. It offers high bandwidth capacity and low latency for transferring large volumes of data. 
+     - C. Incorrect. AWS VPN CloudHub operates on top of AWS Site-to-Site VPN connections. It allows establishing a single VPN connection to AWS and then access multiple VPCs. It does not provide a dedicated high-bandwidth, low-latency connection. 
+     - D. Incorrect. AWS Transit Gateway allows interconnecting multiple VPCs and on-premises networks using a central hub. However, it does not establish a dedicated network connection between the on-premises data center and AWS. 
+     - In summary, answer **choice B** is the correct choice because AWS Direct Connect meets the requirements stated in the question of a high-bandwidth, low-latency dedicated network connection between the on-premises data center and AWS.
+3. 
+   - A Throughput Optimized HDD EBS volume is an HDD-backed storage device that is limited to 500 IOPS for each volume.
+   - A Provisioned IOPS SSD EBS volume provides up to 64,000 IOPS for each volume.
+   - A General Purpose SSD EBS volume is limited to 16,000 IOPS for each volume.
+   - A Cold HDD volume provides low-cost magnetic storage that defines performance in terms of throughput rather than IOPS. Cold HDD volumes are a good fit for large, sequential cold-data workloads.
+4. Some more notes
+    - Bastion host 
+    - signed URL 
+    - IP whitelist 
+    - signed cookies 
+    - origin access identity (OAI)
+    - disaster recovery (DR) 
+    - Backup and restore DR strategies typically have the lowest cost but highest recovery time. A solution that manually rebuilds the hosting infrastructure on AWS could take hours.
+    - This is a pilot light DR strategy. This solution recreates an existing application hosting environment in an AWS Region. This solution turns off most (or all) resources and uses the resources only during tests or when DR failover is necessary. RPO and RTO are usually 10s of minutes.
+    - This is a warm standby DR strategy. This solution recreates an existing application hosting environment in an AWS Region. This solution serves a portion of live traffic. With this DR strategy, RPO and RTO are usually a few minutes. However, costs are higher because this solutions runs resources continuously.
+    - This is a backup and restore DR strategy. Backup and restore DR strategies typically have the lowest cost but highest recovery time. A solution that manually rebuilds the hosting infrastructure on premises and downloads the data that a company has backed up could take hours or days
+5. Amazon Cognito provides authentication, authorization, and user management for your web and mobile apps. Users can sign in directly with a user name and password, or through a trusted third party.
+6. Retrieve instance metadata :- http://169.254.169.254/latest/meta-data/
+7. A customer gateway is required for the VPN connection to be established. A customer gateway device is set up and configured in the customer's data center.
+   1. API Gateway is a fully managed service for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the front door for applications to use to access data, business logic, or functionality from backend services. However, API Gateway is not necessary for the implementation of a VPN connection.
+   2. A virtual private gateway is attached to a VPC to create a site-to-site VPN connection on AWS. You can accept private encrypted network traffic from an on-premises data center into your VPC without the need to traverse the open public internet.
+   3. A NAT gateway provides a way for private Amazon EC2 instances to send requests to the internet. A NAT gateway does not give you the ability to create an encrypted site-to-site VPN connection.
+8. Note
+   - Baseline I/O performance for General Purpose SSD storage is 3 IOPS for each GiB, with a minimum of 100 IOPS. For 50 GiB of storage, the baseline performance would be 150 IOPS. 
+   - Baseline I/O performance for General Purpose SSD storage is 3 IOPS for each GiB. For 334 GiB of storage, the baseline performance would be 1,002 IOPS. Additionally, General Purpose SSD storage is more cost-effective than Provisioned IOPS storage. 
+   - 50 GiB of Provisioned IOPS storage with 1,000 IOPS would be more expensive than 334 GiB of General Purpose SSD storage.
+
+9. Note
+   - https://docs.aws.amazon.com/elasticloadbalancing/latest/application/sticky-sessions.html
+     - If an EC2 instance were removed from the target group during a scale-in process, the EC2 instance would fail (or would be unhealthy if it were checked). An Application Load Balancer would stop routing requests to that target and would choose a new healthy target.
+   - https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#deregistration-delay
+     - Elastic Load Balancing waits 300 seconds before the completion of the deregistration process, which can help in-flight requests to the target become complete. To change the amount of time that Elastic Load Balancing waits, update the deregistration delay value.
+   - https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html
+     - Amazon EC2 Auto Scaling cooldown periods help you prevent Auto Scaling groups from launching or terminating additional instances before the effects of previous activities are apparent.
+10. note
+    - A Throughput Optimized HDD EBS volume is an HDD-backed storage device that is limited to 500 IOPS for each volume. 
+    - A Provisioned IOPS SSD EBS volume provides up to 64,000 IOPS for each volume. 
+    - A General Purpose SSD EBS volume is limited to 16,000 IOPS for each volume. 
+    - A Cold HDD volume provides low-cost magnetic storage that defines performance in terms of throughput rather than IOPS. Cold HDD volumes are a good fit for large, sequential cold-data workloads.
+11. note
+    - An internet gateway is attached to a VPC to allow traffic from the internet to flow into or out of the VPC. A VPN connection does not flow through an internet gateway. The internet gateway is designed to allow traffic from the open internet, not an encrypted VPN connection.
+    - A NAT gateway provides a way for private Amazon EC2 instances to send requests to the internet. A NAT gateway does not give you the ability to create an encrypted site-to-site VPN connection.
+    - A customer gateway is required for the VPN connection to be established. A customer gateway device is set up and configured in the customer's data center.
+    - API Gateway is a fully managed service for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the front door for applications to use to access data, business logic, or functionality from backend services. However, API Gateway is not necessary for the implementation of a VPN connection.
+    - A virtual private gateway is attached to a VPC to create a site-to-site VPN connection on AWS. You can accept private encrypted network traffic from an on-premises data center into your VPC without the need to traverse the open public internet.
