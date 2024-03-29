@@ -120,31 +120,32 @@
    - option 3. we can temporarily modify the API gateway to route the traffic directly to the indivisual server or machine.
    - in short ,amazon load balancer are failure proof, only if they are setup on multiple availability zone
 
-2. A company has a large on-premises data center and wants to establish a dedicated network connection between their data center and the AWS Cloud. They require a **high-bandwidth, low-latency** connection for transferring large amounts of data securely. Which AWS service should they use? 
+2. A company has a large on-premises data center and wants to establish a **dedicated network connection** between their data center and the AWS Cloud. They require a **high-bandwidth, low-latency** connection for transferring large amounts of data securely. Which AWS service should they use? 
      - A. AWS Site-to-Site VPN 
      - B. **AWS Direct Connect** 
      - C. AWS VPN CloudHub 
      - D. AWS Transit Gateway
-     - **ANS**:- A. Incorrect. AWS Site-to-Site VPN would allow establishing an encrypted VPN connection over the public internet between the on-premises data center and AWS. However, it does not provide a dedicated high-bandwidth, low-latency connection. 
+     - **ANS**:- A. Incorrect. AWS Site-to-Site VPN would allow establishing an **encrypted VPN connection** over the public internet between the on-premises data center and AWS. However, it does **not provide a dedicated high-bandwidth, low-latency** connection. 
      - B. Correct. AWS Direct Connect provides a dedicated private network connection between the on-premises data center and AWS. It offers high bandwidth capacity and low latency for transferring large volumes of data. 
      - C. Incorrect. AWS VPN CloudHub operates on top of AWS Site-to-Site VPN connections. It allows establishing a single VPN connection to AWS and then access multiple VPCs. It does not provide a dedicated high-bandwidth, low-latency connection. 
-     - D. Incorrect. AWS Transit Gateway allows interconnecting multiple VPCs and on-premises networks using a central hub. However, it does not establish a dedicated network connection between the on-premises data center and AWS. 
+     - D. Incorrect. AWS **Transit Gateway allows interconnecting multiple VPCs** and on-premises networks using a central hub. However, it does not establish a dedicated network connection between the on-premises data center and AWS. 
      - In summary, answer **choice B** is the correct choice because AWS Direct Connect meets the requirements stated in the question of a high-bandwidth, low-latency dedicated network connection between the on-premises data center and AWS.
-3. Some more notes
-     - disaster recovery (DR) 
-     - Backup and restore DR strategies typically have the lowest cost but highest recovery time. A solution that manually rebuilds the hosting infrastructure on AWS could take hours.
-     - This is a pilot light DR strategy. This solution recreates an existing application hosting environment in an AWS Region. This solution turns off most (or all) resources and uses the resources only during tests or when DR failover is necessary. RPO and RTO are usually 10s of minutes.
-     - This is a warm standby DR strategy. This solution recreates an existing application hosting environment in an AWS Region. This solution serves a portion of live traffic. With this DR strategy, RPO and RTO are usually a few minutes. However, costs are higher because this solutions runs resources continuously.
+3. **Disaster recovery (DR)** 
+     - Resiliency can be defined in terms of metrics called 
+       - **RTO** (Recovery Time Objective)
+       - **RPO** (Recovery Point Objective)
+     - **Pilot light DR strategy**. This solution recreates an existing application hosting environment in an AWS Region. This solution turns off most (or all) resources and uses the resources only during tests or when DR failover is necessary. **RPO and RTO are usually 10s of minutes**.
+     - **Warm standby DR strategy**. This solution recreates an existing application hosting environment in an AWS Region. This solution serves a portion of live traffic. With this DR strategy, **RPO and RTO are usually a few minutes**. However, **costs are higher** because this solutions **runs resources continuously**.
      - This is a backup and restore DR strategy. Backup and restore DR strategies typically have the lowest cost but highest recovery time. A solution that manually rebuilds the hosting infrastructure on premises and downloads the data that a company has backed up could take hours or days
 4. Amazon Cognito provides authentication, authorization, and user management for your web and mobile apps. Users can sign in directly with a user name and password, or through a trusted third party.
 
 5. Retrieve instance metadata :- http://169.254.169.254/latest/meta-data/
 
 6. Note
-   - A customer gateway is required for the VPN connection to be established. A customer gateway device is set up and configured in the customer's data center. 
-   - API Gateway is a fully managed service for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the front door for applications to use to access data, business logic, or functionality from backend services. However, API Gateway is not necessary for the implementation of a VPN connection. 
+   - **A customer gateway** is required for the VPN connection to be established. A customer gateway device is set up and configured in the customer's data center. 
+   - **API Gateway** is a fully managed service for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the front door for applications to use to access data, business logic, or functionality from backend services. However, API Gateway is not necessary for the implementation of a VPN connection. 
    - A virtual private gateway is attached to a VPC to create a site-to-site VPN connection on AWS. You can accept private encrypted network traffic from an on-premises data center into your VPC without the need to traverse the open public internet. 
-   - A NAT gateway provides a way for private Amazon EC2 instances to send requests to the internet. A NAT gateway does not give you the ability to create an encrypted site-to-site VPN connection.
+   - A **NAT gateway provides a way for private Amazon EC2 instances to send requests to the internet.** A NAT gateway **does not give you the ability to create an encrypted site-to-site VPN connection.**
 7. Note
    - Baseline I/O performance for General Purpose SSD storage is 3 IOPS for each GiB, with a minimum of 100 IOPS. For 50 GiB of storage, the baseline performance would be 150 IOPS. 
    - Baseline I/O performance for General Purpose SSD storage is 3 IOPS for each GiB. For 334 GiB of storage, the baseline performance would be 1,002 IOPS. Additionally, General Purpose SSD storage is more cost-effective than Provisioned IOPS storage. 
@@ -159,17 +160,12 @@
      - Amazon EC2 Auto Scaling cooldown periods help you prevent Auto Scaling groups from launching or terminating additional instances before the effects of previous activities are apparent.
 
 9. note
-   - A Throughput Optimized HDD EBS volume is an HDD-backed storage device that is limited to 500 IOPS for each volume. 
-   - A Provisioned IOPS SSD EBS volume provides up to 64,000 IOPS for each volume. 
-   - A General Purpose SSD EBS volume is limited to 16,000 IOPS for each volume. 
-   - A Cold HDD volume provides low-cost magnetic storage that defines performance in terms of throughput rather than IOPS. Cold HDD volumes are a good fit for large, sequential cold-data workloads.
+   - A **General Purpose SSD**  EBS volume is limited to **16,000** IOPS for each volume.
+   - A **Provisioned SSD**  EBS volume provides up to **64,000** IOPS for each volume. offer storage with consistent and low-latency performance, and are designed for I/O intensive applications such as large relational or NoSQL databases.
+   - A **Throughput Optimized HDD** EBS volume is an HDD-backed storage ,limited to **500** IOPS for each volume.
+   - A **Cold HDD Magnetic volumes** provide the lowest cost per gigabyte of all EBS volume types and are ideal for workloads where data is accessed infrequently, and applications where the lowest storage cost is important. Cold HDD volumes are a good fit for **large, sequential cold-data** workloads.
+   
 10. note
-    - An internet gateway is attached to a VPC to allow traffic from the internet to flow into or out of the VPC. A VPN connection does not flow through an internet gateway. The internet gateway is designed to allow traffic from the open internet, not an encrypted VPN connection.
-    - A NAT gateway provides a way for private Amazon EC2 instances to send requests to the internet. A NAT gateway does not give you the ability to create an encrypted site-to-site VPN connection.
-    - A customer gateway is required for the VPN connection to be established. A customer gateway device is set up and configured in the customer's data center.
-    - API Gateway is a fully managed service for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the front door for applications to use to access data, business logic, or functionality from backend services. However, API Gateway is not necessary for the implementation of a VPN connection.
-    - A virtual private gateway is attached to a VPC to create a site-to-site VPN connection on AWS. You can accept private encrypted network traffic from an on-premises data center into your VPC without the need to traverse the open public internet.
-11. note
 
     - A company has a web application hosted on Amazon EC2 instances in a private subnet within an Amazon Virtual Private Cloud (Amazon VPC). The instances in the private subnet cannot be accessed directly from the internet for security reasons. To manage and maintain these instances, the company needs to implement a secure solution. 
     - Which of the following approaches would be the most appropriate to address this requirement?
@@ -184,28 +180,25 @@
     - B. Incorrect. Configuring a VPN does allow direct access to the instances, but this exposes them to the internet. The goal is to keep them private. 
     - C. Incorrect. Enabling public IPs and configuring security groups exposes the instances directly to the internet, which compromises security. 
     - D. Incorrect. An AWS Lambda function invoked from the internet could allow access to the private instances, but it is more complex and less secure than using a bastion host.
-12. note
+11. note
     - Set up an IAM policy to ensure that only encrypted EBS volumes can be created. Create an AWS Config rule that tracks unencrypted EBS volumes and use an AWS Systems Manager Automation document for remediation.
-13. note
+12. note
     - want to track and log every request access to their S3 buckets including the requester, bucket name, request time, request action, referrer, turnaround time, and error code information. 
       - Enable server access logging for all required Amazon S3 buckets.
-14. A multinational corporation is expanding its operations and needs to efficiently monitor and analyze IAM-related errors, specifically **Access Denied and Unauthorized errors** in their AWS accounts. The **company has AWS CloudTrail enabled for logging** purposes.
+13. A multinational corporation is expanding its operations and needs to efficiently monitor and analyze IAM-related errors, specifically **Access Denied and Unauthorized errors** in their AWS accounts. The **company has AWS CloudTrail enabled for logging** purposes.
 
     - ANS: Query with **AWS CloudTrail Lake** to find specific errors in CloudTrail logs.
-15. note : Migrate the RabbitMQ queue to Amazon MQ to a cluster broker deployment setup. Launch a Multi-AZ Auto Scaling group for the Amazon EC2 instances that host the consumer application. Migrate the existing database to Amazon RDS for PostgreSQL in a Multi-AZ Deployment configuration.
+14. note : Migrate the RabbitMQ queue to Amazon MQ to a cluster broker deployment setup. Launch a Multi-AZ Auto Scaling group for the Amazon EC2 instances that host the consumer application. Migrate the existing database to Amazon RDS for PostgreSQL in a Multi-AZ Deployment configuration.
 
-16. cloud formation
-17. What are the different type of EMR cluster ?
+15. cloud formation
+16. What are the different type of EMR cluster ?
     1. there are two cluster type one is persistent and transient cluster.
     2. persistent type remain alive all the time even if job is completed. 
        1. these job are preferred when continues jobs to run on the data.
        2. is particularly suited for workloads that run for extended periods or indefinitely, providing highly available and durable storage.
 
-18. **Access control lists(ACL)** are used for controlling permissions to a computer system or computer network. They are used to filter traffic in and out of a specific device. Those devices can be network devices that act as network gateways or endpoint devices that users access directly.
-19. **A storage optimized instance** is designed for workloads that require high, sequential read and write access to very large data sets on local storage. They are optimized to deliver tens of thousands of low-latency, random I/O operations per second (IOPS) to applications.
-20. note
-    - **Provisioned IOPS** volumes offer storage with consistent and low-latency performance, and are designed for I/O intensive applications such as large relational or NoSQL databases.
-    - **Magnetic volumes** provide the lowest cost per gigabyte of all EBS volume types and are ideal for workloads where data is accessed infrequently, and applications where the lowest storage cost is important.
-21. note
-    - AWS Storage Gateway connects an on-premises software appliance with cloud-based storage to provide seamless integration with data security features between your on-premises IT environment and the AWS storage infrastructure. 
-    - **Elastic Fabric Adapter (EFA)** is a network device that you can attach to your Amazon EC2 instance to accelerate High Performance Computing (HPC) and machine learning applications. EFA enables you to achieve the application performance of an on-premises HPC cluster with the scalability, flexibility, and elasticity provided by the AWS Cloud.
+17. **Access control lists(ACL)** are used for controlling permissions to a computer system or computer network. They are used to filter traffic in and out of a specific device. Those devices can be network devices that act as network gateways or endpoint devices that users access directly.
+18. **A storage optimized instance** is designed for workloads that require high, sequential read and write access to very large data sets on local storage. They are optimized to deliver tens of thousands of low-latency, random I/O operations per second (IOPS) to applications.
+19. note
+    - **AWS Storage Gateway** connects an on-premises software appliance with cloud-based storage to provide seamless integration with data security features between your on-premises IT environment and the AWS storage infrastructure. 
+    - **Elastic Fabric Adapter (EFA)** is a network device that you can attach to your **Amazon EC2** instance to **accelerate High Performance Computing (HPC) and machine learning applications.** EFA enables you to achieve the application performance of an **on-premises HPC cluster with the scalability, flexibility, and elasticity** provided by the AWS Cloud.
