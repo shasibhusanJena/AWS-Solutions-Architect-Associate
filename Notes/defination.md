@@ -64,6 +64,19 @@
      - Using an Elastic Load Balancer is an ideal solution for adding **elasticity** to your application. 
      - **Karpenter** to automatically adjusts the number of nodes in the EKS cluster when pods fail or are rescheduled onto other nodes
      - AWS Transit Gateway and add VPC attachments to connect all departments. Set up AWS Network Firewall to secure the application traffic travelling between the VPCs
-     - RAID 0 configuration enables you to **improve your storage volumes’ performance by distributing the I/O across the volumes** in a stripe. Therefore, if you add a storage volume, you get the straight addition of throughput and IOPS.
+     - **RAID 0** configuration enables you to **improve your storage volumes’ performance by distributing the I/O across the volumes** in a stripe. Therefore, if you add a storage volume, you get the straight addition of throughput and IOPS.
+     - **RAID 1** configuration is used for data mirroring
      - Implement Lake Formation tag-based access control to enable authorization and cross-account permissions for the needed datasets to engineering team accounts. 
        - Integrate with AWS Security Hub to enhance security monitoring and compliance oversight.
+4. Note
+   - **AWS Application Discovery Service** helps you plan your migration to the AWS cloud by collecting usage and configuration data about your on-premises servers. 
+     - Application Discovery Service is integrated with AWS Migration Hub, which simplifies your migration tracking as it aggregates your migration status information into a single console. You can view the discovered servers, group them into applications, and then track the migration status of each application from the Migration Hub console in your home region.
+   - **AWS Migration Hub (Migration Hub)** provides a single place to discover your existing servers, plan migrations, and track the status of each application migration. The Migration Hub provides visibility into your application portfolio and streamlines planning and tracking.
+   - **AWS Application migration** is the process of moving software applications from one computing environment to another. 
+     - This can include migrating applications from one data center to another, such as from a public to a private cloud, or from a company's on-premises server to a cloud provider's environment.
+5. ![img_1.png](img_1.png)
+
+6. **Amazon Aurora Serverless v2** scales instantly to hundreds of thousands of transactions in a fraction of a second. 
+   1. As it scales, it adjusts capacity in fine-grained increments to provide the right amount of database resources that the application needs. There is no database capacity for you to manage. You pay only for the capacity your application consumes, and you can save up to 90% of your database cost compared to the cost of provisioning capacity for peak load.
+7. note
+   - **Predictive scaling** uses machine learning to predict capacity requirements based on historical data from CloudWatch. The machine learning algorithm consumes the available historical data and calculates capacity that best fits the historical load pattern, and then continuously learns based on new data to make future forecasts more accurate.
