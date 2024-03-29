@@ -219,6 +219,7 @@ descriiption
       troubleshooting purposes.
     - Enable AWS CloudTrail trail logging across all regions and turn on log file validation.
     - example **S3 buckets settings being changed regularly by some one**. 
+      - The CloudTrail Processing Library is a Java library that provides an easy way to process AWS CloudTrail logs. You provide configuration details about your CloudTrail SQS queue and write code to process events. The CloudTrail Processing Library does the rest.
 29. **Amazon EventBridge**
     - EventBridge allows responding to events from various AWS services as well as custom applications. It meets the
       requirements of decoupled architecture, **responding to events**, and supporting AWS and custom sources.
@@ -233,6 +234,7 @@ descriiption
       of **OUs and accounts provisioned**
     - is used by cloud administrators and architects to **set up and govern a secure, multi-account**
     - for a large enterprise that wants to set up a **multi-account environment in AWS** using AWS Control Tower.
+    - is used to simplify the creation of new accounts with preconfigured constraints.
 32. **Others**.
 
     - **Amazon Polly**: text to audio , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
@@ -242,6 +244,7 @@ descriiption
     - **Amazon Comprehend** : natural language processing (NLP) to find **meaning and insights in text**.
     - **Amazon Comprehend Medical** - This service is specifically built for natural language processing for medical
       text. It can identify medication names, dosages, symptoms etc. from unstructured clinical text.
+    - **Amazon App Mesh** it easy to run services by providing consistent visibility and network traffic controls for every service. 
     - **Amazon SageMaker** - Fully managed service for developer, data scientist for Build ML model.
     - **Amazon Forecast** - use ML to deliver accurate forcast.
     - **Amazon Kendra** - fully managed document search service, extract answer from document , it read files ,PDF from
@@ -252,6 +255,8 @@ descriiption
     - **Amazon Rekognition** : **face detection**, labeling, **celebrity recognition** , **remove pornographic content**
     - **Amazon Transcribe** : **audio to text (ex: subtitles)** , **remove any Personally Identifiable Information** (PII) from
       the call before it's saved.
+    - **Amazon Config** : etailed view of the configuration of AWS resources in your AWS account. 
+      - This includes how the resources are related to one another and how they were configured in the past so that you can see how the configurations and relationships change over time.
     - **Amazon GuardDuty** : 
        - is a threat detection service that **continuously monitors your AWS workloads for malicious activity**. 
        - uses ML to create intelligent Threat discovery to protect your AWS Account,anomaly
@@ -275,10 +280,16 @@ descriiption
         - It provides transcoding optimizations like resolution and bitrate adjustment to support playback on different
           devices.
         - Fully managed and secure pay for what you use.
-    - **AWS Trusted Advisor** provides **security recommendations** based on industry best practices, however, it **can’t scan for software vulnerabilities** inside Amazon EC2 instances.
+    - **AWS Trusted Advisor** that provides you with real-time guidance to help you provision your resources following AWS best practices. 
+      - It inspects your AWS environment and makes recommendations for saving money, improving system performance and reliability, or closing security gaps. 
+      - however, it **can’t scan for software vulnerabilities** inside Amazon EC2 instances.
     - **AWS Proton** is a **deployment workflow tool for modern applications**. It can be used to manage Infrastructure as Code (IaC) templates build using tools like CloudFormation or Terraform.
 33. **Amazon Keyspaces (for Apache Cassandra)** is a scalable, highly available, and managed **Apache Cassandra–compatible database** service. With Amazon Keyspaces, you can run your Cassandra workloads on AWS using the same Cassandra application code
-34. **Other Definations**
+34. **AWS Compute Optimizer** recommends optimal AWS resources for your workloads to reduce costs and improve performance by using machine learning to analyze historical utilization metrics. 
+    1. Overprovisioning resources can lead to unnecessary infrastructure costs, and underprovisioning resources can lead to poor application performance.
+
+-AWS Lambda functions
+35. **Other Definations**
     - EBS volumes: Network storage for one EC2 instance at a time
     - Instance Storage: Physical storage for your EC2 instance (high IOPS)
     - EFS: Network File System for Linux instances, POSIX filesystem
@@ -287,7 +298,7 @@ descriiption
     - FSx for NetApp ONTAP: High OS Compatibility
     - FSx for OpenZFS: Managed ZFS file system
 
-35. **Classic Ports to know**
+36. **Classic Ports to know**
     - 22 = SSH (Secure Shell) - log into a Linux instance
     - 21 = FTP (File Transfer Protocol) – upload files into a file share
     - 22 = SFTP (Secure File Transfer Protocol) – upload files using SSH
@@ -295,7 +306,7 @@ descriiption
     - 443 = HTTPS – access secured websites
     - 3389 = RDP (Remote Desktop Protocol) – log into a Windows instance
 
-36. **Overall, try to avoid using Elastic IP**:
+37. **Overall, try to avoid using Elastic IP**:
     - They often reflect poor architectural decisions, Instead, use a random public IP and register a DNS name to it
     - Or, as we’ll see later, use a Load Balancer and don’t use a public IP.
 
@@ -315,7 +326,7 @@ descriiption
     - **AWS GovCloud** (US) Move sensitive workloads into the cloud.
     - **AWS Identity and Access Management** - Securely manage access to services and resources
     - **AWS IAM Identity Center** - Manage single sign-on access to AWS accounts and apps.
-    - **AWS Network Firewall** - Deploy network security across your Amazon VPCs with just a few clicks
+    - **AWS Network Firewall** - Deploy network security across your Amazon VPCs to protect VPC against potential threats.
     - **AWS Payment Cryptography** - Fully managed payment cryptography service.
     - **AWS Resource Access Manager** - Simple, secure service to share AWS resources.
     - **AWS Secrets Manager** - **Rotate, manage, and retrieve secrets**.
