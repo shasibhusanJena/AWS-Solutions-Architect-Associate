@@ -8,8 +8,6 @@
     - **S3 Glacier Instant Retrieval** for archive data that needs immediate access, 
     - **S3 Glacier Flexible Retrieval (formerly S3 Glacier)** for rarely accessed long-term data that does not require immediate access, 
     - **Amazon S3 Glacier Deep Archive (S3 Glacier Deep Archive)** for long-term archive and digital preservation with retrieval in hours at the lowest cost storage in the cloud.
-   
-    - 
     - **Amazon S3 Standard (S3 Standard)**:-
       - Standard offers high durability, availability, and performance object storage for frequently accessed data.
       - appropriate for a wide variety of use cases, including cloud applications, dynamic websites, content distribution, mobile and gaming applications, and big data analytics. 
