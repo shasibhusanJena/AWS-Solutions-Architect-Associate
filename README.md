@@ -18,7 +18,7 @@ descriiption
         - Amazon Aurora is a **MySQL and PostgreSQL-compatible relational database** built for the cloud, that combines
           the performance and availability of **traditional enterprise databases with the simplicity** and
           cost-effectiveness of open source databases. Amazon Aurora features a distributed, fault-tolerant,
-          self-healing storage system that auto-scales up to 64TB per database instance.
+          self-healing storage system that **auto-scales up to 64TB per database instance**.
 
     - **DynamoDB** :- it is a noSQL DB, unstructured DB. have two types as Provision Mode and On Demand Mode ,
         - **Provisioned Mode** - pay for Provisioned Read Capacity Units(RCU) and Write Capacity Units(WCU)
@@ -237,7 +237,6 @@ descriiption
     - is used to simplify the creation of new accounts with preconfigured constraints.
 32. **Others**.
 
-    - **Amazon Polly**: text to audio , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
     - **Amazon Translate**: provides real-time, high-quality, and affordable language translation
     - **Amazon Lex**: build conversational bots – chatbots
     - **Amazon Connect**: cloud contact center
@@ -249,46 +248,46 @@ descriiption
     - **Amazon Forecast** - use ML to deliver accurate forcast.
     - **Amazon Kendra** - fully managed document search service, extract answer from document , it read files ,PDF from
       google Drive and s3.
-    - Amazon Personalize - fully managed ML , to build apps with real time personalized recommendation. , also send sms
+    - **Amazon Personalize** - fully managed ML , to build apps with real time personalized recommendation. , also send sms
       and email ,
     - **Amazon textract** - **help to extract text** , analyze and data will be given .
     - **Amazon Rekognition** : **face detection**, labeling, **celebrity recognition** , **remove pornographic content**
+    - **Amazon Polly**: **text to audio** , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
     - **Amazon Transcribe** : **audio to text (ex: subtitles)** , **remove any Personally Identifiable Information** (PII) from
-      the call before it's saved.
-    - **Amazon Config** : etailed view of the configuration of AWS resources in your AWS account. 
-      - This includes how the resources are related to one another and how they were configured in the past so that you can see how the configurations and relationships change over time.
+   the call before it's saved.
+    - **Amazon Config** : Detailed view of the configuration of AWS resources in your AWS account. 
+      - This includes how the resources are related to one another and how they were configured in the past so that you can see how the **configurations and relationships change over time**.
     - **Amazon GuardDuty** : 
-       - is a threat detection service that **continuously monitors your AWS workloads for malicious activity**. 
-       - uses ML to create intelligent Threat discovery to protect your AWS Account,anomaly
-      detection, 3rd party data, One click to enable (30 days trial), no need to install software.
-       - GuardDuty analyzes tens of billions of events across multiple AWS data sources, such as 
-         - AWS CloudTrail events, 
-         - Amazon VPC Flow Logs, 
-         - and DNS logs.
+    - is a threat detection service that **continuously monitors your AWS workloads for malicious activity**. 
+    - uses ML to create intelligent Threat discovery to protect your AWS Account,anomaly
+   detection, 3rd party data, One click to enable (30 days trial), no need to install software.
+    - GuardDuty analyzes tens of billions of events across multiple AWS data sources, such as 
+      - AWS CloudTrail events, 
+      - Amazon VPC Flow Logs, 
+      - and DNS logs.
     - **Amazon Inspector**
-        - Automated Security Assessments and easy Reporting & integration with AWS Security Hub
-        - **Sends findings to Amazon Event Bridge.**
-        - Continuous **scanning of the infrastructure**.
-        - Automated and continual **vulnerability management at scale**.
+    - Automated Security Assessments and easy Reporting & integration with AWS Security Hub
+    - **Sends findings to Amazon Event Bridge.**
+    - Continuous **scanning of the infrastructure**.
+    - Automated and continual **vulnerability management at scale**.
     - **Amazon Macie**
-        - Amazon Macie is a fully managed data security and data privacy service that uses **machine learning and pattern
-          matching to discover and protect your sensitive data** in AWS.
-        - Discover and protect your sensitive data at scale.
-        - Macie helps **identify and alert you to sensitive data, ex: as personally identifiable information (PII)**.
+    - Amazon Macie is a fully managed data security and data privacy service that uses **machine learning and pattern
+      matching to discover and protect your sensitive data** in AWS.
+    - Discover and protect your sensitive data at scale.
+    - Macie helps **identify and alert you to sensitive data, ex: as personally identifiable information (PII)**.
     - **Amazon Elastic Transcoder** :
-        - allows you to easily convert media files stored in Amazon S3 into multiple formats.
-        - It provides transcoding optimizations like resolution and bitrate adjustment to support playback on different
-          devices.
-        - Fully managed and secure pay for what you use.
-    - **AWS Trusted Advisor** that provides you with real-time guidance to help you provision your resources following AWS best practices. 
-      - It inspects your AWS environment and makes recommendations for saving money, improving system performance and reliability, or closing security gaps. 
-      - however, it **can’t scan for software vulnerabilities** inside Amazon EC2 instances.
+    - allows you to easily **convert media files stored in Amazon S3 into multiple formats**.
+    - It provides transcoding optimizations like resolution and bitrate adjustment to support playback on different
+      devices.
+    - Fully managed and secure pay for what you use.
+    - **AWS Trusted Advisor** that provides you with **real-time guidance to help you provision your resources** following AWS best practices. 
+    - It inspects your AWS environment and makes recommendations for saving money, improving system performance and reliability, or closing security gaps. 
+    - however, it **can’t scan for software vulnerabilities** inside Amazon EC2 instances.
     - **AWS Proton** is a **deployment workflow tool for modern applications**. It can be used to manage Infrastructure as Code (IaC) templates build using tools like CloudFormation or Terraform.
 33. **Amazon Keyspaces (for Apache Cassandra)** is a scalable, highly available, and managed **Apache Cassandra–compatible database** service. With Amazon Keyspaces, you can run your Cassandra workloads on AWS using the same Cassandra application code
 34. **AWS Compute Optimizer** recommends optimal AWS resources for your workloads to reduce costs and improve performance by using machine learning to analyze historical utilization metrics. 
     1. Overprovisioning resources can lead to unnecessary infrastructure costs, and underprovisioning resources can lead to poor application performance.
 
--AWS Lambda functions
 35. **Other Definations**
     - EBS volumes: Network storage for one EC2 instance at a time
     - Instance Storage: Physical storage for your EC2 instance (high IOPS)
