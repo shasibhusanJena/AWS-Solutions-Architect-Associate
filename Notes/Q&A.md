@@ -202,3 +202,4 @@
 19. note
     - **AWS Storage Gateway** connects an on-premises software appliance with cloud-based storage to provide seamless integration with data security features between your on-premises IT environment and the AWS storage infrastructure. 
     - **Elastic Fabric Adapter (EFA)** is a network device that you can attach to your **Amazon EC2** instance to **accelerate High Performance Computing (HPC) and machine learning applications.** EFA enables you to achieve the application performance of an **on-premises HPC cluster with the scalability, flexibility, and elasticity** provided by the AWS Cloud.
+20. Global table
