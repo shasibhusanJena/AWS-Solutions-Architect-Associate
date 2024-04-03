@@ -23,6 +23,7 @@
 - **Amazon FSx for Lustre** is an ideal solution for the **animation studio’s** requirements. 
   - FSx for Lustre provides a fully managed, high-performance, scalable storage service, specifically designed for **compute-intensive workloads like 3D** animation rendering.
   - It offers shared storage with sub-millisecond latencies and can deliver up to terabytes per second of throughput, crucial for handling **hundreds of gigabytes** of data daily as in the studio’s case.
+  - Lustre is a popular **open-source parallel file system** which stores data across multiple network file servers to maximize performance and reduce bottlenecks.
 - **FSx for Lustre scratch file systems** are optimized for high-performance computing applications and provide high throughput and low latency, 
   - they are designed for temporary storage and are not intended for long-term persistence.
 - if customer have AWS CloudTrail enabled for logging purposes , then we can **Query with AWS CloudTrail Lake to find specific errors** in CloudTrail logs.
@@ -156,12 +157,16 @@
    - https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html
      - Amazon EC2 Auto Scaling cooldown periods help you prevent Auto Scaling groups from launching or terminating additional instances before the effects of previous activities are apparent.
 
-8. note
-   - A **General Purpose SSD**  EBS volume is limited to **16,000** IOPS for each volume.
-   - A **Provisioned SSD**  EBS volume provides up to **64,000** IOPS for each volume. offer storage with consistent and low-latency performance, and are designed for I/O intensive applications such as large relational or NoSQL databases.
-   - A **Throughput Optimized HDD** EBS volume is an HDD-backed storage ,limited to **500** IOPS for each volume.
-   - A **Cold HDD Magnetic volumes** provide the lowest cost per gigabyte of all EBS volume types and are ideal for workloads where data is accessed infrequently, and applications where the lowest storage cost is important. Cold HDD volumes are a good fit for **large, sequential cold-data** workloads.
-   
+8. **EBS Volume**
+   - A **General Purpose SSD volume**  is limited to **16,000** IOPS for each volume.
+   - A **Provisioned SSD volume** provides up to **64,000** IOPS for each volume. offer storage with consistent and low-latency performance, and are designed for I/O intensive applications such as large relational or NoSQL databases.
+   - A **Throughput Optimized HDD volume** is an HDD-backed storage ,limited to **500** IOPS for each volume.
+   - A **Cold Magnetic HDD volumes** provide the lowest cost per gigabyte of all EBS volume types and are ideal for workloads where data is accessed infrequently, and applications where the lowest storage cost is important. Cold HDD volumes are a good fit for **large, sequential cold-data** workloads.
+
+    ![img_3.png](img_3.png)   
+
+    ![img_4.png](img_4.png)
+
 9. note
 
    - A company has a web application hosted on Amazon EC2 instances in a private subnet within an Amazon Virtual Private Cloud (Amazon VPC). The instances in the private subnet cannot be accessed directly from the internet for security reasons. To manage and maintain these instances, the company needs to implement a secure solution. 
@@ -199,4 +204,26 @@
 18. note
     - **AWS Storage Gateway** connects an on-premises software appliance with cloud-based storage to provide seamless integration with data security features between your on-premises IT environment and the AWS storage infrastructure. 
     - **Elastic Fabric Adapter (EFA)** is a network device that you can attach to your **Amazon EC2** instance to **accelerate High Performance Computing (HPC) and machine learning applications.** EFA enables you to achieve the application performance of an **on-premises HPC cluster with the scalability, flexibility, and elasticity** provided by the AWS Cloud.
-19. Global table
+19. Global table , internet gateway vs transient gateway , network LB vs application LB 
+20. note
+    1. Use AWS Database Migration Service (AWS DMS) to migrate to a **new Aurora Serverless database** from Aurora cluster.
+    2. n the event that your primary database instance goes down. When failing over, Amazon RDS simply flips the canonical name record (CNAME) for your DB instance to point at the standby, which is in turn promoted to become the new primary.
+    3. **AWS Storage Gateway** - The service enables hybrid storage between on-premises environments and the AWS Cloud.
+    4. Enable Cross-Region Snapshots Copy in your Amazon Redshift Cluster to implement a disaster recovery plan while using Redshift cluster.
+    5. A **VPC endpoint** allows you to **privately** connect your VPC to supported AWS and VPC endpoint services powered by AWS PrivateLink without needing an Internet gateway, NAT computer, VPN connection, or AWS Direct Connect connection. 
+    6. **Geolocation routing** lets you choose the resources that serve your traffic **based on the geographic location of your users**, meaning the location that DNS queries originate from. For example, you might want all queries from Europe to be routed to an ELB load balancer in the Frankfurt region.
+    7. Using **Route 53 Weighted Routing** policy just lets you **associate multiple resources** with a single domain name (tutorialsdojo.com) or subdomain name (forums.tutorialsdojo.com) and choose **how much traffic is routed to each resource**.
+
+21. **Route 53 Health checking**
+    - **Active-Active Failover** 
+      - Use this failover configuration when you want **all of your resources to be available** the majority of the time. When a resource becomes unavailable, Route 53 can detect that it’s unhealthy and stop including it when responding to queries. 
+      - In **active-active failover**, all the records that have the same name, the same type (**such as A or AAAA**), and the same routing policy (such **as weighted or latency**) are active unless Route 53 considers them unhealthy. 
+      - Route 53 can respond to a DNS query using any healthy record.
+    - **Active-Passive Failover** 
+      - Use an active-passive failover configuration when you want a primary resource or group of resources to be available the majority of the time and you want a secondary resource or group of resources to be on standby in case all the primary resources become unavailable. When responding to queries, Route 53 includes only the healthy primary resources. If all the primary resources are unhealthy, Route 53 begins to include only the healthy secondary resources in response to DNS queries.
+
+    **- in the above note the  The service should be available 24/7 so the Active -Active Failover is the good choice with zero downtime in** 
+22. Note
+    - **Expedited retrievals** allow you to quickly access your data when occasional urgent requests for a subset of archives are required. For all but the largest archives (250 MB+), data accessed using Expedited retrievals are typically made available within 1–5 minutes. Provisioned Capacity ensures that retrieval capacity for Expedited retrievals is available when you need it.
+
+To make an Expedited, Standard, or Bulk retrieval, set the Tier parameter in the Initiate Job (POST jobs) REST API request to the option you want, or the equivalent in the AWS CLI or AWS SDKs. If you have purchased provisioned capacity, then all expedited retrievals are automatically served through your provisioned capacity. 

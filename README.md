@@ -152,6 +152,9 @@ descriiption
     - ingest real time data as Application log, Metrics, Website clickstream.
     - Kinesis is of 4 types.
         - Kinesis Data Firehose. - load data stream into AWS data stores.
+          - is the easiest way to load streaming data into data stores and analytics tools. 
+          - It can capture, transform, and load streaming data into Amazon S3, Amazon Redshift, Amazon OpenSearch Service, and Splunk.
+          - Enabling near real-time analytics with existing business intelligence tools and dashboards
         - Kinesis Data Analytics. - analyze data stream with SQL or Apache Flink.
         - Kinesis Data stream. - capture, process, store data streams.
         - Kinesis video Streams. - capture process store data stream.
