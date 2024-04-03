@@ -204,8 +204,8 @@
 18. note
     - **AWS Storage Gateway** connects an on-premises software appliance with cloud-based storage to provide seamless integration with data security features between your on-premises IT environment and the AWS storage infrastructure. 
     - **Elastic Fabric Adapter (EFA)** is a network device that you can attach to your **Amazon EC2** instance to **accelerate High Performance Computing (HPC) and machine learning applications.** EFA enables you to achieve the application performance of an **on-premises HPC cluster with the scalability, flexibility, and elasticity** provided by the AWS Cloud.
-19. Global table , internet gateway vs transient gateway , network LB vs application LB 
-20. note 
+
+19. note 
     - Use AWS Database Migration Service (AWS DMS) to migrate to a **new Aurora Serverless database** from Aurora cluster. 
     - In the event that your primary database instance goes down. When failing over, Amazon RDS simply flips the canonical name record (CNAME) for your DB instance to point at the standby, which is in turn promoted to become the new primary.
     - **AWS Storage Gateway** - The service enables hybrid storage between on-premises environments and the AWS Cloud. 
@@ -233,3 +233,6 @@
    - Provisioned Capacity ensures that retrieval capacity for Expedited retrievals is available when you need it.
 
 To make an Expedited, Standard, or Bulk retrieval, set the Tier parameter in the Initiate Job (POST jobs) REST API request to the option you want, or the equivalent in the AWS CLI or AWS SDKs. If you have purchased provisioned capacity, then all expedited retrievals are automatically served through your provisioned capacity. 
+24. **AWS Elastic Disaster Recovery (AWS DRS)** provides continuous block-level replication, recovery orchestration, and automated server conversion capabilities. These allow customers to achieve a crash-consistent recovery point objective (RPO) of **60 seconds**, and a recovery time objective (RTO) typically ranging between 5–20 minutes.
+25. By simply selecting Spot when launching EC2 instances, you can save up to 90% on On-Demand prices. The only difference between On-Demand instances and Spot Instances is that Spot instances can be interrupted by EC2 with two minutes of notification when the EC2 needs the capacity back.
+26. Global table , internet gateway vs transient gateway , network LB vs application LB , envelope encryption and automates key rotation.
