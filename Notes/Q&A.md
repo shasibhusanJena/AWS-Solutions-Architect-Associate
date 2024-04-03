@@ -205,25 +205,31 @@
     - **AWS Storage Gateway** connects an on-premises software appliance with cloud-based storage to provide seamless integration with data security features between your on-premises IT environment and the AWS storage infrastructure. 
     - **Elastic Fabric Adapter (EFA)** is a network device that you can attach to your **Amazon EC2** instance to **accelerate High Performance Computing (HPC) and machine learning applications.** EFA enables you to achieve the application performance of an **on-premises HPC cluster with the scalability, flexibility, and elasticity** provided by the AWS Cloud.
 19. Global table , internet gateway vs transient gateway , network LB vs application LB 
-20. note
-    1. Use AWS Database Migration Service (AWS DMS) to migrate to a **new Aurora Serverless database** from Aurora cluster.
-    2. n the event that your primary database instance goes down. When failing over, Amazon RDS simply flips the canonical name record (CNAME) for your DB instance to point at the standby, which is in turn promoted to become the new primary.
-    3. **AWS Storage Gateway** - The service enables hybrid storage between on-premises environments and the AWS Cloud.
-    4. Enable Cross-Region Snapshots Copy in your Amazon Redshift Cluster to implement a disaster recovery plan while using Redshift cluster.
-    5. A **VPC endpoint** allows you to **privately** connect your VPC to supported AWS and VPC endpoint services powered by AWS PrivateLink without needing an Internet gateway, NAT computer, VPN connection, or AWS Direct Connect connection. 
-    6. **Geolocation routing** lets you choose the resources that serve your traffic **based on the geographic location of your users**, meaning the location that DNS queries originate from. For example, you might want all queries from Europe to be routed to an ELB load balancer in the Frankfurt region.
-    7. Using **Route 53 Weighted Routing** policy just lets you **associate multiple resources** with a single domain name (tutorialsdojo.com) or subdomain name (forums.tutorialsdojo.com) and choose **how much traffic is routed to each resource**.
+20. note 
+    - Use AWS Database Migration Service (AWS DMS) to migrate to a **new Aurora Serverless database** from Aurora cluster. 
+    - In the event that your primary database instance goes down. When failing over, Amazon RDS simply flips the canonical name record (CNAME) for your DB instance to point at the standby, which is in turn promoted to become the new primary.
+    - **AWS Storage Gateway** - The service enables hybrid storage between on-premises environments and the AWS Cloud. 
+    - Enable Cross-Region Snapshots Copy in your Amazon Redshift Cluster to implement a disaster recovery plan while using Redshift cluster. 
+    - A VPC endpoint enables customers to privately connect to supported AWS services and VPC endpoint services powered by AWS PrivateLink. Amazon VPC instances do not require public IP addresses to communicate with resources of the service. Traffic between an Amazon VPC and a service does not leave the Amazon network.
+    - We can use two types of VPC endpoints to access Amazon S3: **gateway endpoints and interface endpoints**.
+      - A gateway endpoint is a gateway that you specify in your route table to access Amazon S3 from your VPC over the AWS network.
+      - Interface endpoints extend the functionality of gateway endpoints by using private IP addresses to route requests to Amazon S3 from within your VPC, on-premises, or from a different AWS Region. Interface endpoints are compatible with gateway endpoints. If you have an existing gateway endpoint in the VPC, you can use both types of endpoints in the same VPC.
 
-21. **Route 53 Health checking**
-    - **Active-Active Failover** 
-      - Use this failover configuration when you want **all of your resources to be available** the majority of the time. When a resource becomes unavailable, Route 53 can detect that it’s unhealthy and stop including it when responding to queries. 
-      - In **active-active failover**, all the records that have the same name, the same type (**such as A or AAAA**), and the same routing policy (such **as weighted or latency**) are active unless Route 53 considers them unhealthy. 
-      - Route 53 can respond to a DNS query using any healthy record.
-    - **Active-Passive Failover** 
-      - Use an active-passive failover configuration when you want a primary resource or group of resources to be available the majority of the time and you want a secondary resource or group of resources to be on standby in case all the primary resources become unavailable. When responding to queries, Route 53 includes only the healthy primary resources. If all the primary resources are unhealthy, Route 53 begins to include only the healthy secondary resources in response to DNS queries.
 
-    **- in the above note the  The service should be available 24/7 so the Active -Active Failover is the good choice with zero downtime in** 
-22. Note
-    - **Expedited retrievals** allow you to quickly access your data when occasional urgent requests for a subset of archives are required. For all but the largest archives (250 MB+), data accessed using Expedited retrievals are typically made available within 1–5 minutes. Provisioned Capacity ensures that retrieval capacity for Expedited retrievals is available when you need it.
+21. **Geolocation routing** lets you choose the resources that serve your traffic **based on the geographic location of your users**, meaning the location that DNS queries originate from. For example, you might want all queries from Europe to be routed to an ELB load balancer in the Frankfurt region.
+22. Using **Route 53 Weighted Routing** policy just lets you **associate multiple resources** with a single domain name (tutorialsdojo.com) or subdomain name (forums.tutorialsdojo.com) and choose **how much traffic is routed to each resource**.
+
+**Route 53 Health checking**
+          - **Active-Active Failover** 
+            - Use this failover configuration when you want **all of your resources to be available** the majority of the time. When a resource becomes unavailable, Route 53 can detect that it’s unhealthy and stop including it when responding to queries. 
+            - In **active-active failover**, all the records that have the same name, the same type (**such as A or AAAA**), and the same routing policy (such **as weighted or latency**) are active unless Route 53 considers them unhealthy. 
+            - Route 53 can respond to a DNS query using any healthy record.
+          - **Active-Passive Failover** 
+            - Use an active-passive failover configuration when you want a primary resource or group of resources to be available the majority of the time and you want a secondary resource or group of resources to be on standby in case all the primary resources become unavailable. When responding to queries, Route 53 includes only the healthy primary resources. If all the primary resources are unhealthy, Route 53 begins to include only the healthy secondary resources in response to DNS queries.
+
+          **in the above note the  The service should be available 24/7 so the Active -Active Failover is the good choice with zero downtime in** 
+23. Note
+   - **Expedited retrievals** allow you to quickly access your data when occasional urgent requests for a subset of archives are required. For all but the largest archives (250 MB+), data accessed using Expedited retrievals are typically made available within 1–5 minutes. 
+   - Provisioned Capacity ensures that retrieval capacity for Expedited retrievals is available when you need it.
 
 To make an Expedited, Standard, or Bulk retrieval, set the Tier parameter in the Initiate Job (POST jobs) REST API request to the option you want, or the equivalent in the AWS CLI or AWS SDKs. If you have purchased provisioned capacity, then all expedited retrievals are automatically served through your provisioned capacity. 
