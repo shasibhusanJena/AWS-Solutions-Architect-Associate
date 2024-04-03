@@ -307,6 +307,9 @@ descriiption
     - 80 = HTTP – access unsecured websites
     - 443 = HTTPS – access secured websites
     - 3389 = RDP (Remote Desktop Protocol) – log into a Windows instance
+    - The /32 denotes one IP address and the /0 refers to the entire network.
+    - Use Signed Cookies to control who can access the private files in your CloudFront distribution by modifying your application to determine whether a user should have access to your content. For members, send the required Set-Cookie headers to the viewer which will unlock the content only to them.
+
 
 37. **Overall, try to avoid using Elastic IP**:
     - They often reflect poor architectural decisions, Instead, use a random public IP and register a DNS name to it
@@ -335,6 +338,8 @@ descriiption
     - **AWS Security Documentation** - Security documentation by category.
     - **AWS Security Hub** - **Unified security and compliance center**.
     - **Amazon Security Lake** - Automatically centralize your security data with a few clicks
+    - **Amazon WorkSpaces** enables you to provision virtual, cloud-based Microsoft Windows, Amazon Linux, or Ubuntu Linux desktops for your users, known as WorkSpaces. 
+      - WorkSpaces eliminates the need to procure and deploy hardware or install complex software.
     - **AWS Shield** - **DDoS protection**.
     - **AWS WAF** - Filter **malicious web traffic**.
     - **Amazon Athena** is an interactive query service that makes it easy to analyze data in **Amazon S3 using standard SQL** expressions. Athena is serverless, so there is no infrastructure to manage.

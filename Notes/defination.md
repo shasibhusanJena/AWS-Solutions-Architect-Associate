@@ -92,3 +92,11 @@
   - Disk space utilization
   - Page file utilization
   - Log collection
+12. 
+  ![img_5.png](img_5.png)
+13. **Scaling**
+  - **Target tracking** or step scaling policies can trigger a scaling activity immediately without waiting for the cooldown period to expire. 
+  - **Simple scaling** you need to wait for the cooldown period to complete before initiating additional scaling activities. 
+  - **Scheduled scaling** is mainly used for predictable traffic patterns.
+  - **Suspend and resume scaling** this type is used to temporarily pause scaling activities triggered by your scaling policies and scheduled actions.
+14. 
