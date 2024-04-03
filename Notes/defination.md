@@ -51,7 +51,12 @@
      - Customer sends the key with every request
      - S3 performs encryption and decryption without storing the key
      - HTTPS is mandatory
-3. **Notes**
+3. **Fargate** allocates the right amount of compute, eliminating the need to choose instances and scale cluster capacity. 
+   - You only pay for the resources required to run your containers, so there is no over-provisioning and paying for additional servers. 
+   - By default, Fargate tasks are given a minimum of **20 GiB of free ephemeral storage**
+4. **AWS Transit Gateway** is a service that enables customers to connect their Amazon Virtual Private Clouds (VPCs) and their on-premises networks to a single gateway. 
+   - As you grow the number of workloads running on AWS, you need to be able to scale your networks across multiple accounts and Amazon VPCs to keep up with the growth.
+5. **Notes**
      - Throttling is the process of limiting the number of requests an authorized program can submit to a given operation in a given amount of time. API gateway can handle this not LoadBalancer.
      - You can use **AWS WAF with your Application Load Balancer to allow or block requests based on the rules** in a web access control list (web ACL).Configure the listener over HTTP and HTTPS to forward traffic to the application target group.
      - Accidental deletion of data in the bucket can be handled by **Enable versioning on the bucket**  and **Enable MFA** on the bucket.
@@ -63,18 +68,27 @@
      - **Karpenter** to automatically adjusts the **number of nodes in the EKS cluster when pods fail or are rescheduled onto other nodes**
      - AWS Transit Gateway and add VPC attachments to connect all departments. Set up AWS Network Firewall to secure the application traffic travelling between the VPCs
      - **RAID 0** configuration enables you to **improve your storage volumes’ performance by distributing the I/O across the volumes** in a stripe. Therefore, if you add a storage volume, you get the straight addition of throughput and IOPS.
-     - **RAID 1** configuration is used for data mirroring
+     - **RAID 1** configuration is used for **data mirroring**
      - Implement Lake Formation tag-based access control to enable authorization and cross-account permissions for the needed datasets to engineering team accounts. 
        - Integrate with AWS Security Hub to enhance security monitoring and compliance oversight.
-4. Note
+6. Note
    - **AWS Application Discovery Service** helps you plan your migration to the AWS cloud by collecting usage and configuration data about your on-premises servers. 
      - Application Discovery Service is integrated with AWS Migration Hub, which simplifies your migration tracking as it aggregates your migration status information into a single console. You can view the discovered servers, group them into applications, and then track the migration status of each application from the Migration Hub console in your home region.
    - **AWS Migration Hub (Migration Hub)** provides a single place to discover your existing servers, plan migrations, and track the status of each application migration. The Migration Hub provides visibility into your application portfolio and streamlines planning and tracking.
    - **AWS Application migration** is the process of moving software applications from one computing environment to another. 
      - This can include migrating applications from one data center to another, such as from a public to a private cloud, or from a company's on-premises server to a cloud provider's environment.
-5. ![img_1.png](img_1.png)
+     - you **can’t assign an Elastic IP address to an Application Load Balancer**. The alternative method you can do is assign an Elastic IP address to a Network Load Balancer in front of the Application Load Balancer.
+7. ![img_1.png](img_1.png)
 
-6. **Amazon Aurora Serverless v2** scales instantly to hundreds of thousands of transactions in a fraction of a second. 
+8. **Amazon Aurora Serverless v2** scales instantly to hundreds of thousands of transactions in a fraction of a second. 
    1. As it scales, it adjusts capacity in fine-grained increments to provide the right amount of database resources that the application needs. There is no database capacity for you to manage. You pay only for the capacity your application consumes, and you can save up to 90% of your database cost compared to the cost of provisioning capacity for peak load.
-7. note
+9. note
    - **Predictive scaling** uses machine learning to predict capacity requirements based on historical data from CloudWatch. The machine learning algorithm consumes the available historical data and calculates capacity that best fits the historical load pattern, and then continuously learns based on new data to make future forecasts more accurate.
+10. ![img_2.png](img_2.png)
+11. Note 
+  - install CloudWatch Agent to collect more system-level metrics from Amazon EC2 instances. Here’s the list of custom metrics that you can set up:
+  - Memory utilization
+  - Disk swap utilization
+  - Disk space utilization
+  - Page file utilization
+  - Log collection
