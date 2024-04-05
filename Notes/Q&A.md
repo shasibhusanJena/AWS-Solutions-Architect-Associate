@@ -166,54 +166,61 @@
     ![img_3.png](img_3.png)   
 
     ![img_4.png](img_4.png)
-
-9. note
-
-   - A company has a web application hosted on Amazon EC2 instances in a private subnet within an Amazon Virtual Private Cloud (Amazon VPC). The instances in the private subnet cannot be accessed directly from the internet for security reasons. To manage and maintain these instances, the company needs to implement a secure solution. 
-   - Which of the following approaches would be the most appropriate to address this requirement?
-    
-   - A. Create a bastion host (jump box) in a public subnet within the same VPC, and use it as an entry point to access the instances in the private subnet.
-   - B. Configure a site-to-site VPN connection between the company's on-premises network and the VPC, allowing direct access to the instances in the private subnet.
-   - C. Enable public IP addresses on the instances in the private subnet, and configure security groups to allow inbound traffic from specific IP addresses.
-   - D. Create an AWS Lambda function that can be invoked from the internet to establish a secure connection to the instances in the private subnet.
-    
-   ANS:- 
-   - A. Correct. Creating a bastion host (jump box) in a public subnet within the same VPC, and using it as an entry point to access the instances in the private subnet, is the most appropriate approach to securely manage and maintain the instances that cannot be accessed directly from the internet. The bastion host acts as a proxy to access the private instances. 
-   - B. Incorrect. Configuring a VPN does allow direct access to the instances, but this exposes them to the internet. The goal is to keep them private. 
-   - C. Incorrect. Enabling public IPs and configuring security groups exposes the instances directly to the internet, which compromises security. 
-   - D. Incorrect. An AWS Lambda function invoked from the internet could allow access to the private instances, but it is more complex and less secure than using a bastion host.
+9. **EBS Volume Encryption**
+  - EBS volumes are highly available and reliable storage volumes that can be attached to any running instance that is in the same Availability Zone. 
+  - EBS volumes that are attached to an EC2 instance are exposed as storage volumes that persist independently from the life of the instance.
+  - When you create an encrypted EBS volume and attach it to a supported instance type, the following types of data are encrypted:
+    - Data at rest inside the volume 
+    - All data moving between the volume and the instance 
+    - All snapshots created from the volume 
+    - All volumes created from those snapshots
 10. note
-    - Set up an IAM policy to ensure that only encrypted EBS volumes can be created. Create an AWS Config rule that tracks unencrypted EBS volumes and use an AWS Systems Manager Automation document for remediation.
+
+    - A company has a web application hosted on Amazon EC2 instances in a private subnet within an Amazon Virtual Private Cloud (Amazon VPC). The instances in the private subnet cannot be accessed directly from the internet for security reasons. To manage and maintain these instances, the company needs to implement a secure solution. 
+    - Which of the following approaches would be the most appropriate to address this requirement?
+    
+    - A. Create a bastion host (jump box) in a public subnet within the same VPC, and use it as an entry point to access the instances in the private subnet.
+    - B. Configure a site-to-site VPN connection between the company's on-premises network and the VPC, allowing direct access to the instances in the private subnet.
+    - C. Enable public IP addresses on the instances in the private subnet, and configure security groups to allow inbound traffic from specific IP addresses.
+    - D. Create an AWS Lambda function that can be invoked from the internet to establish a secure connection to the instances in the private subnet.
+    
+    ANS:- 
+    - A. Correct. Creating a bastion host (jump box) in a public subnet within the same VPC, and using it as an entry point to access the instances in the private subnet, is the most appropriate approach to securely manage and maintain the instances that cannot be accessed directly from the internet. The bastion host acts as a proxy to access the private instances. 
+    - B. Incorrect. Configuring a VPN does allow direct access to the instances, but this exposes them to the internet. The goal is to keep them private. 
+    - C. Incorrect. Enabling public IPs and configuring security groups exposes the instances directly to the internet, which compromises security. 
+    - D. Incorrect. An AWS Lambda function invoked from the internet could allow access to the private instances, but it is more complex and less secure than using a bastion host.
 11. note
+    - Set up an IAM policy to ensure that only encrypted EBS volumes can be created. Create an AWS Config rule that tracks unencrypted EBS volumes and use an AWS Systems Manager Automation document for remediation.
+12. note
     - want to track and log every request access to their S3 buckets including the requester, bucket name, request time, request action, referrer, turnaround time, and error code information. 
       - Enable server access logging for all required Amazon S3 buckets.
-12. A multinational corporation is expanding its operations and needs to efficiently monitor and analyze IAM-related errors, specifically **Access Denied and Unauthorized errors** in their AWS accounts. The **company has AWS CloudTrail enabled for logging** purposes.
+13. A multinational corporation is expanding its operations and needs to efficiently monitor and analyze IAM-related errors, specifically **Access Denied and Unauthorized errors** in their AWS accounts. The **company has AWS CloudTrail enabled for logging** purposes.
 
     - ANS: Query with **AWS CloudTrail Lake** to find specific errors in CloudTrail logs.
-13. note : Migrate the RabbitMQ queue to Amazon MQ to a cluster broker deployment setup. Launch a Multi-AZ Auto Scaling group for the Amazon EC2 instances that host the consumer application. Migrate the existing database to Amazon RDS for PostgreSQL in a Multi-AZ Deployment configuration.
+14. note : Migrate the RabbitMQ queue to Amazon MQ to a cluster broker deployment setup. Launch a Multi-AZ Auto Scaling group for the Amazon EC2 instances that host the consumer application. Migrate the existing database to Amazon RDS for PostgreSQL in a Multi-AZ Deployment configuration.
 
-14. cloud formation
-15. What are the different type of EMR cluster ?
+15. cloud formation
+16. What are the different type of EMR cluster ?
     1. there are two cluster type one is persistent and transient cluster.
     2. persistent type remain alive all the time even if job is completed. 
        1. these job are preferred when continues jobs to run on the data.
        2. is particularly suited for workloads that run for extended periods or indefinitely, providing highly available and durable storage.
 
-16. **Access control lists(ACL)** are used for controlling permissions to a computer system or computer network. They are used to filter traffic in and out of a specific device. Those devices can be network devices that act as network gateways or endpoint devices that users access directly.
-17. **A storage optimized instance** is designed for workloads that require high, sequential read and write access to very large data sets on local storage. They are optimized to deliver tens of thousands of low-latency, random I/O operations per second (IOPS) to applications.
-18. note
+17. **Access control lists(ACL)** are used for controlling permissions to a computer system or computer network. They are used to filter traffic in and out of a specific device. Those devices can be network devices that act as network gateways or endpoint devices that users access directly.
+18. **A storage optimized instance** is designed for workloads that require high, sequential read and write access to very large data sets on local storage. They are optimized to deliver tens of thousands of low-latency, random I/O operations per second (IOPS) to applications.
+19. note
     - **AWS Storage Gateway** connects an on-premises software appliance with cloud-based storage to provide seamless integration with data security features between your on-premises IT environment and the AWS storage infrastructure. 
     - **Elastic Fabric Adapter (EFA)** is a network device that you can attach to your **Amazon EC2** instance to **accelerate High Performance Computing (HPC) and machine learning applications.** EFA enables you to achieve the application performance of an **on-premises HPC cluster with the scalability, flexibility, and elasticity** provided by the AWS Cloud.
 
-19. note 
+20. note 
     - Use AWS Database Migration Service (AWS DMS) to migrate to a **new Aurora Serverless database** from Aurora cluster. 
     - In the event that your primary database instance goes down. When failing over, Amazon RDS simply flips the canonical name record (CNAME) for your DB instance to point at the standby, which is in turn promoted to become the new primary.
     - **AWS Storage Gateway** - The service enables hybrid storage between on-premises environments and the AWS Cloud. 
     - Enable Cross-Region Snapshots Copy in your Amazon Redshift Cluster to implement a disaster recovery plan while using Redshift cluster. 
     - A VPC endpoint enables customers to privately connect to supported AWS services and VPC endpoint services powered by AWS PrivateLink. Amazon VPC instances do not require public IP addresses to communicate with resources of the service. Traffic between an Amazon VPC and a service does not leave the Amazon network.
     - We can use two types of VPC endpoints to access Amazon S3: **gateway endpoints and interface endpoints**.
-      - A gateway endpoint is a gateway that you specify in your route table to access Amazon S3 from your VPC over the AWS network.
-      - Interface endpoints extend the functionality of gateway endpoints by using private IP addresses to route requests to Amazon S3 from within your VPC, on-premises, or from a different AWS Region. Interface endpoints are compatible with gateway endpoints. If you have an existing gateway endpoint in the VPC, you can use both types of endpoints in the same VPC.
+      - A **gateway endpoint** is a gateway that you specify in your route table to access Amazon S3 from your VPC over the AWS network.
+      - **Interface endpoints** extend the functionality of gateway endpoints by using private IP addresses to route requests to Amazon S3 from within your VPC, on-premises, or from a different AWS Region. Interface endpoints are compatible with gateway endpoints. If you have an existing gateway endpoint in the VPC, you can use both types of endpoints in the same VPC.
 
 
 21. **Geolocation routing** lets you choose the resources that serve your traffic **based on the geographic location of your users**, meaning the location that DNS queries originate from. For example, you might want all queries from Europe to be routed to an ELB load balancer in the Frankfurt region.
@@ -235,4 +242,11 @@
 To make an Expedited, Standard, or Bulk retrieval, set the Tier parameter in the Initiate Job (POST jobs) REST API request to the option you want, or the equivalent in the AWS CLI or AWS SDKs. If you have purchased provisioned capacity, then all expedited retrievals are automatically served through your provisioned capacity. 
 24. **AWS Elastic Disaster Recovery (AWS DRS)** provides continuous block-level replication, recovery orchestration, and automated server conversion capabilities. These allow customers to achieve a crash-consistent recovery point objective (RPO) of **60 seconds**, and a recovery time objective (RTO) typically ranging between 5–20 minutes.
 25. By simply selecting Spot when launching EC2 instances, you can save up to 90% on On-Demand prices. The only difference between On-Demand instances and Spot Instances is that Spot instances can be interrupted by EC2 with two minutes of notification when the EC2 needs the capacity back.
-26. Global table , internet gateway vs transient gateway , network LB vs application LB , envelope encryption and automates key rotation.
+26. Note
+  - Create an Amazon Pinpoint journey for the multi-engagement SMS marketing campaign and an Amazon Kinesis Data Stream for analysis. Configure Amazon Pinpoint to send events to the Kinesis data stream for collection, processing, and analysis. Set the retention period of the Kinesis data stream to 365 days.
+  - In order for you to establish an SSH connection from your home computer to your EC2 instance, you need to do the following:
+    - On the Security Group, add an Inbound Rule to allow SSH traffic to your EC2 instance. 
+    - On the NACL, add both an Inbound and Outbound Rule to allow SSH traffic to your EC2 instance.
+  - **Cross-origin resource sharing (CORS)** defines a way for client web applications that are loaded in one domain to interact with resources in a different domain. 
+    - With CORS support, you can build rich client-side web applications with Amazon S3 and selectively allow cross-origin access to your Amazon S3 resources.
+27. Global table , internet gateway vs transient gateway , network LB vs application LB , envelope encryption and automates key rotation. ingress , pilot light disaster recovery (DR) 
