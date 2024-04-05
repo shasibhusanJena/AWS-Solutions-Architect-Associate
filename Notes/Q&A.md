@@ -1,7 +1,6 @@
   
 - i am policy to ensure encrypted EBS volume can be created is :
 
-
     {
         "Sid" : "Name001",
         "Effect" : "Allow",
