@@ -3,7 +3,7 @@
 - A Provisioned IOPS SSD EBS volume provides up to 64,000 IOPS for each volume.
 - A General Purpose SSD EBS volume is limited to 16,000 IOPS for each volume.
 - A Cold HDD volume provides low-cost magnetic storage that defines performance in terms of throughput rather than IOPS. Cold HDD volumes are a good fit for large, sequential cold-data workloads.
-- ...
+- ..
 - A customer gateway is required for the VPN connection to be established. A customer gateway device is set up and configured in the customer's data center.
 - A virtual private gateway is attached to a VPC to create a site-to-site VPN connection to AWS. You can accept private encrypted network traffic from an on-premises data center into your VPC without the need to traverse the open public internet.
 - .....
