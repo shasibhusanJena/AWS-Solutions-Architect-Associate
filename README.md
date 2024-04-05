@@ -307,8 +307,9 @@ descriiption
     - 80 = HTTP – access unsecured websites
     - 443 = HTTPS – access secured websites
     - 3389 = RDP (Remote Desktop Protocol) – log into a Windows instance
-    - The /32 denotes one IP address and the /0 refers to the entire network.
-    - Use Signed Cookies to control who can access the private files in your CloudFront distribution by modifying your application to determine whether a user should have access to your content. For members, send the required Set-Cookie headers to the viewer which will unlock the content only to them.
+    - The **/32** denotes one IP address and the **/0** refers to the entire network.
+    - Use **Signed Cookies to control who can access the private files** in your CloudFront distribution by modifying your application to determine whether a user should have access to your content.
+      - For members, send the required Set-Cookie headers to the viewer which will unlock the content only to them.
 
 
 37. **Overall, try to avoid using Elastic IP**:
