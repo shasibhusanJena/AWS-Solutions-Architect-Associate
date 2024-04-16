@@ -11,3 +11,4 @@
 7. AWS Network Firewall to create the required rules for traffic inspection and traffic filtering for the production VPC
 8. if a application running in Prod , and software that access need high I/O then Take EBS snapshots of the production EBS volumes. Turn on the EBS **fast snapshot restore feature** on the EBS snapshots. Restore the snapshots into new EBS volumes. Attach the new EBS volumes to EC2 instances in the test environment. 
 9. WS Direct Connect is a network service that allows you to establish a dedicated network connection from your on-premises data center to AWS. This connection bypasses the public Internet and can provide more reliable, lower-latency communication between your on-premises application and Amazon S3.
+10.Use AWS Systems Manager Run Command to run a custom command that applies the patch to all EC2 instances.
