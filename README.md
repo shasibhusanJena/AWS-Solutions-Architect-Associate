@@ -1,18 +1,12 @@
 # AWS-Solutions-Architect-Associate
 
 it has vary specific notes on the use cases of AWS components and helps in understanding each of them with short
-descriiption
+description
 
 1. **DataBase**
     - **Amazon Neptune**
         - Amazon Neptune is a fast, reliable, fully managed **graph database** service that makes it easy to build and
           run applications that work with highly connected datasets.
-
-    - **Amazon Redshift**
-        - Amazon Redshift is a **fully-managed petabyte-scale cloud-based data warehouse product** designed for large
-          scale data set storage and analysis.
-            - **Amazon Redshift Spectrum**, you can efficiently **query and retrieve structured and semi structured data
-              from files in Amazon S3 without having to load the data into Amazon Redshift tables**
 
     - **Amazon Aurora**
         - Amazon Aurora is a **MySQL and PostgreSQL-compatible relational database** built for the cloud, that combines
@@ -30,6 +24,11 @@ descriiption
         - **DynamoDB Streams** allows you to capture a **time-ordered sequence of item-level modifications** in a DynamoDB
           table. It's integrated with AWS Lambda so that you create triggers that automatically respond to events in
           real-time.
+          - commonly used for replication or table audits.
+          - The primary restrictions imposed by DynamoDB Streams are:
+            - only 1 or 2 consumers (you need to use fanout patterns beyond that)
+            - only 24h retention. While absolutely all changes are recorded, and in strict order, there is a hard limit on the retention ,you need to grab them and do something, quick.
+   
     - **RDS** - Amazon Relational Database Service (Amazon RDS) makes it **easy to set up, operate, and scale a relational
       database in the cloud.**
         - It provides cost-efficient and resizable capacity while automating time-consuming administration tasks such as
@@ -42,23 +41,30 @@ descriiption
         - Amazon ElastiCache is a popular choice for real-time use cases like Caching, Session Stores, Gaming,
           Geospatial Services, Real-Time Analytics, and Queuing.
     - **Amazon Quantum Ledger Database (Amazon QLDB)** - is a fully managed ledger database that provides a transparent, immutable, and **cryptographically verifiable transaction log** owned by a central trusted authority. 
-    - Amazon QLDB can be used to **track every application data change and maintains a complete and verifiable history** of changes over time.
-****
+      - Amazon QLDB can be used to **track every application data change and maintains a complete and verifiable history** of changes over time.
+   
+    - **Amazon Redshift**
+        - Amazon Redshift is a **fully-managed petabyte-scale cloud-based data warehouse product** designed for large
+          scale data set storage and analysis.
+            - **Amazon Redshift Spectrum**, you can efficiently **query and retrieve structured and semi structured data
+              from files in Amazon S3 without having to load the data into Amazon Redshift tables**
+            
 2. **AWS Transit Gateway**
+    - All VPCs link to a single, central hub, making it much simpler to manage and track
     - Create a route table for the transit gateway and add a route that allows traffic between VPC A and VPC B's CIDR
       blocks. Associate this route table with VPC A and VPC B attachments.
     - if we have 5 VPC then we can use **transit gateway** to interconnect the VPC
-3. **AWS Global Accelerator**
+4. **AWS Global Accelerator**
     - You are designing the architecture for a global **SaaS application** that will be deployed in the AWS cloud across
       multiple regions. The application needs to provide fast, reliable access for users across the globe. You want to
       improve performance and availability for users **by routing traffic through the AWS global network**.
-4. **Cross-region replication**
+5. **Cross-region replication**
     - copies objects between S3 buckets in different regions
-5. 
+6. 
     - **CloudFront**
     -  Enable accelerated, reliable and secure content delivery for Amazon S3 buckets, Application Load Balancers, Amazon API Gateway APIs, and more in 5 minutes or less. used for caching content at the edge
 
-6. **Amazon Direct Connect**:
+7. **Amazon Direct Connect**:
 - Move GB/s of data to the cloud, over a private secure network - from its on-premises data center to AWS
 
 7. **Amazon Snowball**

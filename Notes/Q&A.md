@@ -1,6 +1,7 @@
   
 - i am policy to ensure encrypted EBS volume can be created is :
 
+
     {
         "Sid" : "Name001",
         "Effect" : "Allow",
@@ -136,8 +137,8 @@
        - **RPO** (Recovery Point Objective)
      - **Pilot light DR strategy**. This solution recreates an existing application hosting environment in an AWS Region. This solution turns off most (or all) resources and uses the resources only during tests or when DR failover is necessary. **RPO and RTO are usually 10s of minutes**.
      - **Warm standby DR strategy**. This solution recreates an existing application hosting environment in an AWS Region. This solution serves a portion of live traffic. With this DR strategy, **RPO and RTO are usually a few minutes**. However, **costs are higher** because this solutions **runs resources continuously**.
-     - This is a backup and restore DR strategy. Backup and restore DR strategies typically have the lowest cost but highest recovery time. A solution that manually rebuilds the hosting infrastructure on premises and downloads the data that a company has backed up could take hours or days
-4. Amazon Cognito provides authentication, authorization, and user management for your web and mobile apps. Users can sign in directly with a user name and password, or through a trusted third party.
+     - **Backup and restore DR strategy**. This strategies typically have the lowest cost but highest recovery time. A solution that manually rebuilds the hosting infrastructure on premises and downloads the data that a company has backed up could take hours or days
+4. **Amazon Cognito** provides authentication, authorization, and user management for your web and mobile apps. Users can sign in directly with a user name and password, or through a trusted third party.
 
 5. Retrieve instance metadata :- http://169.254.169.254/latest/meta-data/
 
@@ -146,7 +147,6 @@
    - **API Gateway** is a fully managed service for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the front door for applications to use to access data, business logic, or functionality from backend services. However, API Gateway is not necessary for the implementation of a VPN connection. 
    - A virtual private gateway is attached to a VPC to create a site-to-site VPN connection on AWS. You can accept private encrypted network traffic from an on-premises data center into your VPC without the need to traverse the open public internet. 
    - A **NAT gateway provides a way for private Amazon EC2 instances to send requests to the internet.** A NAT gateway **does not give you the ability to create an encrypted site-to-site VPN connection.**
-
 
 7. Note
    - https://docs.aws.amazon.com/elasticloadbalancing/latest/application/sticky-sessions.html
@@ -201,7 +201,7 @@
 15. cloud formation
 16. What are the different type of EMR cluster ?
     1. there are two cluster type one is persistent and transient cluster.
-    2. persistent type remain alive all the time even if job is completed. 
+    2. **persistent type** remain alive all the time even if job is completed. 
        1. these job are preferred when continues jobs to run on the data.
        2. is particularly suited for workloads that run for extended periods or indefinitely, providing highly available and durable storage.
 
@@ -209,7 +209,8 @@
 18. **A storage optimized instance** is designed for workloads that require high, sequential read and write access to very large data sets on local storage. They are optimized to deliver tens of thousands of low-latency, random I/O operations per second (IOPS) to applications.
 19. note
     - **AWS Storage Gateway** connects an on-premises software appliance with cloud-based storage to provide seamless integration with data security features between your on-premises IT environment and the AWS storage infrastructure. 
-    - **Elastic Fabric Adapter (EFA)** is a network device that you can attach to your **Amazon EC2** instance to **accelerate High Performance Computing (HPC) and machine learning applications.** EFA enables you to achieve the application performance of an **on-premises HPC cluster with the scalability, flexibility, and elasticity** provided by the AWS Cloud.
+    - **Elastic Fabric Adapter (EFA)** is a network device that you can attach to your **Amazon EC2** instance to **accelerate High Performance Computing (HPC) and machine learning applications.
+      - ** EFA enables you to achieve the application performance of an **on-premises HPC cluster with the scalability, flexibility, and elasticity** provided by the AWS Cloud.
 
 20. note 
     - Use AWS Database Migration Service (AWS DMS) to migrate to a **new Aurora Serverless database** from Aurora cluster. 
