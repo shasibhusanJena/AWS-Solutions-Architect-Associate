@@ -75,7 +75,7 @@
    - **Predictive scaling** uses machine learning to predict capacity requirements based on historical data from CloudWatch. The machine learning algorithm consumes the available historical data and calculates capacity that best fits the historical load pattern, and then continuously learns based on new data to make future forecasts more accurate.
 9. ![img_2.png](img_2.png)
 10. Note 
-  - install CloudWatch Agent to collect more system-level metrics from Amazon EC2 instances. Here’s the list of custom metrics that you can set up:
+  - **install CloudWatch Agent** to collect more system-level metrics from Amazon EC2 instances. Here’s the list of custom metrics that you can set up:
   - Memory utilization
   - Disk swap utilization
   - Disk space utilization
