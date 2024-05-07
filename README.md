@@ -260,7 +260,7 @@ description
     - **Amazon Personalize** - fully managed ML , to build apps with real time personalized recommendation. , also send sms
       and email ,
     - **Amazon textract** - **help to extract text** , analyze and data will be given .
-    - **Amazon Rekognition** : **face detection**, labeling, **celebrity recognition** , **remove pornographic content**
+    - **Amazon Rekognition** : **face detection**, labeling, **celebrity recognition** , **remove pornographic content** ,inappropriate content, including explicit or suggestive adult content, violent content, and offensive language.
     - **Amazon Polly**: **text to audio** , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
     - **Amazon Transcribe** : **audio to text (ex: subtitles)** , **remove any Personally Identifiable Information** (PII) from
    the call before it's saved.
@@ -373,6 +373,7 @@ description
     - AWS Transfer - Seamlessly transfer files over SFTP, FTPS, and FTP protocols into your filesystem
     - Amazon Elastic- File System (Amazon EFS) provides a simple, scalable, fully managed elastic NFS file system for use with AWS Cloud services and on-premises resources. It is built to scale on demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files, eliminating the need to provision and manage capacity to accommodate growth.
     - AWS DataSync - Automate data transfers between on-premises storage and your file system ex: S3.
+      - Secure and Most reliable transfer then use = **AWS DataSync over AWS Direct Connect** for sensitive data.
     
 
 ### Links for more info
