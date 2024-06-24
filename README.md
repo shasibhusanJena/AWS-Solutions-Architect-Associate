@@ -86,37 +86,38 @@ description
     - is a portable, rugged, and secure device for edge computing and data transfer. You can use a Snowcone device to
       collect, process, and move data to the AWS Cloud, either offline by shipping the device to AWS, or online by using
       **AWS DataSync**.
+10. **AWS AppSync** enables developers to connect their applications and services to data and events with secure, serverless and **high-performing GraphQL and Pub/Sub APIs.** You can do the following with AWS AppSync: Access data from one or more data sources from a single GraphQL API endpoint.
 
-10. **Amazon DataSync**
+11. **Amazon DataSync**
      - Move large amount of data between **on-premises and S3**, EFS, FSx for Windows and **aws to aws**.
      - migrate 10 TB of data from an on-premises NAS device to Amazon S3. The data transfer needs to start - immediately
        and complete within 12 hours. Your on-premises network has a 1 Gbps connection to AWS.
 
-11. **Transfer Acceleration**
+12. **Transfer Acceleration**
     - a media company that frequently transfers large video files between an on-premises data center and Amazon S3. The
       company would like to accelerate these transfers to improve efficiency.
     - uses the AWS global network and edge locations to accelerate uploads to and downloads from an S3 bucket over long
       distances. This would help accelerate transfers between the on-premises data center and S3
-12. **Virtual private gateway**.
+13. **Virtual private gateway**.
     - Explanation: A virtual private gateway enables communication between a VPC and an on-premises network over an
       IPsec VPN tunnel. It supports overlapping IP address ranges and meets the requirements stated in the scenario.
-13. **NAT gateway**
+14. **NAT gateway**
     - Instances in the private subnet can access the internet by using a NAT gateway.
     - The NAT gateway will perform source **NAT and translate the private IP** to a public IP when traffic goes to the
       internet
 
-14. **Internet gateway**
+15. **Internet gateway**
     - Attaching an internet gateway to the VPC allows resources in the VPC such as instances in private subnets to
       connect to the internet by routing their traffic through a NAT gateway. This allows private resources internet
       access while keeping them private.
 
-15. **VPC peering**
+16. **VPC peering**
     - requirement : You have two VPCs, VPC A (10.0.0.0/16) in us-east-1 and VPC B (10.1.0.0/16) in us-west-2. You need
       to allow resources in VPC A to communicate with resources in VPC B.
     - VPC peering allows resources in two VPCs, even in different regions, to communicate with each other as if they are
       within the same network. A VPC peering connection needs to be created between the VPCs and routes configured to
       route traffic between them. This allows resources in VPC A to communicate with resources in VPC B.
-16. **SQS**
+17. **SQS**
     - The messages need to be processed asynchronously and out of order. Your application needs to **ensure no messages
       are lost.**
     - Amazon SQS provides a message queue service that enables asynchronous message processing. It supports out-of-order
@@ -139,23 +140,23 @@ description
           the wait time can be 1 to 20 second. (preferable 20 second). long pooling can be enabled at queue level or at
           the API level using WaitTimeSeconds.
 
-17. **SNS**
+18. **SNS**
     - SNS is designed for fan out messaging and can deliver messages concurrently to a large number of subscribers
       including Lambda functions. This makes it an effective choice for fan out to improve event throughput.
     - Push once in SNS , receive in all SQS queues that are subscribed.Fully decoupled , no data loss.
     - allows sending push notifications but **does not have built-in analytics for tracking app usage** or targeting
       user segments.
 
-18. **Amazon Pinpoint**
+19. **Amazon Pinpoint**
     - send **push notifications and has features for tracking app usage**, defining user segments, and sending targeted
       campaigns.
     - Pinpoint is designed for sending push notifications to mobile apps too.
     - Scales to Billions of messages per day.
 
-19. **Kinesis**
+20. **Kinesis**
 
     - it makes it easy to collect, process and analyze streaming data in real time.
-    - ingest real time data as Application log, Metrics, Website clickstream.
+    - ingest real time data as Application log, Metrics, Website **clickstream**.
     - Kinesis is of 4 types.
         - Kinesis Data Firehose. - load data stream into AWS data stores.
           - is the easiest way to load streaming data into data stores and analytics tools. 
@@ -165,13 +166,13 @@ description
         - Kinesis Data stream. - capture, process, store data streams.
         - Kinesis video Streams. - capture process store data stream.
 
-20. **ECS** (Elastic container service)
+21. **ECS** (Elastic container service)
     - The application consists of a front-end container that communicates with a back-end container. The containers need
       to scale automatically based on demand. You want to deploy the containers on ECS and manage them as a single
       application.
     - The most efficient approach is to use a single ECS service with one task definition running both containers. This
       allows managing them together while still providing auto scaling based on demand.
-21. **ECR** (Elastic container Registry)
+22. **ECR** (Elastic container Registry)
     - Private Repository.
     - ECR Used to Store and manage Docker image on AWS.
     - Your company is migrating its monolithic application to microservices hosted in containers. The development team
@@ -180,26 +181,26 @@ description
     - An ECR repository can be configured with a VPC endpoint policy to allow access only from the specified VPC and
       subnets. This meets the requirement to restrict access to the VPC with private subnets only.
 
-22. **EKS** (Elastic Kubernates Service)
+23. **EKS** (Elastic Kubernates Service)
     - You are designing a Kubernetes environment on AWS that will run a variety of microservices applications. The
       applications have unpredictable traffic patterns and can scale up rapidly at times. You want to optimize cost
       efficiency while still providing high availability.
     - Deploy Amazon EKS with a mix of spot and on-demand instances in multiple Availability Zones.
 
-23. **Amazon Fargate**
+24. **Amazon Fargate**
     - The application consists of a front-end and a back-end container. The front-end needs to scale automatically based
       on demand. The back-end needs to run consistently with no interruptions. You want to optimize cost.
     - Deploy both containers to a **Fargate service configured with a load balancer and auto scaling** to optimize cost.
-24. **Amazon CloudFront**
+25. **Amazon CloudFront**
     - it supports JavaScript, can handle million of request per second, max execution time <1 millisecond
     - Max Memory 2 MB , total PKG size 10 KB, free tier available 1/6th price of @Edge.
 
-25. **Lambda@Edge**
+26. **Lambda@Edge**
 
     - it supports node.js , python , can handle 1000 of requests , triggers Viewer Request/Response and Origin
       Request/Response.
     - max execution time 5 -10 seconds , max memory 128 MB - 10 GB , total package size = 1 MB -50 MB.
-26. **Amazon Lambda**
+27. **Amazon Lambda**
 
     - Execution:
         - Memory allocation: 128 MB – 10GB (1 MB increments)
@@ -213,12 +214,12 @@ description
         - Can use the /tmp directory to load other files at startup.
         - Size of environment variables: 4 KB.
 
-27. **CloudWatch**
+28. **CloudWatch**
     - **monitor** everything like (applications, infrastructure, network, and services)and use **alarms, logs,** and events data to take automated actions and reduce mean time to resolution (MTTR).
     - but **not API calls** .
     - CloudWatch **Logs agent** provides an automated way to send log data to CloudWatch Logs
 
-28. **CloudTrail**
+29. **CloudTrail**
     - it provides governance ,audit and compliance for AWS account.
     - inaccurate resource provisioning
     - hitting service limits
@@ -229,22 +230,22 @@ description
     - Enable AWS CloudTrail trail logging across all regions and turn on log file validation.
     - example **S3 buckets settings being changed regularly by some one**. 
       - The CloudTrail Processing Library is a Java library that provides an easy way to process AWS CloudTrail logs. You provide configuration details about your CloudTrail SQS queue and write code to process events. The CloudTrail Processing Library does the rest.
-29. **Amazon EventBridge**
+30. **Amazon EventBridge**
     - EventBridge allows responding to events from various AWS services as well as custom applications. It meets the
       requirements of decoupled architecture, **responding to events**, and supporting AWS and custom sources.
     - Receives Notification when specific **Amazon S3 events such as Object creation or deletion occur in the S3** Bucket.
-30. **Amazon AppFlow**
+31. **Amazon AppFlow**
     - is a fully managed integration service that helps you securely **transfer data** between **software as a service** (SaaS)
       applications such as Salesforce, SAP, Google Analytics, Facebook Ads, and ServiceNow, and AWS services such as
       Amazon Simple Storage Service (S3) and Amazon Redshift in just a few clicks.
 
-31. **AWS Control Tower**
+32. **AWS Control Tower**
     - The AWS Control Tower dashboard gives you continuous visibility into your AWS environment. You can view the number
       of **OUs and accounts provisioned**
     - is used by cloud administrators and architects to **set up and govern a secure, multi-account**
     - for a large enterprise that wants to set up a **multi-account environment in AWS** using AWS Control Tower.
     - is used to simplify the creation of new accounts with preconfigured constraints.
-32. **Others**.
+33. **Others**.
 
     - **Amazon Translate**: provides real-time, high-quality, and affordable language translation
     - **Amazon Lex**: build conversational bots – chatbots
@@ -293,11 +294,11 @@ description
     - It inspects your AWS environment and makes recommendations for saving money, improving system performance and reliability, or closing security gaps. 
     - however, it **can’t scan for software vulnerabilities** inside Amazon EC2 instances.
     - **AWS Proton** is a **deployment workflow tool for modern applications**. It can be used to manage Infrastructure as Code (IaC) templates build using tools like CloudFormation or Terraform.
-33. **Amazon Keyspaces (for Apache Cassandra)** is a scalable, highly available, and managed **Apache Cassandra–compatible database** service. With Amazon Keyspaces, you can run your Cassandra workloads on AWS using the same Cassandra application code
-34. **AWS Compute Optimizer** recommends optimal AWS resources for your workloads to reduce costs and improve performance by using machine learning to analyze historical utilization metrics. 
+34. **Amazon Keyspaces (for Apache Cassandra)** is a scalable, highly available, and managed **Apache Cassandra–compatible database** service. With Amazon Keyspaces, you can run your Cassandra workloads on AWS using the same Cassandra application code
+35. **AWS Compute Optimizer** recommends optimal AWS resources for your workloads to reduce costs and improve performance by using machine learning to analyze historical utilization metrics. 
     1. Overprovisioning resources can lead to unnecessary infrastructure costs, and underprovisioning resources can lead to poor application performance.
 
-35. **Other Definations**
+36. **Other Definations**
     - EBS volumes: Network storage for one EC2 instance at a time
     - Instance Storage: Physical storage for your EC2 instance (high IOPS)
     - EFS: Network File System for Linux instances, POSIX filesystem
@@ -306,7 +307,7 @@ description
     - FSx for NetApp ONTAP: High OS Compatibility
     - FSx for OpenZFS: Managed ZFS file system
 
-36. **Classic Ports to know**
+37. **Classic Ports to know**
     - 22 = SSH (Secure Shell) - log into a Linux instance
     - 21 = FTP (File Transfer Protocol) – upload files into a file share
     - 22 = SFTP (Secure File Transfer Protocol) – upload files using SSH
@@ -348,7 +349,8 @@ description
     - **Amazon WorkSpaces** enables you to provision virtual, cloud-based Microsoft Windows, Amazon Linux, or Ubuntu Linux desktops for your users, known as WorkSpaces. 
       - WorkSpaces eliminates the need to procure and deploy hardware or install complex software.
     - **AWS Shield** - **DDoS protection**.
-    - **AWS WAF** - Filter **malicious web traffic**.
+    - **Amazon WAF** - Filter **malicious web traffic**.
+      - A rate-based rule tracks the rate of requests for each originating IP address and triggers the rule action on IPs with rates that go over a limit. You set the limit as the number of requests per 5-minute time span. You can use this type of rule to put a temporary block on requests from an IP address that’s sending excessive requests.
     - **Amazon Athena** is an interactive query service that makes it easy to analyze data in **Amazon S3 using standard SQL** expressions. Athena is serverless, so there is no infrastructure to manage.
     - **Amazon Redshift** also includes Redshift Spectrum, allowing you to directly run **SQL queries against exabytes of unstructured data**** in Amazon S3**. 
       - Is designed primarily for Online Analytical Processing (OLAP) workloads 
@@ -371,7 +373,8 @@ description
     - AWS Backup - Automatically back up your filesystem.
     - AWS Lambda - Run code without thinking about servers. Pay only for the compute time you consume.
     - AWS Transfer - Seamlessly transfer files over SFTP, FTPS, and FTP protocols into your filesystem
-    - Amazon Elastic- File System (Amazon EFS) provides a simple, scalable, fully managed elastic NFS file system for use with AWS Cloud services and on-premises resources. It is built to scale on demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files, eliminating the need to provision and manage capacity to accommodate growth.
+    - Amazon Elastic- File Storage) provides a simple, scalable, fully managed elastic NFS file system for use with AWS Cloud services and on-premises resources. 
+      - It is built to scale on demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files, eliminating the need to provision and manage capacity to accommodate growth.
     - AWS DataSync - Automate data transfers between on-premises storage and your file system ex: S3.
       - Secure and Most reliable transfer then use = **AWS DataSync over AWS Direct Connect** for sensitive data.
     

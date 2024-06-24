@@ -28,3 +28,56 @@
     1. An internet gateway is attached to a VPC to allow traffic from the internet to flow into or out of the VPC. A VPN connection does not flow through an internet gateway. The internet gateway is designed to allow traffic from the open internet, not an encrypted VPN connection. 
     2. A customer gateway is required for the VPN connection to be established. A customer gateway device is set up and configured in the customer's data center. 
 22. AWS Key Management Service used to store SSL keys not data Keys.
+
+## Date May 2024
+
+23. Use Amazon Rekognition to detect inappropriate content.
+24. By default, CloudTrail event log files are encrypted using Amazon S3 server-side encryption (SSE). 
+25. Change the web architecture to access the financial data through a Gateway VPC Endpoint.
+26. The ApproximateAgeOfOldestMessage metric is useful when applications have time-sensitive messages and you need to ensure that messages are processed within a specific time period. You can use this metric to set Amazon CloudWatch alarms that issue alerts when messages remain in the queue for extended periods of time
+27. **Glacier Select** It is primarily used to run queries directly on data stored in Amazon Glacier, retrieving only the data you need out of your archives to use for analytics.
+28. using **Cached volumes**, you store your data in Amazon Simple Storage Service (Amazon S3) and retain a copy of frequently accessed data subsets locally in your on-premises network. Cached volumes offer substantial cost savings on primary storage and minimize the need to scale your storage on-premises.
+29. **AWS Wavelength** combines the high bandwidth and ultralow latency of 5G networks with AWS compute and storage services so that developers can innovate and build a new class of applications.
+30. **AppSync pipeline resolvers** offer an elegant server-side solution to address the common challenge faced in web applications—aggregating data from multiple database tables. Instead of invoking multiple API calls across different data sources, which can degrade application performance and user experience, AppSync pipeline resolvers enable easy retrieval of data from multiple sources with just a single call. By leveraging Pipeline functions, these resolvers streamline the process of consolidating and presenting data to end-users.
+31. **file system** that uses an NFS protocol  , **AWS Storage Gateway** storage solutions, only file gateway can store and retrieve objects in Amazon S3 using the protocols NFS and SMB.
+32. The **Volume Gateway** is a cloud-based **iSCSI block storage volume** for your on-premises applications. The Volume Gateway provides either a local cache or full volumes on-premises while also storing full copies of your volumes in the AWS cloud.
+    1. There are two options for Volume Gateway:
+       1. Cached Volumes – you store volume data in AWS, with a small portion of recently accessed data in the cache on-premises. 
+       2. Stored Volumes – you store the entire set of volume data on-premises and store periodic point-in-time backups (snapshots) in AWS.
+33. Use the AWS Schema Conversion Tool to convert the source schema and application code to match that of the target database, and then use the AWS Database Migration Service to migrate data from the source database to the target database.
+
+## Date June 2024
+
+34. To limit access to this S3 bucket to only users of accounts within the organization in AWS Organizations , **Add the aws PrincipalOrgID global condition** key with a reference to the organization ID to the S3 bucket policy, 
+35. A **S3 File Gateway** simplifies file storage in Amazon S3, integrates to existing applications through industry-standard file system protocols, and provides a cost-effective alternative to on-premises storage. It also provides low-latency access to data through transparent local caching.
+36. Use AWS Network Firewall to **create the required rules for traffic inspection and traffic filtering for the production VPC**. 
+    1. AWS Network Firewall is a managed firewall service that provides filtering for both inbound and outbound network traffic. It allows you to create rules for traffic inspection and filtering, which can help protect your production VPC. 
+    2. Option A: Amazon GuardDuty is a threat detection service, not a traffic inspection or filtering service. 
+    3. Option B: Traffic Mirroring is a feature that allows you to replicate and send a copy of network traffic from a VPC to another VPC or on-premises location. It is not a service that performs traffic inspection or filtering. 
+    4. Option D: AWS Firewall Manager is a security management service that helps you to centrally configure and manage firewalls across your accounts. It is not a service that performs traffic inspection or filtering.
+37. EBS fast snapshot restore feature on the EBS snapshots. helps to create a new Snapshot.
+    1. Application Load Balancer:
+    - Web applications with layer 7 routing (HTTP/HTTPS)
+    - Microservices architectures (e.g. Docker containers)
+    - Lambda targets
+    2. Network Load Balancer:
+    - TCP and UDP based applications
+    - Ultra low latency
+    - Static IP addresses
+    - VPC endpoint services
+38. Just all static content HTML, CSS, client-side JavaScript, images. Amazon S3 is good enough.
+39. Gateway VPC allows direct access to S3 without going through public internet. 
+40. AWS Systems Manager Run Command to run a custom command that applies the patch to all EC2 instances
+41. Create a Regional API Gateway endpoint. Associate the API Gateway endpoint with the company's domain name. Import the public certificate associated with the company's domain name into AWS Certificate Manager (ACM) in the us-east-1 Region. Attach the certificate to the API Gateway APIs. Create Route 53 DNS records with the company's domain name. Point an A record to the company's domain name.
+42. Store the database credentials as a secret in AWS Secrets Manager. Turn on automatic rotation for the secret. Attach the required permission to the EC2 role to grant access to the secret.
+43. Secret manager supports AutoRotation. Where as Parameter Store does not support auto rotation. 
+    1. Key Autorotation = AWS Secrets Manager
+44. Use Amazon EventBridge (Amazon CloudWatch Events) to send a notification when the certificate is nearing expiration
+45. A highly available connection with consistent low latency = AWS Direct Connect 
+46. Minimize costs and accept slower traffic if the primary connection fails = VPN connection
+47. By deploying an S3 VPC gateway endpoint, the application can access the S3 buckets over a private network connection within the VPC, 
+    1. eliminating the need for data transfer over the internet. 
+    2. This can help reduce data transfer fees as well as improve the performance of the application. 
+    3. The endpoint policy can be used to specify which S3 buckets the application has access to.
+48. near-real-time + large data + secure = DataSync over DirectConnect
+49. 
