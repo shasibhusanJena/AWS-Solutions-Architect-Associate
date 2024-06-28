@@ -45,5 +45,7 @@
      - Customer sends the key with every request
      - S3 performs encryption and decryption without storing the key
      - HTTPS is mandatory
+   
+   - Note:- You can choose to have AWS KMS automatically rotate KMS keys in a configurable range of days (from 90 days to 2560 days (7 years) or use the RotateKeyOnDemand API to invoke immediate key rotation (lifetime limit of 10 on-demand rotations per key). Automatic key rotation is not supported for imported keys, asymmetric keys, HMAC keys, or keys generated in a AWS CloudHSM cluster using the AWS KMS custom key store feature. You can rotate keys stored in the external key store (XKS), and you manage all key lifecycle events for external keys in your key manager.  
 
 1. ![img_6.png](img_6.png)
