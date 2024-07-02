@@ -17,7 +17,7 @@
       - **Each object is encrypted with a unique key.** 
       - As an additional safeguard, it encrypts the **key itself with a master key** that it regularly rotates. 
       - Amazon S3 server-side encryption uses one of the **strongest block ciphers** available, **256-bit** Advanced Encryption Standard (AES-256), to encrypt your data. 
-    - Use **Server-Side Encryption with Customer Master Keys (CMKs)** 
+    - Use **Server-Side Encryption with Customer Master Keys (SSE-CMKs)** 
       - Stored in AWS **Key Management Service (SSE-KMS)** – Similar to SSE-S3, 
       - but with some additional benefits and charges for using this service. 
       - There are separate permissions for the use of a CMK that provides **added protection against unauthorized access of your objects in Amazon S3**. 
