@@ -80,4 +80,30 @@
     2. This can help reduce data transfer fees as well as improve the performance of the application. 
     3. The endpoint policy can be used to specify which S3 buckets the application has access to.
 48. near-real-time + large data + secure = DataSync over DirectConnect
-49. 
+49. **dynamoDB On-demand mode** is a good option if any of the following are true , 
+    - You create new tables with unknown workloads.
+    - You have unpredictable application traffic.
+    - You prefer the ease of paying for only what you use.
+50. AWS Systems Manager - for storing and managing secrets. 
+    1. AWS Secrets Manager - for storeing credential and for autorotation of secrets
+51. The Amazon Aurora MySQL DB provided better spped for cloning the database, while working on a clone we can take another with minimum time and any disruption/ latency.
+52. Keyword: "separate read traffic from write traffic" = Read Replica = Option A and B are not the correct answer.
+53. Create an S3 bucket with S3 Object Lock enabled. Enable versioning. Add a legal hold to the objects. Add the s3:PutObjectLegalHold permission to the IAM policies of users who need to delete the objects.
+54. NAT gateway is used for outbound internet connectivity from private subnets, but it doesn't provide a private route for accessing S3.
+    1. creating a VPC endpoint for S3, and linking the endpoint to the route table for private subnets. This ensures that file transfer traffic between the EC2 instances and S3 remains within the private network without going over the internet.
+55. **enhanced security** - Configure Amazon CloudFront in front of the website to use HTTPS functionality
+56. **static content** - Create the new website and an Amazon S3 bucket. Deploy the website on the S3 bucket with static website hosting enabled
+57. **Amazon EBS for maximum performance, Amazon S3 for durable data storage, and Amazon S3 Glacier for archival storage**
+58. **OAI**
+    1. An OAI provides secure access between CloudFront and S3 without exposing the S3 bucket publicly. 
+    2. The OAI is associated with the CloudFront distribution. 
+    3. The S3 bucket policy limits access only to that OAI. 
+    4. This ensures only CloudFront can access the objects, not direct S3 access.
+59. While CloudFront can accelerate content delivery by caching static content at edge locations, it may not be the most effective solution in this scenario. Since the portal delivers a mixture of static and dynamic content, leveraging Route 53 latency routing for dynamic content delivery ensures that users are directed to the nearest AWS Region hosting the dynamic content.
+60. AWS Global Accelerator and Amazon CloudFront are separate services that use the AWS global network and its edge locations around the world. CloudFront improves performance for both cacheable content (such as images and videos) and dynamic content (such as API acceleration and dynamic site delivery). Global Accelerator improves performance for a wide range of applications over TCP or UDP by proxying packets at the edge to applications running in one or more AWS Regions. Global Accelerator is a good fit for non-HTTP use cases, such as gaming (UDP), IoT (MQTT), or Voice over IP, as well as for HTTP use cases that specifically require static IP addresses or deterministic, fast regional failover. Both services integrate with AWS Shield for DDoS protection.
+61. ECS allows running Docker containers, so the existing monolithic app can be containerized and run on ECS with minimal code changes. 
+    1. The app can be broken into smaller microservices by containerizing different components and managing them separately.
+62. Use Reserved Instances for the baseline level of usage. Use Spot instances for any additional capacity that the application needs. 
+63. **Composite alarms** determine their states by monitoring the states of other alarms. You can **use composite alarms to reduce alarm noise**. For example, you can create a composite alarm where the underlying metric alarms go into ALARM when they meet specific conditions. You then can set up your composite alarm to go into ALARM and send you notifications when the underlying metric alarms go into ALARM by configuring the underlying metric alarms never to take actions.
+64. You can use **CloudFront to deliver video on demand** (VOD) or live streaming video using any HTTP origin 
+65. **Global Accelerator is a good fit for non-HTTP use cases,** such as gaming (UDP), IoT (MQTT), or Voice over IP, as well as for HTTP use cases that specifically require static IP addresses

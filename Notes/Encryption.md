@@ -17,7 +17,7 @@
       - **Each object is encrypted with a unique key.** 
       - As an additional safeguard, it encrypts the **key itself with a master key** that it regularly rotates. 
       - Amazon S3 server-side encryption uses one of the **strongest block ciphers** available, **256-bit** Advanced Encryption Standard (AES-256), to encrypt your data. 
-    - Use **Server-Side Encryption with Customer Master Keys (CMKs)** 
+    - Use **Server-Side Encryption with Customer Master Keys (SSE-CMKs)** 
       - Stored in AWS **Key Management Service (SSE-KMS)** – Similar to SSE-S3, 
       - but with some additional benefits and charges for using this service. 
       - There are separate permissions for the use of a CMK that provides **added protection against unauthorized access of your objects in Amazon S3**. 
@@ -45,5 +45,7 @@
      - Customer sends the key with every request
      - S3 performs encryption and decryption without storing the key
      - HTTPS is mandatory
+   
+   - Note:- You can choose to have AWS KMS automatically rotate KMS keys in a configurable range of days (from 90 days to 2560 days (7 years) or use the RotateKeyOnDemand API to invoke immediate key rotation (lifetime limit of 10 on-demand rotations per key). Automatic key rotation is not supported for imported keys, asymmetric keys, HMAC keys, or keys generated in a AWS CloudHSM cluster using the AWS KMS custom key store feature. You can rotate keys stored in the external key store (XKS), and you manage all key lifecycle events for external keys in your key manager.  
 
 1. ![img_6.png](img_6.png)

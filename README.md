@@ -15,7 +15,7 @@ description
           self-healing storage system that **auto-scales up to 64TB per database instance**.
 
     - **DynamoDB** :- it is a noSQL DB, unstructured DB. have two types as Provision Mode and On Demand Mode ,
-        - **Provisioned Mode** - pay for Provisioned Read Capacity Units(RCU) and Write Capacity Units(WCU)
+        - **Provisioned Mode** - pay for Provisioned Read Capacity Units(RCU) and Write Capacity Units(WCU) , and costly
         - **in On-Demand Mode** - read/writes automatically scale up/down with your work load.
         - **DynamoDB Accelerator (DAX)** is a fully managed, highly available, **in-memory cache** for DynamoDB that
           delivers up to 10x performance improvement. It caches the most frequently used data, thus offloading the heavy
@@ -351,6 +351,7 @@ description
     - **AWS Shield** - **DDoS protection**.
     - **Amazon WAF** - Filter **malicious web traffic**.
       - A rate-based rule tracks the rate of requests for each originating IP address and triggers the rule action on IPs with rates that go over a limit. You set the limit as the number of requests per 5-minute time span. You can use this type of rule to put a temporary block on requests from an IP address that’s sending excessive requests.
+      - XSS and SQL Injection are both app level attack hence needs a WAF.
     - **Amazon Athena** is an interactive query service that makes it easy to analyze data in **Amazon S3 using standard SQL** expressions. Athena is serverless, so there is no infrastructure to manage.
     - **Amazon Redshift** also includes Redshift Spectrum, allowing you to directly run **SQL queries against exabytes of unstructured data**** in Amazon S3**. 
       - Is designed primarily for Online Analytical Processing (OLAP) workloads 
