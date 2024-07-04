@@ -248,96 +248,13 @@ description
     - is used by cloud administrators and architects to **set up and govern a secure, multi-account**
     - for a large enterprise that wants to set up a **multi-account environment in AWS** using AWS Control Tower.
     - is used to simplify the creation of new accounts with preconfigured constraints.
-35. **Others**.
 
-    - **Amazon Lex**: build conversational bots – chatbots
-    - **Amazon Connect**: cloud contact center
-    - **Amazon Comprehend** : natural language processing (NLP) to find **meaning and insights in text**.
-    - **Amazon Comprehend Medical** - This service is specifically built for natural language processing for medical
-      text. It can identify medication names, dosages, symptoms etc. from unstructured clinical text.
-    - **Amazon App Mesh** it easy to run services by providing consistent visibility and network traffic controls for every service. 
-    - **Amazon SageMaker** - Fully managed service for developer, data scientist for Build ML model.
-    - **Amazon Forecast** - use ML to deliver accurate forcast.
-    - **Amazon Kendra** - fully managed document search service, extract answer from document , it read files ,PDF from
-      google Drive and s3.
-    - **Amazon Personalize** - fully managed ML , to build apps with real time personalized recommendation. , also send sms
-      and email ,
-    - **Amazon textract** - **help to extract text** , analyze and data will be given .
-    - **Amazon Translate**: provides real-time, high-quality, and affordable language translation
-    - **Amazon Rekognition** : **face detection**, labeling, **celebrity recognition** , **remove pornographic content** ,inappropriate content, including explicit or suggestive adult content, violent content, and offensive language.
-    - **Amazon Transcribe** : **audio to text (ex: subtitles)** , **remove any Personally Identifiable Information** (PII) from
-   the call before it's saved.
-    
-    - **Amazon Polly**: **text to audio** , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
-    - **Amazon Config** : Detailed view of the configuration of AWS resources in your AWS account. 
-      - This includes how the resources are related to one another and how they were configured in the past so that you can see how the **configurations and relationships change over time**.
-    - **Amazon GuardDuty** : 
-    - is a threat detection service that **continuously monitors your AWS workloads for malicious activity**. 
-    - uses ML to create intelligent Threat discovery to protect your AWS Account,anomaly
-   detection, 3rd party data, One click to enable (30 days trial), no need to install software.
-    - GuardDuty analyzes tens of billions of events across multiple AWS data sources, such as 
-      - AWS CloudTrail events, 
-      - Amazon VPC Flow Logs, 
-      - and DNS logs.
-    - **Amazon Inspector**
-    - Automated Security Assessments and easy Reporting & integration with AWS Security Hub
-    - **Sends findings to Amazon Event Bridge.**
-    - Continuous **scanning of the infrastructure**.
-    - Automated and continual **vulnerability management at scale**.
-    - **Amazon Macie**
-    - Amazon Macie is a fully managed data security and data privacy service that uses **machine learning and pattern
-      matching to discover and protect your sensitive data** in AWS.
-    - Discover and protect your sensitive data at scale.
-    - Macie helps **identify and alert you to sensitive data, ex: as personally identifiable information (PII)**.
-    - **Amazon Elastic Transcoder** :
-    - allows you to easily **convert media files stored in Amazon S3 into multiple formats**.
-    - It provides transcoding optimizations like resolution and bitrate adjustment to support playback on different
-      devices.
-    - Fully managed and secure pay for what you use.
-    - **AWS Trusted Advisor** that provides you with **real-time guidance to help you provision your resources** following AWS best practices. 
-    - It inspects your AWS environment and makes recommendations for saving money, improving system performance and reliability, or closing security gaps. 
-    - however, it **can’t scan for software vulnerabilities** inside Amazon EC2 instances.
-    - **AWS Proton** is a **deployment workflow tool for modern applications**. It can be used to manage Infrastructure as Code (IaC) templates build using tools like CloudFormation or Terraform.
-36. **Amazon Keyspaces (for Apache Cassandra)** is a scalable, highly available, and managed **Apache Cassandra–compatible database** service. With Amazon Keyspaces, you can run your Cassandra workloads on AWS using the same Cassandra application code
-37. **AWS Compute Optimizer** recommends optimal AWS resources for your workloads to reduce costs and improve performance by using machine learning to analyze historical utilization metrics. 
-    1. Overprovisioning resources can lead to unnecessary infrastructure costs, and underprovisioning resources can lead to poor application performance.
-
-38. **Other Definations**
-    - EBS volumes: Network storage for one EC2 instance at a time
-    - Instance Storage: Physical storage for your EC2 instance (high IOPS)
-    - EFS: Network File System for Linux instances, POSIX filesystem
-    - FSx for Windows: Network File System for Windows servers
-    - FSx for Lustre: High Performance Computing Linux file system
-    - FSx for NetApp ONTAP: High OS Compatibility
-    - FSx for OpenZFS: Managed ZFS file system
-
-39. **Classic Ports to know**
-    - 22 = SSH (Secure Shell) - log into a Linux instance
-    - 21 = FTP (File Transfer Protocol) – upload files into a file share
-    - 22 = SFTP (Secure File Transfer Protocol) – upload files using SSH
-    - 80 = HTTP – access unsecured websites
-    - 443 = HTTPS – access secured websites
-    - 3389 = RDP (Remote Desktop Protocol) – log into a Windows instance
-    - The **/32** denotes one IP address and the **/0** refers to the entire network.
-    - Use **Signed Cookies to control who can access the private files** in your CloudFront distribution by modifying your application to determine whether a user should have access to your content.
-      - For members, send the required Set-Cookie headers to the viewer which will unlock the content only to them.
-
-
-37. **Overall, try to avoid using Elastic IP**:
-    - They often reflect poor architectural decisions, Instead, use a random public IP and register a DNS name to it
-    - Or, as we’ll see later, use a Load Balancer and don’t use a public IP.
-
-
-35. **SQS VS SNS VS Kinsesis**
-
-    ![img_1.png](img_1.png)
-
-36. ###**Security, Identity, & Compliance** :
+35. ###**Security, Identity, & Compliance** :
     - **AWS Artifact** - **On-demand access to AWS compliance reports**
     - **AWS Audit Manager**  - Audit your AWS usage to simplify how you **assess risk and compliance**
-    - **Amazon Cloud Directory** - Store hundreds of millions of application-specific objects.
-    - **Amazon Cognito** - Identity management for your apps.
-    - **Amazon Detective** - Investigate potential security issues.
+    - **AWS Cloud Directory** - Store hundreds of millions of application-specific objects.
+    - **AWS Cognito** - Identity management for your apps.
+    - **AWS Detective** - Investigate potential security issues.
     - **AWS Directory Service** - Set up and run Microsoft Active Directory with AWS services
     - **AWS Firewall Manager** - Deploy network security across your VPCs with just a few clicks
     - **AWS GovCloud** (US) Move sensitive workloads into the cloud.
@@ -349,19 +266,102 @@ description
     - **AWS Secrets Manager** - **Rotate, manage, and retrieve secrets**.
     - **AWS Security Documentation** - Security documentation by category.
     - **AWS Security Hub** - **Unified security and compliance center**.
-    - **Amazon Security Lake** - Automatically centralize your security data with a few clicks
-    - **Amazon WorkSpaces** enables you to provision virtual, cloud-based Microsoft Windows, Amazon Linux, or Ubuntu Linux desktops for your users, known as WorkSpaces. 
+    - **AWS Security Lake** - Automatically centralize your security data with a few clicks
+    - **AWS WorkSpaces** enables you to provision virtual, cloud-based Microsoft Windows, Amazon Linux, or Ubuntu Linux desktops for your users, known as WorkSpaces. 
       - WorkSpaces eliminates the need to procure and deploy hardware or install complex software.
     - **AWS Shield** - **DDoS protection**.
-    - **Amazon WAF** - Filter **malicious web traffic**.
+    - **AWS WAF** - Filter **malicious web traffic**.
       - A rate-based rule tracks the rate of requests for each originating IP address and triggers the rule action on IPs with rates that go over a limit. You set the limit as the number of requests per 5-minute time span. You can use this type of rule to put a temporary block on requests from an IP address that’s sending excessive requests.
       - XSS and SQL Injection are both app level attack hence needs a WAF.
-    - **Amazon Athena** is an interactive query service that makes it easy to analyze data in **Amazon S3 using standard SQL** expressions. Athena is serverless, so there is no infrastructure to manage.
-    - **Amazon Redshift** also includes Redshift Spectrum, allowing you to directly run **SQL queries against exabytes of unstructured data**** in Amazon S3**. 
+    - **AWS Athena** is an interactive query service that makes it easy to analyze data in **Amazon S3 using standard SQL** expressions. Athena is serverless, so there is no infrastructure to manage.
+    - **AWS Redshift** also includes Redshift Spectrum, allowing you to directly run **SQL queries against exabytes of unstructured data**** in Amazon S3**. 
       - Is designed primarily for Online Analytical Processing (OLAP) workloads 
       - No loading or transformation is required, and you can use open data formats, including Avro, CSV, Grok, ORC, Parquet, RCFile, RegexSerDe, SequenceFile, TextFile, and TSV. 
         - **Redshift Spectrum** automatically scales query compute capacity
-37. **Notes**
+
+36. **Others**.
+
+    - **AWS Lex**: build conversational bots – chatbots
+    - **AWS Connect**: cloud contact center
+    - **AWS Comprehend** : natural language processing (NLP) to find **meaning and insights in text**.
+    - **AWS Comprehend Medical** - This service is specifically built for natural language processing for medical
+      text. It can identify medication names, dosages, symptoms etc. from unstructured clinical text.
+    - **AWS App Mesh** it easy to run services by providing consistent visibility and network traffic controls for every service. 
+    - **AWS SageMaker** - Fully managed service for developer, data scientist for Build ML model.
+    - **AWS Forecast** - use ML to deliver accurate forcast.
+    - **AWS Kendra** - fully managed document search service, extract answer from document , it read files ,PDF from
+      google Drive and s3.
+    - **AWS Personalize** - fully managed ML , to build apps with real time personalized recommendation. , also send sms
+      and email ,
+    - **AWS textract** - **help to extract text** , analyze and data will be given .
+    - **AWS Translate**: provides real-time, high-quality, and affordable language translation
+    - **AWS Rekognition** : **face detection**, labeling, **celebrity recognition** , **remove pornographic content** ,inappropriate content, including explicit or suggestive adult content, violent content, and offensive language.
+    - **AWS Transcribe** : **audio to text (ex: subtitles)** , **remove any Personally Identifiable Information** (PII) from
+   the call before it's saved.
+    
+    - **AWS Polly**: **text to audio** , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
+    - **AWS Config** : Detailed view of the configuration of AWS resources in your AWS account. 
+      - This includes how the resources are related to one another and how they were configured in the past so that you can see how the **configurations and relationships change over time**.
+    - **AWS GuardDuty** : 
+    - is a threat detection service that **continuously monitors your AWS workloads for malicious activity**. 
+    - uses ML to create intelligent Threat discovery to protect your AWS Account,anomaly
+   detection, 3rd party data, One click to enable (30 days trial), no need to install software.
+    - GuardDuty analyzes tens of billions of events across multiple AWS data sources, such as 
+      - AWS CloudTrail events, 
+      - Amazon VPC Flow Logs, 
+      - and DNS logs.
+    - **AWS Inspector**
+    - Automated Security Assessments and easy Reporting & integration with AWS Security Hub
+    - **Sends findings to Amazon Event Bridge.**
+    - Continuous **scanning of the infrastructure**.
+    - Automated and continual **vulnerability management at scale**.
+    - **AWS Macie**
+    - Amazon Macie is a fully managed data security and data privacy service that uses **machine learning and pattern
+      matching to discover and protect your sensitive data** in AWS.
+    - Discover and protect your sensitive data at scale.
+    - Macie helps **identify and alert you to sensitive data, ex: as personally identifiable information (PII)**.
+    - **AWS Elastic Transcoder** :
+    - allows you to easily **convert media files stored in Amazon S3 into multiple formats**.
+    - It provides transcoding optimizations like resolution and bitrate adjustment to support playback on different
+      devices.
+    - Fully managed and secure pay for what you use.
+    - **AWS Trusted Advisor** that provides you with **real-time guidance to help you provision your resources** following AWS best practices. 
+    - It inspects your AWS environment and makes recommendations for saving money, improving system performance and reliability, or closing security gaps. 
+    - however, it **can’t scan for software vulnerabilities** inside Amazon EC2 instances.
+    - **AWS Proton** is a **deployment workflow tool for modern applications**. It can be used to manage Infrastructure as Code (IaC) templates build using tools like CloudFormation or Terraform.
+37. **AWS Keyspaces (for Apache Cassandra)** is a scalable, highly available, and managed **Apache Cassandra–compatible database** service. With Amazon Keyspaces, you can run your Cassandra workloads on AWS using the same Cassandra application code
+38. **AWS Compute Optimizer** recommends optimal AWS resources for your workloads to reduce costs and improve performance by using machine learning to analyze historical utilization metrics. 
+    1. Overprovisioning resources can lead to unnecessary infrastructure costs, and underprovisioning resources can lead to poor application performance.
+
+39. **Other Definations**
+    - EBS volumes: Network storage for one EC2 instance at a time
+    - Instance Storage: Physical storage for your EC2 instance (high IOPS)
+    - EFS: Network File System for Linux instances, POSIX filesystem
+    - FSx for Windows: Network File System for Windows servers
+    - FSx for Lustre: High Performance Computing Linux file system
+    - FSx for NetApp ONTAP: High OS Compatibility
+    - FSx for OpenZFS: Managed ZFS file system
+
+40. **Classic Ports to know**
+    - 22 = SSH (Secure Shell) - log into a Linux instance
+    - 21 = FTP (File Transfer Protocol) – upload files into a file share
+    - 22 = SFTP (Secure File Transfer Protocol) – upload files using SSH
+    - 80 = HTTP – access unsecured websites
+    - 443 = HTTPS – access secured websites
+    - 3389 = RDP (Remote Desktop Protocol) – log into a Windows instance
+    - The **/32** denotes one IP address and the **/0** refers to the entire network.
+    - Use **Signed Cookies to control who can access the private files** in your CloudFront distribution by modifying your application to determine whether a user should have access to your content.
+      - For members, send the required Set-Cookie headers to the viewer which will unlock the content only to them.
+      
+41. **Overall, try to avoid using Elastic IP**:
+    - They often reflect poor architectural decisions, Instead, use a random public IP and register a DNS name to it
+    - Or, as we’ll see later, use a Load Balancer and don’t use a public IP.
+
+42. **SQS VS SNS VS Kinsesis**
+
+    ![img_1.png](img_1.png)
+
+43. **Notes**
     - S3 Transfer Acceleration helps speed up **long-distance object transfers between S3 buckets**, while Global
       Accelerator helps manage **traffic across multiple AWS regions**.
     - Glacier is a storage service, used for archival storage. Snowball is data transfer service, used for transferring
@@ -382,8 +382,7 @@ description
       - It is built to scale on demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files, eliminating the need to provision and manage capacity to accommodate growth.
     - AWS DataSync - Automate data transfers between on-premises storage and your file system ex: S3.
       - Secure and Most reliable transfer then use = **AWS DataSync over AWS Direct Connect** for sensitive data.
-    
-
+      
 ### Links for more info
 
 1. Architecting for the cloud:  https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf (Archived)
