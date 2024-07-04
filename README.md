@@ -54,70 +54,73 @@ description
     - Create a route table for the transit gateway and add a route that allows traffic between VPC A and VPC B's CIDR
       blocks. Associate this route table with VPC A and VPC B attachments.
     - if we have 5 VPC then we can use **transit gateway** to interconnect the VPC
-4. **AWS Global Accelerator**
-    - You are designing the architecture for a global **SaaS application** that will be deployed in the AWS cloud across
-      multiple regions. The application needs to provide fast, reliable access for users across the globe. You want to
-      improve performance and availability for users **by routing traffic through the AWS global network**.
-5. **Cross-region replication**
+3. **AWS Global Accelerator**
+   1. What is the difference between CloudFront and Global Accelerator?
+      1. CloudFront uses Edge Locations to cache content while Global Accelerator uses Edge Locations to find an optimal pathway to the nearest regional endpoint. CloudFront is designed to handle HTTP protocol meanwhile Global Accelerator is best used for both HTTP and non-HTTP protocols such as TCP and UDP. 
+      2. ex :- You are designing the architecture for a global **SaaS application** that will be deployed in the AWS cloud across
+            multiple regions. The application needs to provide fast, reliable access for users across the globe. You want to
+            improve performance and availability for users **by routing traffic through the AWS global network**.
+4. **Cross-region replication**
     - copies objects between S3 buckets in different regions
-6. 
+5. 
     - **CloudFront**
     -  Enable accelerated, reliable and secure content delivery for Amazon S3 buckets, Application Load Balancers, Amazon API Gateway APIs, and more in 5 minutes or less. used for caching content at the edge
-
-7. **Amazon Direct Connect**:
+6. PrivateLink - a private network connection between VPCs and AWS services. 
+7. Direct Connect -  is a dedicated, private connection between on-premises infrastructure and an AWS Location.
+8. **Amazon Direct Connect**:
 - Move GB/s of data to the cloud, over a private secure network - from its on-premises data center to AWS
 
-7. **Amazon Snowball**
+9. **Amazon Snowball**
     - migrate 50 **Terabytes** of data from on-premises data centers to Amazon S3.
     - AWS Snowball is available in two device types.
         - **Snowball Edge Compute Optimized** - with more computing capabilities, suited for higher performance
           workloads
         - **Snowball Edge - Storage Optimized** with more storage, which is suited for large-scale data migrations and
           capacity-oriented workloads.
-8. **AMAZON Snowmobile**
-    - To migrate large datasets of 10 Petabyte or more in a single location
-    - Ship the - data to AWS using Snowmobile to transfer the data offline.
+10. **AMAZON Snowmobile**
+     - To migrate large datasets of 10 Petabyte or more in a single location
+     - Ship the - data to AWS using Snowmobile to transfer the data offline.
 
-    - How should I choose between Snowmobile and Snowball? To migrate large datasets of 10 **Petabyte** or more in a
-      single location, you should use Snowmobile.
-    - For datasets less than 10 **Petabyte** or distributed in multiple locations, you should use Snowball.
+     - How should I choose between Snowmobile and Snowball? To migrate large datasets of 10 **Petabyte** or more in a
+       single location, you should use Snowmobile.
+     - For datasets less than 10 **Petabyte** or distributed in multiple locations, you should use Snowball.
 
-9. **AWS Snowcone**
-    - is a portable, rugged, and secure device for edge computing and data transfer. You can use a Snowcone device to
-      collect, process, and move data to the AWS Cloud, either offline by shipping the device to AWS, or online by using
-      **AWS DataSync**.
-10. **AWS AppSync** enables developers to connect their applications and services to data and events with secure, serverless and **high-performing GraphQL and Pub/Sub APIs.** You can do the following with AWS AppSync: Access data from one or more data sources from a single GraphQL API endpoint.
+11. **AWS Snowcone**
+     - is a portable, rugged, and secure device for edge computing and data transfer. You can use a Snowcone device to
+       collect, process, and move data to the AWS Cloud, either offline by shipping the device to AWS, or online by using
+       **AWS DataSync**.
+12. **AWS AppSync** enables developers to connect their applications and services to data and events with secure, serverless and **high-performing GraphQL and Pub/Sub APIs.** You can do the following with AWS AppSync: Access data from one or more data sources from a single GraphQL API endpoint.
 
-11. **Amazon DataSync**
+13. **Amazon DataSync**
      - Move large amount of data between **on-premises and S3**, EFS, FSx for Windows and **aws to aws**.
      - migrate 10 TB of data from an on-premises NAS device to Amazon S3. The data transfer needs to start - immediately
        and complete within 12 hours. Your on-premises network has a 1 Gbps connection to AWS.
 
-12. **Transfer Acceleration**
+14. **Transfer Acceleration**
     - a media company that frequently transfers large video files between an on-premises data center and Amazon S3. The
       company would like to accelerate these transfers to improve efficiency.
     - uses the AWS global network and edge locations to accelerate uploads to and downloads from an S3 bucket over long
       distances. This would help accelerate transfers between the on-premises data center and S3
-13. **Virtual private gateway**.
+15. **Virtual private gateway**.
     - Explanation: A virtual private gateway enables communication between a VPC and an on-premises network over an
       IPsec VPN tunnel. It supports overlapping IP address ranges and meets the requirements stated in the scenario.
-14. **NAT gateway**
+16. **NAT gateway**
     - Instances in the private subnet can access the internet by using a NAT gateway.
     - The NAT gateway will perform source **NAT and translate the private IP** to a public IP when traffic goes to the
       internet
 
-15. **Internet gateway**
+17. **Internet gateway**
     - Attaching an internet gateway to the VPC allows resources in the VPC such as instances in private subnets to
       connect to the internet by routing their traffic through a NAT gateway. This allows private resources internet
       access while keeping them private.
 
-16. **VPC peering**
+18. **VPC peering**
     - requirement : You have two VPCs, VPC A (10.0.0.0/16) in us-east-1 and VPC B (10.1.0.0/16) in us-west-2. You need
       to allow resources in VPC A to communicate with resources in VPC B.
     - VPC peering allows resources in two VPCs, even in different regions, to communicate with each other as if they are
       within the same network. A VPC peering connection needs to be created between the VPCs and routes configured to
       route traffic between them. This allows resources in VPC A to communicate with resources in VPC B.
-17. **SQS**
+19. **SQS**
     - The messages need to be processed asynchronously and out of order. Your application needs to **ensure no messages
       are lost.**
     - Amazon SQS provides a message queue service that enables asynchronous message processing. It supports out-of-order
@@ -140,20 +143,20 @@ description
           the wait time can be 1 to 20 second. (preferable 20 second). long pooling can be enabled at queue level or at
           the API level using WaitTimeSeconds.
 
-18. **SNS**
+20. **SNS**
     - SNS is designed for fan out messaging and can deliver messages concurrently to a large number of subscribers
       including Lambda functions. This makes it an effective choice for fan out to improve event throughput.
     - Push once in SNS , receive in all SQS queues that are subscribed.Fully decoupled , no data loss.
     - allows sending push notifications but **does not have built-in analytics for tracking app usage** or targeting
       user segments.
 
-19. **Amazon Pinpoint**
+21. **Amazon Pinpoint**
     - send **push notifications and has features for tracking app usage**, defining user segments, and sending targeted
       campaigns.
     - Pinpoint is designed for sending push notifications to mobile apps too.
     - Scales to Billions of messages per day.
 
-20. **Kinesis**
+22. **Kinesis**
 
     - it makes it easy to collect, process and analyze streaming data in real time.
     - ingest real time data as Application log, Metrics, Website **clickstream**.
@@ -166,13 +169,13 @@ description
         - Kinesis Data stream. - capture, process, store data streams.
         - Kinesis video Streams. - capture process store data stream.
 
-21. **ECS** (Elastic container service)
+23. **ECS** (Elastic container service)
     - The application consists of a front-end container that communicates with a back-end container. The containers need
       to scale automatically based on demand. You want to deploy the containers on ECS and manage them as a single
       application.
     - The most efficient approach is to use a single ECS service with one task definition running both containers. This
       allows managing them together while still providing auto scaling based on demand.
-22. **ECR** (Elastic container Registry)
+24. **ECR** (Elastic container Registry)
     - Private Repository.
     - ECR Used to Store and manage Docker image on AWS.
     - Your company is migrating its monolithic application to microservices hosted in containers. The development team
@@ -181,26 +184,26 @@ description
     - An ECR repository can be configured with a VPC endpoint policy to allow access only from the specified VPC and
       subnets. This meets the requirement to restrict access to the VPC with private subnets only.
 
-23. **EKS** (Elastic Kubernates Service)
+25. **EKS** (Elastic Kubernates Service)
     - You are designing a Kubernetes environment on AWS that will run a variety of microservices applications. The
       applications have unpredictable traffic patterns and can scale up rapidly at times. You want to optimize cost
       efficiency while still providing high availability.
     - Deploy Amazon EKS with a mix of spot and on-demand instances in multiple Availability Zones.
 
-24. **Amazon Fargate**
+26. **Amazon Fargate**
     - The application consists of a front-end and a back-end container. The front-end needs to scale automatically based
       on demand. The back-end needs to run consistently with no interruptions. You want to optimize cost.
     - Deploy both containers to a **Fargate service configured with a load balancer and auto scaling** to optimize cost.
-25. **Amazon CloudFront**
+27. **Amazon CloudFront**
     - it supports JavaScript, can handle million of request per second, max execution time <1 millisecond
     - Max Memory 2 MB , total PKG size 10 KB, free tier available 1/6th price of @Edge.
 
-26. **Lambda@Edge**
+28. **Lambda@Edge**
 
     - it supports node.js , python , can handle 1000 of requests , triggers Viewer Request/Response and Origin
       Request/Response.
     - max execution time 5 -10 seconds , max memory 128 MB - 10 GB , total package size = 1 MB -50 MB.
-27. **Amazon Lambda**
+29. **Amazon Lambda**
 
     - Execution:
         - Memory allocation: 128 MB – 10GB (1 MB increments)
@@ -214,12 +217,12 @@ description
         - Can use the /tmp directory to load other files at startup.
         - Size of environment variables: 4 KB.
 
-28. **CloudWatch**
+30. **CloudWatch**
     - **monitor** everything like (applications, infrastructure, network, and services)and use **alarms, logs,** and events data to take automated actions and reduce mean time to resolution (MTTR).
     - but **not API calls** .
     - CloudWatch **Logs agent** provides an automated way to send log data to CloudWatch Logs
 
-29. **CloudTrail**
+31. **CloudTrail**
     - it provides governance ,audit and compliance for AWS account.
     - inaccurate resource provisioning
     - hitting service limits
@@ -230,24 +233,23 @@ description
     - Enable AWS CloudTrail trail logging across all regions and turn on log file validation.
     - example **S3 buckets settings being changed regularly by some one**. 
       - The CloudTrail Processing Library is a Java library that provides an easy way to process AWS CloudTrail logs. You provide configuration details about your CloudTrail SQS queue and write code to process events. The CloudTrail Processing Library does the rest.
-30. **Amazon EventBridge**
+32. **Amazon EventBridge**
     - EventBridge allows responding to events from various AWS services as well as custom applications. It meets the
       requirements of decoupled architecture, **responding to events**, and supporting AWS and custom sources.
     - Receives Notification when specific **Amazon S3 events such as Object creation or deletion occur in the S3** Bucket.
-31. **Amazon AppFlow**
+33. **Amazon AppFlow**
     - is a fully managed integration service that helps you securely **transfer data** between **software as a service** (SaaS)
       applications such as Salesforce, SAP, Google Analytics, Facebook Ads, and ServiceNow, and AWS services such as
       Amazon Simple Storage Service (S3) and Amazon Redshift in just a few clicks.
 
-32. **AWS Control Tower**
+34. **AWS Control Tower**
     - The AWS Control Tower dashboard gives you continuous visibility into your AWS environment. You can view the number
       of **OUs and accounts provisioned**
     - is used by cloud administrators and architects to **set up and govern a secure, multi-account**
     - for a large enterprise that wants to set up a **multi-account environment in AWS** using AWS Control Tower.
     - is used to simplify the creation of new accounts with preconfigured constraints.
-33. **Others**.
+35. **Others**.
 
-    - **Amazon Translate**: provides real-time, high-quality, and affordable language translation
     - **Amazon Lex**: build conversational bots – chatbots
     - **Amazon Connect**: cloud contact center
     - **Amazon Comprehend** : natural language processing (NLP) to find **meaning and insights in text**.
@@ -261,10 +263,12 @@ description
     - **Amazon Personalize** - fully managed ML , to build apps with real time personalized recommendation. , also send sms
       and email ,
     - **Amazon textract** - **help to extract text** , analyze and data will be given .
+    - **Amazon Translate**: provides real-time, high-quality, and affordable language translation
     - **Amazon Rekognition** : **face detection**, labeling, **celebrity recognition** , **remove pornographic content** ,inappropriate content, including explicit or suggestive adult content, violent content, and offensive language.
-    - **Amazon Polly**: **text to audio** , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
     - **Amazon Transcribe** : **audio to text (ex: subtitles)** , **remove any Personally Identifiable Information** (PII) from
    the call before it's saved.
+    
+    - **Amazon Polly**: **text to audio** , Pronunciation Lexicon, Speech synthesis Markup language (SSML)
     - **Amazon Config** : Detailed view of the configuration of AWS resources in your AWS account. 
       - This includes how the resources are related to one another and how they were configured in the past so that you can see how the **configurations and relationships change over time**.
     - **Amazon GuardDuty** : 
@@ -294,11 +298,11 @@ description
     - It inspects your AWS environment and makes recommendations for saving money, improving system performance and reliability, or closing security gaps. 
     - however, it **can’t scan for software vulnerabilities** inside Amazon EC2 instances.
     - **AWS Proton** is a **deployment workflow tool for modern applications**. It can be used to manage Infrastructure as Code (IaC) templates build using tools like CloudFormation or Terraform.
-34. **Amazon Keyspaces (for Apache Cassandra)** is a scalable, highly available, and managed **Apache Cassandra–compatible database** service. With Amazon Keyspaces, you can run your Cassandra workloads on AWS using the same Cassandra application code
-35. **AWS Compute Optimizer** recommends optimal AWS resources for your workloads to reduce costs and improve performance by using machine learning to analyze historical utilization metrics. 
+36. **Amazon Keyspaces (for Apache Cassandra)** is a scalable, highly available, and managed **Apache Cassandra–compatible database** service. With Amazon Keyspaces, you can run your Cassandra workloads on AWS using the same Cassandra application code
+37. **AWS Compute Optimizer** recommends optimal AWS resources for your workloads to reduce costs and improve performance by using machine learning to analyze historical utilization metrics. 
     1. Overprovisioning resources can lead to unnecessary infrastructure costs, and underprovisioning resources can lead to poor application performance.
 
-36. **Other Definations**
+38. **Other Definations**
     - EBS volumes: Network storage for one EC2 instance at a time
     - Instance Storage: Physical storage for your EC2 instance (high IOPS)
     - EFS: Network File System for Linux instances, POSIX filesystem
@@ -307,7 +311,7 @@ description
     - FSx for NetApp ONTAP: High OS Compatibility
     - FSx for OpenZFS: Managed ZFS file system
 
-37. **Classic Ports to know**
+39. **Classic Ports to know**
     - 22 = SSH (Secure Shell) - log into a Linux instance
     - 21 = FTP (File Transfer Protocol) – upload files into a file share
     - 22 = SFTP (Secure File Transfer Protocol) – upload files using SSH
