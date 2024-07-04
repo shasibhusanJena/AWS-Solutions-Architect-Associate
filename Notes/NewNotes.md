@@ -33,18 +33,17 @@
 
 23. Use Amazon Rekognition to detect inappropriate content.
 24. By default, CloudTrail event log files are encrypted using Amazon S3 server-side encryption (SSE). 
-25. Change the web architecture to access the financial data through a Gateway VPC Endpoint.
-26. The ApproximateAgeOfOldestMessage metric is useful when applications have time-sensitive messages and you need to ensure that messages are processed within a specific time period. You can use this metric to set Amazon CloudWatch alarms that issue alerts when messages remain in the queue for extended periods of time
-27. **Glacier Select** It is primarily used to run queries directly on data stored in Amazon Glacier, retrieving only the data you need out of your archives to use for analytics.
-28. using **Cached volumes**, you store your data in Amazon Simple Storage Service (Amazon S3) and retain a copy of frequently accessed data subsets locally in your on-premises network. Cached volumes offer substantial cost savings on primary storage and minimize the need to scale your storage on-premises.
-29. **AWS Wavelength** combines the high bandwidth and ultralow latency of 5G networks with AWS compute and storage services so that developers can innovate and build a new class of applications.
-30. **AppSync pipeline resolvers** offer an elegant server-side solution to address the common challenge faced in web applications—aggregating data from multiple database tables. Instead of invoking multiple API calls across different data sources, which can degrade application performance and user experience, AppSync pipeline resolvers enable easy retrieval of data from multiple sources with just a single call. By leveraging Pipeline functions, these resolvers streamline the process of consolidating and presenting data to end-users.
-31. **file system** that uses an NFS protocol  , **AWS Storage Gateway** storage solutions, only file gateway can store and retrieve objects in Amazon S3 using the protocols NFS and SMB.
-32. The **Volume Gateway** is a cloud-based **iSCSI block storage volume** for your on-premises applications. The Volume Gateway provides either a local cache or full volumes on-premises while also storing full copies of your volumes in the AWS cloud.
+25. The ApproximateAgeOfOldestMessage metric is useful when applications have time-sensitive messages and you need to ensure that messages are processed within a specific time period. You can use this metric to set Amazon CloudWatch alarms that issue alerts when messages remain in the queue for extended periods of time
+26. **Glacier Select** It is primarily used to run queries directly on data stored in Amazon Glacier, retrieving only the data you need out of your archives to use for analytics.
+27. using **Cached volumes**, you store your data in Amazon Simple Storage Service (Amazon S3) and retain a copy of frequently accessed data subsets locally in your on-premises network. Cached volumes offer substantial cost savings on primary storage and minimize the need to scale your storage on-premises.
+28. **AWS Wavelength** combines the high bandwidth and ultralow latency of 5G networks with AWS compute and storage services so that developers can innovate and build a new class of applications.
+29. **AppSync pipeline resolvers** offer an elegant server-side solution to address the common challenge faced in web applications—aggregating data from multiple database tables. Instead of invoking multiple API calls across different data sources, which can degrade application performance and user experience, AppSync pipeline resolvers enable easy retrieval of data from multiple sources with just a single call. By leveraging Pipeline functions, these resolvers streamline the process of consolidating and presenting data to end-users.
+30. **file system** that uses an NFS protocol  , **AWS Storage Gateway** storage solutions, only file gateway can store and retrieve objects in Amazon S3 using the protocols NFS and SMB.
+31. The **Volume Gateway** is a cloud-based **iSCSI block storage volume** for your on-premises applications. The Volume Gateway provides either a local cache or full volumes on-premises while also storing full copies of your volumes in the AWS cloud.
     1. There are two options for Volume Gateway:
        1. Cached Volumes – you store volume data in AWS, with a small portion of recently accessed data in the cache on-premises. 
        2. Stored Volumes – you store the entire set of volume data on-premises and store periodic point-in-time backups (snapshots) in AWS.
-33. Use the AWS Schema Conversion Tool to convert the source schema and application code to match that of the target database, and then use the AWS Database Migration Service to migrate data from the source database to the target database.
+32. Use the AWS Schema Conversion Tool to convert the source schema and application code to match that of the target database, and then use the AWS Database Migration Service to migrate data from the source database to the target database.
 
 ## Date June 2024
 
@@ -94,7 +93,7 @@
 55. **enhanced security** - Configure Amazon CloudFront in front of the website to use HTTPS functionality
 56. **static content** - Create the new website and an Amazon S3 bucket. Deploy the website on the S3 bucket with static website hosting enabled
 57. **Amazon EBS for maximum performance, Amazon S3 for durable data storage, and Amazon S3 Glacier for archival storage**
-58. **OAI**
+58. **OAI** CloudFront provides two ways to send authenticated requests to an Amazon S3 origin: origin access control (OAC) and origin access identity (OAI).
     1. An OAI provides secure access between CloudFront and S3 without exposing the S3 bucket publicly. 
     2. The OAI is associated with the CloudFront distribution. 
     3. The S3 bucket policy limits access only to that OAI. 
@@ -107,3 +106,10 @@
 63. **Composite alarms** determine their states by monitoring the states of other alarms. You can **use composite alarms to reduce alarm noise**. For example, you can create a composite alarm where the underlying metric alarms go into ALARM when they meet specific conditions. You then can set up your composite alarm to go into ALARM and send you notifications when the underlying metric alarms go into ALARM by configuring the underlying metric alarms never to take actions.
 64. You can use **CloudFront to deliver video on demand** (VOD) or live streaming video using any HTTP origin 
 65. **Global Accelerator is a good fit for non-HTTP use cases,** such as gaming (UDP), IoT (MQTT), or Voice over IP, as well as for HTTP use cases that specifically require static IP addresses
+66. By creating an (Service Control Policy)**SCP** in the root organizational unit, the security team can define and enforce fine-grained permissions that limit access to specific services or actions across all member accounts.
+67. Geographic (Geo) Match Conditions in **AWS WAF**
+68. **RDS Proxy** Helps to minimize application Disruption, from outage affecting the availability for your application.by automatically connecting to new database. when failover occur, RDS proxy route the new database instance to new database Instance.
+69. Using AWS Backup to copy EC2 and RDS backups to the separate Region is the solution that meets the requirements with the least operational overhead. 
+70. RDS Multi-AZ = Synchronous = Disaster Recovery (DR)
+    1. Read Replica = Asynchronous = High Availability
+    2. **Note** Creating a read replica in a separate AWS Region would provide disaster recovery capabilities but does not ensure synchronous replication or meet the requirement of storing every transaction on at least two nodes.
