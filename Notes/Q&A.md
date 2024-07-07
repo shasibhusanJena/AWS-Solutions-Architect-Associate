@@ -144,9 +144,9 @@
 
 6. Note
    - **A customer gateway** is required for the VPN connection to be established. A customer gateway device is set up and configured in the customer's data center. 
-   - **API Gateway** is a fully managed service for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the front door for applications to use to access data, business logic, or functionality from backend services. However, API Gateway is not necessary for the implementation of a VPN connection. 
-   - A virtual private gateway is attached to a VPC to create a site-to-site VPN connection on AWS. You can accept private encrypted network traffic from an on-premises data center into your VPC without the need to traverse the open public internet. 
-   - A **NAT gateway provides a way for private Amazon EC2 instances to send requests to the internet.** A NAT gateway **does not give you the ability to create an encrypted site-to-site VPN connection.**
+   - **A API Gateway** is a fully managed service for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the front door for applications to use to access data, business logic, or functionality from backend services. However, API Gateway is not necessary for the implementation of a VPN connection. 
+   - **A virtual private gateway** is attached to a VPC to create a site-to-site VPN connection on AWS. You can accept private encrypted network traffic from an on-premises data center into your VPC without the need to traverse the open public internet. 
+   - **A NAT gateway** provides a way for private Amazon EC2 instances to send requests to the internet. A NAT gateway **does not give you the ability to create an encrypted site-to-site VPN connection.**
 
 7. Note
    - https://docs.aws.amazon.com/elasticloadbalancing/latest/application/sticky-sessions.html
@@ -240,6 +240,7 @@
    - Provisioned Capacity ensures that retrieval capacity for Expedited retrievals is available when you need it.
 
 To make an Expedited, Standard, or Bulk retrieval, set the Tier parameter in the Initiate Job (POST jobs) REST API request to the option you want, or the equivalent in the AWS CLI or AWS SDKs. If you have purchased provisioned capacity, then all expedited retrievals are automatically served through your provisioned capacity. 
+
 24. **AWS Elastic Disaster Recovery (AWS DRS)** provides continuous block-level replication, recovery orchestration, and automated server conversion capabilities. These allow customers to achieve a crash-consistent recovery point objective (RPO) of **60 seconds**, and a recovery time objective (RTO) typically ranging between 5–20 minutes.
 25. By simply selecting Spot when launching EC2 instances, you can save up to 90% on On-Demand prices. The only difference between On-Demand instances and Spot Instances is that Spot instances can be interrupted by EC2 with two minutes of notification when the EC2 needs the capacity back.
 26. Note
