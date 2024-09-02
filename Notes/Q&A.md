@@ -114,6 +114,9 @@
 
 - **AWS Glue Job bookMarks**  - help AWS Glue **maintain state information and prevent the reprocessing of old data**.
 - **The AWS Glue Data Catalog** is a centralized metadata repository for all your data assets across various data sources. It provides a unified interface to store and query information about data formats, schemas, and sources.
+- **FLEX execution** class leverages spare capacity within the AWS infrastructure to run **Glue jobs** at a discounted price compared to the **standard execution** class. 
+  - Since the data engineer doesn't have specific time constraints, utilizing spare capacity is ideal for cost savings.
+  - Today's date it's a checkbox in order to spare capacity and will mean we dont know when is going to finish, which is recommended to increase a timeout
 
 1. How to handle elastic load balancer in the system ?
    - option 1. if the first load balancer fails , we can have a secondary load balancer as backup. 

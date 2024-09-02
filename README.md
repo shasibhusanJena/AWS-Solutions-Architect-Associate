@@ -89,8 +89,9 @@ description
      - is a portable, rugged, and secure device for edge computing and data transfer. You can use a Snowcone device to
        collect, process, and move data to the AWS Cloud, either offline by shipping the device to AWS, or online by using
        **AWS DataSync**.
-12. **AWS AppSync** enables developers to connect their applications and services to data and events with secure, serverless and **high-performing GraphQL and Pub/Sub APIs.** You can do the following with AWS AppSync: Access data from one or more data sources from a single GraphQL API endpoint.
-
+12. **AWS AppSync** enables developers to connect their applications and services to data and events with secure, serverless and 
+    - with **GraphQL APIs** built with AWS AppSync give frontend developers the ability to query multiple databases, microservices, and APIs from a single GraphQL endpoint. 
+    - with **Pub/Sub APIs** built with AWS AppSync give frontend developers the ability to publish real-time data updates to subscribed API clients through serverless WebSocket connections.
 13. **Amazon DataSync**
      - Move large amount of data between **on-premises and S3**, EFS, FSx for Windows and **aws to aws**.
      - migrate 10 TB of data from an on-premises NAS device to Amazon S3. The data transfer needs to start - immediately
@@ -99,11 +100,11 @@ description
 14. **Transfer Acceleration**
     - a media company that frequently transfers large video files between an on-premises data center and Amazon S3. The
       company would like to accelerate these transfers to improve efficiency.
-    - uses the AWS global network and edge locations to accelerate uploads to and downloads from an S3 bucket over long
+    - uses the AWS global network, **cloud front** and edge locations to accelerate uploads to and downloads from an S3 bucket over long
       distances. This would help accelerate transfers between the on-premises data center and S3
 15. **Virtual private gateway**.
-    - Explanation: A virtual private gateway enables communication between a VPC and an on-premises network over an
-      IPsec VPN tunnel. It supports overlapping IP address ranges and meets the requirements stated in the scenario.
+    - Explanation: A virtual private gateway enables communication between a **VPC and an on-premises network over an
+      IPsec VPN tunnel**. It supports overlapping IP address ranges and meets the requirements stated in the scenario.
 16. **NAT gateway**
     - Instances in the private subnet can access the internet by using a NAT gateway.
     - The NAT gateway will perform source **NAT and translate the private IP** to a public IP when traffic goes to the
@@ -278,6 +279,12 @@ description
       - Is designed primarily for Online Analytical Processing (OLAP) workloads 
       - No loading or transformation is required, and you can use open data formats, including Avro, CSV, Grok, ORC, Parquet, RCFile, RegexSerDe, SequenceFile, TextFile, and TSV. 
         - **Redshift Spectrum** automatically scales query compute capacity
+    - **AWS Glue DataBrew** :- is a visual data preparation tool that enables users to clean and normalize data without writing any code. 
+        - Using DataBrew helps reduce the time it takes to prepare data for analytics and machine learning (ML) by up to 80 percent, compared to custom developed data preparation. 
+        - You can choose from over 250 ready-made transformations to automate data preparation tasks, such as filtering anomalies, converting data to standard formats, and correcting invalid values.
+    - **AWS MWAA** :- Amazon managed workflow for Apache Airflow. that can be used for data pipeline in the cloud. 
+        - and Apache airflow is a open-source tool used for programmatically author and schedule and monitor sequence.
+        - 
 
 36. **Others**.
 
@@ -382,6 +389,8 @@ description
       - It is built to scale on demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files, eliminating the need to provision and manage capacity to accommodate growth.
     - AWS DataSync - Automate data transfers between on-premises storage and your file system ex: S3.
       - Secure and Most reliable transfer then use = **AWS DataSync over AWS Direct Connect** for sensitive data.
+    - frequently accessed data in Amazon S3 can be stored from the other treading system. and Use Amazon **S3 Select** to run the queries.
+    - Create an IAM role for each use case. Assign appropriate permissions to the role for each use case. Associate the role with Athena.
       
 ### Links for more info
 
