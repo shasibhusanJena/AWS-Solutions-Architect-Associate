@@ -61,7 +61,11 @@ description
             multiple regions. The application needs to provide fast, reliable access for users across the globe. You want to
             improve performance and availability for users **by routing traffic through the AWS global network**.
 4. **Cross-region replication**
-    - copies objects between S3 buckets in different regions
+    - copies objects between S3 buckets in different regions.
+      - CROSS-REGION REPLICATION(CRR)
+        - USE-CASE:- compliance, lower latency access, replication across account
+      - SAME-REGION REPLICATION(SRR)
+        - USE-CASE:- log aggregation, live replication between product and test account.
 5. 
     - **CloudFront**
     -  Enable accelerated, reliable and secure content delivery for Amazon S3 buckets, Application Load Balancers, Amazon API Gateway APIs, and more in 5 minutes or less. used for caching content at the edge

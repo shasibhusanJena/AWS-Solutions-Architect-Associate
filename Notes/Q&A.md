@@ -170,7 +170,7 @@
     ![img_4.png](img_4.png)
 9. **EBS Volume Encryption**
   - EBS volumes are highly available and reliable storage volumes that can be attached to any running instance that is in the same Availability Zone. 
-  - EBS volumes that are attached to an EC2 instance are exposed as storage volumes that persist independently from the life of the instance.
+  - EBS volumes that are attached to an EC2 instance are exposed as storage volumes that persist independently of the life of the instance.
   - When you create an encrypted EBS volume and attach it to a supported instance type, the following types of data are encrypted:
     - Data at rest inside the volume 
     - All data moving between the volume and the instance 
